@@ -272,8 +272,11 @@ ul {
 }
 .title {
   font-weight: bold; /* Met le texte en gras */
-  margin-left: 420px;
-
+  margin-left: 650px;
+}
+.title1 {
+  font-weight: bold; /* Met le texte en gras */
+  margin-left: 720px;
 }
 /* Timelines (Formations & Certifiantes) */
 
