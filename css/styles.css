@@ -270,7 +270,11 @@ ul {
   background-color: #e5e5e5;
 
 }
+.title {
+  font-weight: bold; /* Met le texte en gras */
+  margin-left: 420px;
 
+}
 /* Timelines (Formations & Certifiantes) */
 
 
