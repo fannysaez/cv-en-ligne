@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Mon CV en ligne">
+  <meta name="keywords" content="Accueil, Parcours, Formations, Compétences, Centres d'intêret, M'écrire ">
+  <meta name="author" content="Fanny Saez">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+  <title>Fanny Saez ~ À propos</title>
+  <link rel="icon" type="image/x-icon" href="/img/logo-initiale.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="light-mode">
+  
+<!-- Header + Menu de navigation fixe -->
+  <header class="custom-header">
+      <div class="logo-content">
+        <img src="/img/logo-initiale.png" alt="Logo" />
+      </div>
+      
+<!-- Menu de navigation  -->
+    <nav class="menu">
+      <a href="#aboutme"><i class="fas fa-home fa-1x" title=""></i> Accueil</a>
+      <a href="#parcours"><i class="fas fa-briefcase fa-1x" title=""></i> Parcours</a>
+      <a href="#formations"><i class="fas fa-graduation-cap fa-1x" title=""></i> Formations</a>
+      <a href="#skills"><i class="fas fa-cogs fa-1x" title=""></i> Compétences</a>      
+      <a href="#centres-interet"><i class="fas fa-cogs fa-1x" title=""></i> Centres d'intérêt</a>      
+      <a href="#contact"><i class="fas fa-pen fa-1x" title=""></i> M'écrire</a>
+
+      <div class="toggle-container">
+        <input type="checkbox" id="theme-toggle" />
+        <label for="theme-toggle" class="toggle-label">
+            <span class="icon sun">☀️</span>
+            <span class="icon moon">🌙</span>
+        </label>
+      </div>
+    </nav>
+  </header>
+
+<!-- Sections -->
+<!-- Biographie : Motivation -->
+<section id="aboutme">
+  <div class="overlay">
+    <div class="bio-content">
+        <h1>&thinsp;&thinsp;✦&thinsp;&thinsp; Ma Bio &thinsp;&thinsp;✦&thinsp;&thinsp;</h1>
+        <div class="reveal-lines">
+        <p>
+          Passionnée par les métiers du web et du multimédia</p>
+          <p>Je suis en reconversion professionnelle pour devenir développeuse web et mobile.</p>
+          <p> Organisée, autonome, curieuse, travail en équipe, motivée et rigoureuse</p>
+          <p>J'ai acquis des compétences en conception graphique (suite Adobe),ainsi qu'en programmation front-end (HTML, CSS, JavaScript). </p>
+          <p>J'adore relever de nouveaux défis.
+        </p>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- Parcours Professionnel : Accordéon + logos -->
+<section id="parcours">
+  <div class="main-title">
+  <h2>Expériences</h2>
+</div>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button class="accordion-header">Expérience 1</button>
+      <div class="accordion-content">
+        <p>Details sur l'expérience 1...</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header">Expérience 2</button>
+      <div class="accordion-content">
+        <p>Details sur l'expérience 2...</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header">Expérience 3</button>
+      <div class="accordion-content">
+        <p>Details sur l'expérience 3...</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button class="accordion-header">Expérience 4</button>
+      <div class="accordion-content">
+        <p>Details sur l'expérience 4...</p>
+      </div>
+  </div>
+</section>
+
+<!-- Timeline: Formations & Certification (logo) -->
+<section id="formations">
+
+  
+</section>
+<!-- Skills Progress Bar sur deux colonnes -->
+<section id="skills">
+  <div class="container">
+    <!-- skills à gauche -->
+    <div class="row">
+      <section class="col">
+        <div class="sub-title">
+          <h2>Compétences en programmation</h2>
+        </div>
+  
+        <div class="skills-container">
+          <div class="skill">
+            <div class="subject">HTML | CSS</div>
+            <div class="progress-bar" value="95%">
+              <div class="progress-line" style="max-width: 95%"></div>
+            </div>
+          </div>
+  
+          <div class="skill">
+            <div class="subject">Javascript</div>
+            <div class="progress-bar" value="15%">
+              <div class="progress-line" style="max-width: 15%"></div>
+            </div>
+          </div>
+  
+          <div class="skill">
+            <div class="subject">Visual Studo Code & GitHub</div>
+            <div class="progress-bar" value="90%">
+              <div class="progress-line" style="max-width: 90%"></div>
+            </div>
+          </div>
+  
+          <div class="skill">
+            <div class="subject">PHP | MySQL</div>
+            <div class="progress-bar" value="25%">
+              <div class="progress-line" style="max-width: 25%"></div>
+            </div>
+          </div>
+  
+          <div class="skill">
+            <div class="subject">Python</div>
+            <div class="progress-bar" value="10%">
+              <div class="progress-line" style="max-width: 10%"></div>
+            </div>
+          </div>
+
+          <div class="skill">
+            <div class="subject">Wordpress</div>
+            <div class="progress-bar" value="55%">
+              <div class="progress-line" style="max-width: 55%"></div>
+            </div>
+          </div> 
+        </div>
+      </section>
+    <!-- skills à droite -->
+      <section class="col">
+        <div class="sub-title">
+          <h2>Compétences Créatives</h2>
+        </div>
+        <div class="skills-container">
+          <div class="skill">
+              <div class="subject">Photoshop</div>
+              <div class="progress-bar" value="85%">
+                <div class="progress-line" style="max-width: 85%"></div>
+              </div>
+            </div>
+    
+            <div class="skill">
+              <div class="subject">Illustrator</div>
+              <div class="progress-bar" value="95%">
+                <div class="progress-line" style="max-width: 95%"></div>
+              </div>
+            </div>
+    
+            <div class="skill">
+              <div class="subject">Indesign</div>
+              <div class="progress-bar" value="80%">
+                <div class="progress-line" style="max-width: 80%"></div>
+              </div>
+            </div>
+    
+            <div class="skill">
+              <div class="subject">Figma</div>
+              <div class="progress-bar" value="10%">
+                <div class="progress-line" style="max-width: 10%"></div>
+              </div>
+            </div>
+    
+            <div class="skill">
+              <div class="subject">Cinéma 4D</div>
+              <div class="progress-bar" value="25%">
+                <div class="progress-line" style="max-width: 25%"></div>
+              </div>
+            </div>
+  
+            <div class="skill">
+              <div class="subject">Silhouette Studio "Scrapbooking"</div>
+              <div class="progress-bar" value="50%">
+                <div class="progress-line" style="max-width: 50%"></div>
+              </div>
+            </div> 
+          </div>
+    </div>
+<!-- Skills : savoir-être -->
+    <div class="main-title">
+      <h2>Savoir-être</h2>
+    </div>
+
+    <div class="skills">
+      <div class="skill">
+        <div class="outer-circle" data-percentage="90">
+          <div class="inner-circle">
+            <span>100%</span>
+          </div>
+        </div>
+        <p>Autonomie</p>
+      </div>
+
+      <div class="skill">
+        <div class="outer-circle" data-percentage="75">
+          <div class="inner-circle">
+            <span>95%</span>
+          </div>
+        </div>
+        <p>Rigoureuse</p>
+      </div>
+
+      <div class="skill">
+        <div class="outer-circle" data-percentage="60">
+          <div class="inner-circle">
+            <span>100%</span>
+          </div>
+        </div>
+        <p>Organisée</p>
+      </div>
+
+      <div class="skill">
+        <div class="outer-circle" data-percentage="60">
+          <div class="inner-circle">
+            <span>90%</span>
+          </div>
+        </div>
+        <p>Curieuse</p>
+      </div>
+
+      <div class="skill">
+        <div class="outer-circle" data-percentage="60">
+          <div class="inner-circle">
+            <span>80%</span>
+          </div>
+        </div>
+        <p>Travail en équipe</p>
+      </div>
+    </div>      
+</section>
+
+<!--  Loisirs/passions -->
+<section id="centres-interet">
+ <div class="main-title">
+  <h2>Centres d'intérêt</h2>
+</div>
+  <div class="grid-container">
+  <figure class="interet">
+    <img src="/img/plongee.jpg" alt="plongee-sous-marine">
+    <figcaption>Plongée</figcaption>
+  </figure>
+
+  <figure class="interet">
+    <img src="/img/Randonnée.jpg" alt="randonnee">
+    <figcaption>Marche</figcaption>
+  </figure>
+  <figure class="interet">
+    <img src="/img/natation.jpg" alt="natation">
+    <figcaption>Natation</figcaption>
+  </figure>
+
+  <figure class="interet">
+    <img src="/img/cuisiner.jpg" alt="cuisiner">
+    <figcaption>Cuisiner</figcaption>
+  </figure>
+
+  <figure class="interet">
+    <img src="/img/jeux-video.jpg" alt="jeux-video">
+    <figcaption>Jeux Vidéo</figcaption>
+  </figure>
+
+</section>
+
+
+<!-- Footer -->
+<footer id="contact" class="footer">
+  <div class="main-title">
+  <h2>Me Contacter</h2>
+  </div>
+
+  <div class="footer-content">
+    <p>Liens utiles</p>
+    <p><i class="bx bx-map-pin fa-2x" title=""></i><br> Boulevard Lafayette<br>
+       63000 - Clermont-Ferrand
+    </p>
+    <p><i class="bx bx-mail-send fa-2x" title=""></i><a href="mailto:fanny.saez.0486@gmail.com" class="mail-link"><br> Écrivez-moi ici</a></p>
+  </div>
+</footer>
+
+<!-- Script -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script src="./script/aboutme.js"></script>
+</body>
+</html>

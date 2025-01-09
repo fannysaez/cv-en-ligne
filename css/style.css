@@ -1,0 +1,190 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+/* Body */
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+color:white;
+font-family: 'Manrope', serif;
+background-color: #2f94c4;
+background-image: url('/img/photo.png')  ;
+background-size:cover;
+background-attachment: fixed;
+overflow: hidden;
+}
+
+.transition-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #75dfff, #ce7eff);
+  transform: translateX(100%);
+  z-index: 10;
+  transition: transform 0.8s ease-in-out;
+}
+
+.animatezoom{
+animation:animatezoom 3s
+}
+/* Animation: page accueil */
+@keyframes animatezoom{
+  from{transform:scale(0)}
+  to{transform:scale(1)}}
+
+/* Milieu de page, photo de profil en flip card(recto et verso) avec changement de photo, titre en dessous, boutons lien page html et les icones sociales alignée les unes à coté des autres */
+.container {
+  text-align: center;
+  margin-top:100px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/* Flip Card */
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px;
+  margin: 0 auto 100px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #3498db;
+}
+
+.flip-card-front {
+  border:dotted #24daf2c6 2px;
+}
+
+.flip-card-back {
+  background-color: #24daf2c6;
+  border:ridge white 2px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+}
+
+/* Photo de profil */
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Bouton */
+.btn {
+padding: 10px 20px;
+background-color: transparent;
+color: white;
+border: dotted 2px;
+border-radius: 25px 0px 25px 0px;
+cursor: pointer;
+font-size: 20px;
+margin-top: 150px;
+letter-spacing: 2px;
+font-family: "IBM Plex Mono", serif;
+font-weight: lighter;
+}
+
+.btn:hover {
+  box-shadow: -2px 2px #9c2af4,
+              2px -2px #2aa7f4;  
+}
+
+/* Icônes sociales */
+.social-icons {
+  margin-top: 200px;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.social-icons i{
+  padding:10px;
+  }
+  
+.social-icons i::after{
+  position:relative;
+  content:"";
+  bottom:45px;
+  display:flex;
+  width:60px;
+  height: 60px;
+  border: 1px solid #fff;
+  border-radius: 9px;
+  transform: rotate(45deg);
+  }
+  
+  .social-icons i:hover{
+  color:#5ce4f4;
+  animation: skakeRotate 3s ease 0s 1 normal none;
+  }
+  @keyframes skakeRotate {
+      0%,
+      100% {
+        transform: rotate(0deg);
+        transform-origin: 50% 50%;
+      }
+        10% {
+        transform: rotate(8deg);
+      }
+        20%,
+      40%,
+      60% {
+        transform: rotate(-10deg);
+      }
+        30%,
+      50%,
+      70% {
+        transform: rotate(10deg);
+      }
+    
+      80% {
+        transform: rotate(-8deg);
+      }
+    
+      90% {
+        transform: rotate(8deg);
+      }
+    }
+/* Espacement entre les divs */
+.container > div {
+  margin-bottom: 50px;
+}
+
+

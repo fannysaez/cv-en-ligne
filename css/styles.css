@@ -1,0 +1,564 @@
+*{
+margin:0;
+padding: 0;
+box-sizing: border-box;
+}
+/* Global */
+body {
+font-family: 'Manrope', sans-serif;
+font-weight: lighter;
+overflow-x: hidden; /* Empêche le débordement horizontal */
+transition: background-color 0.3s, color 0.3s;
+}
+/* Mode light et dark */
+body.dark-mode footer a {
+ color:white;
+ text-decoration: none;
+}
+body.light-mode footer a {
+  color:#000000;
+  text-decoration: none;
+ }
+body.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+body.dark-mode,.accordion-item h2 p {
+  background-color: #11162f;
+  color: #ffffff;
+}
+/* Container toggle */
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+.toggle-label {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #ccc;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.toggle-label::before {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background-color: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+/* Input */
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked + .toggle-label {
+  background-color: #5ce5f4;
+}
+input[type="checkbox"]:checked + .toggle-label::before {
+  transform: translateX(30px);
+}
+/* Icon */
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.sun {
+  left: 10px;
+  opacity: 1;
+}
+.moon {
+  right: 10px;
+  opacity: 0;
+}
+
+input[type="checkbox"]:checked + .toggle-label .sun {
+  opacity: 0;
+}
+input[type="checkbox"]:checked + .toggle-label .moon {
+  opacity: 1;
+}
+/* Header styling */
+.custom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #11162f;
+  border-bottom: #5ce5f4 5px double ;
+  color: white;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/* Logo img */
+.logo-content img {
+  height: 50px;
+  } 
+/* Navigation menu */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 145px;
+}
+
+.menu .i{
+  color:white;
+}
+.menu a {
+  text-decoration: none;
+  font-weight: lighter;
+  color: white;
+  letter-spacing: 2px;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #3be2ff;
+}
+
+/* Sections */
+section {
+  padding:50px 30px;
+  /* border-bottom: 1px solid #ccc; */
+}
+
+#aboutme{
+  background-image: url('/img/back-img.png');
+  background-size: cover;
+  background-attachment: scroll;
+  text-align: center;
+  height: 600px;
+  filter: opacity(1);
+}
+.overlay{
+  background: #f5f3f300; /* Couche noire semi-transparente */
+  display: flex; /* Pour centrer le contenu */
+  justify-content: center; /* Centrage horizontal */
+  align-items: center; /* Centrage vertical */
+  color: white; /* Couleur du texte */
+  text-align: center; /* Centrer le texte */
+  padding: 80px;
+}
+.bio-content {
+  height: 350px; /* Limite la largeur du texte */
+  max-width: 900px;
+  padding: 25px;
+  padding-top:10px;
+  background: #5ce5f47c; /* Fond légèrement transparent */
+  border-radius: 20px 0px 20px 0px; /* Coins arrondis */
+  box-shadow: 0 4px 10px #000000a8; /* Ombre pour un effet 3D */
+  border:#ffffff dotted 2px;
+}
+.bio-content p{
+  font-size: 19px;
+  letter-spacing: 2px;
+  color:#000000;
+  line-height: 20px;
+  margin:25px;
+  font-family: "IBM Plex Mono", serif;
+  text-align: center;
+}
+
+.bio-content h1{
+  line-height: 45px;
+  color:#ffffff;
+  font-family: 'Manrope', serif;
+}
+.reveal-lines p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: revealLine 0.8s ease-in-out forwards;
+}
+
+.reveal-lines p:nth-child(1) {
+  animation-delay: 1s;
+}
+.reveal-lines p:nth-child(2) {
+  animation-delay: 2.5s;
+}
+.reveal-lines p:nth-child(3) {
+  animation-delay: 3s;
+}
+.reveal-lines p:nth-child(4) {
+  animation-delay: 4.5s;
+}
+.reveal-lines p:nth-child(5) {
+  animation-delay: 5s;
+}
+@keyframes revealLine {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+} 
+
+#parcours p{
+  padding-bottom: 55px;
+}
+#formations, #centres-interet{
+  background-color: #f0f0f0;
+  color:black;
+}
+
+h2 {
+font-size: 2rem;
+margin-bottom: 20px;
+text-align: center;
+
+}
+p{
+  text-align: center;
+}
+section p, section ul {
+  font-size: 1rem;
+  }
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+/* Section : Expériences: accordéon */
+.accordion {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; 
+}
+
+.accordion-item {
+  border-radius: 20px 0px 20px 0px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  color:black;
+  box-shadow: 0px 4px 15px #5ce5f4;
+  border: #5ce5f4 dotted 2px;
+}
+
+.accordion-header {
+  width: 100%;
+  background-color: #ffffffd5;
+  border: none;
+  text-align: left;
+  padding: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Manrope', serif;
+}
+
+.accordion-content p{
+  text-align: justify;
+}
+.accordion-header:hover {
+  background-color: #5ce5f4;
+}
+
+.accordion-content {
+  padding: 15px;
+  display: none;
+  background-color: #e5e5e5;
+
+}
+
+/* Timelines (Formations & Certifiantes) */
+
+
+
+/* Skills Progress Bar Tooltip  */
+
+.container{
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	padding: 10px
+}
+.container .main-title{
+	max-width: 700px;
+	margin: 15px auto;
+	text-align: center;
+}
+.container .main-title h2{
+	position: relative;
+	font-size: 35px;
+	margin-bottom: 90px;
+	display: inline-block;
+}
+.container .main-title h2::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	top: 125%;
+	left: 0;
+}
+.container .main-title h2::after{
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 3px;
+	background-color: #33bbd3;
+	top: calc(125% - 1px);
+	left: 50%;
+	transform: translateX(-50%);
+}
+.container .row{
+	width: 100%;
+	display: flex;
+	justify-content:space-between; 
+}
+.row .col{
+	flex-basis: 100%;
+	margin: 30px;
+}
+.row .sub-title h2{
+	position: relative;
+	font-size: 22px;
+  font-family: 'Manrope', serif;
+	display: inline-block;
+	margin-bottom: 70px;
+}
+.row .sub-title h2::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	top: 125%;
+	left: 0;
+}
+.row .sub-title h2::after{
+	content: '';
+	position: absolute;
+	width: 25%;
+	height: 3px;
+	top: calc(125% - 1px);
+	left: 0;
+	background-color: #33bbd3;
+}
+.subject{
+	font-size: 16px;
+	padding-bottom: 16px;
+  letter-spacing: 2px;
+  font-family: "IBM Plex Mono", serif;
+  font-weight: lighter;
+}
+.progress-bar{
+	position: relative;
+	width: 100%;
+	height: 5px;
+	background-color: #808080;
+	border-radius: 15px;
+	margin-bottom: 20px;
+}
+.progress-bar::after{
+	position: absolute;
+	content: attr(value);
+	top: -35px;
+	right: 0;
+	color: #808080;
+	font-size: 18px;
+}
+.progress-line, .tooltip{
+	position: absolute;
+	width: 0%;
+	height: 7px;
+	background-color: #33bbd3;
+	border-radius: 15px;
+	top: -1px;
+	animation: animate 1.5s cubic-bezier(1, 0.2, 0.2, 1) forwards;
+}
+@keyframes animate{
+	100%{
+		width: 100%;
+	}
+}
+
+.progress-line::after{
+	content: '';
+	position: absolute;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	top: 50%;
+	left: 100%;
+	transform: translate(-50%, -50%);
+	background-color: #13d0f1;
+}
+@media(max-width: 768px){
+	.container{
+		padding: 30px 8%;
+	}
+}
+@media(max-width: 568px){
+	.container .row{
+		flex-direction: column;
+	}
+	.container .main-title h2{
+		font-size: 36px;
+	}
+	.container .row{
+		margin-top: 30px;
+	}
+	.row .col:nth-child(2){
+		margin-top: 20px;
+	}
+}
+
+/* Tooltip */
+
+
+/* Skills Savoir-faire */
+.skills {
+  display: flex;
+  gap:15px;
+  justify-content: space-around;
+}
+.skill {
+  text-align: left;
+}
+.skill p {
+  margin-top: 15px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: "IBM Plex Mono", serif;
+  font-weight: lighter;
+  margin-bottom:25px;
+}
+.outer-circle {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  background: conic-gradient(
+    #3498db calc(var(--percentage, 0) * 1%),
+    #5ce4f4 0
+  );
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-circle {
+  width: 110px;
+  height: 110px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-circle span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #67696a;
+}
+.outer-circle::after {
+  content: attr(data-percentage) '%';
+  position: absolute;
+  font-size: 0;
+}
+
+/* Timeline Horizontal */
+
+
+/* Centres d'intérêt */
+.main-title{
+	max-width: 700px;
+	margin: 15px auto;
+	text-align: center;
+}
+.main-title h2{
+	position: relative;
+	font-size: 35px;
+	margin-bottom: 90px;
+	display: inline-block;
+}
+.main-title h2::before{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	top: 125%;
+	left: 0;
+}
+.main-title h2::after{
+	content: '';
+	position: absolute;
+	width: 50%;
+	height: 3px;
+	background-color: #33bbd3;
+	top: calc(125% - 1px);
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.grid-container {
+  margin:50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 200px;
+}
+
+
+.interet{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-top: 100px;
+  margin-bottom: 10px;
+  justify-content: space-around;
+  
+}
+.interet img{
+  width: 150px;
+  height: 150px;
+  border-radius: 9px;
+  box-shadow: 0px 0px 15px #5ce4f4;
+  transform: rotate(45deg);
+}
+figcaption{
+margin:45px;
+letter-spacing: 2px;
+font-family: "IBM Plex Mono", serif;
+font-weight: lighter;
+font-size: 18px;
+}
+
+
+/* footer */
+footer {
+  text-align: center; /* Centre le texte du footer */
+  margin:40px;
+  font-family: "IBM Plex Mono", serif;
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+
+.footer-content {
+  display: flex; /* Active la mise en page en ligne */
+  justify-content: space-around; /* Ajoute de l'espace égal entre les éléments */
+  width:100%; /* Largeur maximale pour limiter la taille */
+  max-height: 350px;
+  line-height: 35px;
+}
+
+.footer-content a{
+  text-decoration: none;
+}
+
+* Lien dans le footer */
+.mail-link {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
