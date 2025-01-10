@@ -270,13 +270,9 @@ ul {
   background-color: #e5e5e5;
 
 }
-.title {
-  font-weight: bold; /* Met le texte en gras */
-  margin-left: 650px;
-}
-.title1 {
-  font-weight: bold; /* Met le texte en gras */
-  margin-left: 720px;
+.accordion-header strong {
+  float: right; /* Aligne l'élément à droite */
+  text-align: center; /* Centre le texte à l'intérieur de l'élément */
 }
 /* Timelines (Formations & Certifiantes) */
 
