@@ -275,8 +275,78 @@ ul {
   text-align: center; /* Centre le texte à l'intérieur de l'élément */
 }
 /* Timelines (Formations & Certifiantes) */
+.timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 0 9%;
+}
 
+.timeline .timeline-row {
+  display: flex;
+  column-gap: 64px;
+  flex-wrap: wrap;
+}
 
+.timeline-row .timeline-column {
+  flex: 1 1 320px;
+}
+
+.timeline-column .title {
+  position: relative;
+  display: inline-block;
+  font-size: 28px;
+  margin: 32px 0 16px 30px;
+}
+
+.timeline-column .timeline-box {
+  position: relative;
+  border-left: 2px dotted #5ce4f4;
+}
+
+.timeline-box .timeline-content {
+  position: relative;
+  padding-left: 25px;
+}
+
+.timeline-box .timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -10.5px;
+  width: 20px;
+  height: 20px;
+  background: #5ce4f4;
+  border-radius: 50%;
+}
+
+.timeline-content .content {
+  padding: 24px;
+  border: 2px solid #5ce4f4;
+  border-radius: 8px;
+  margin-bottom: 32px;
+}
+
+.timeline-content .content .year {
+  font-size: 16px;
+  color: #5ce4f4;
+}
+
+.timeline-content .content .year i {
+  margin-right: 8px;
+}
+
+.timeline-content .content h3 {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.timeline-content .content p {
+  font-size: 16px;
+  text-align: justify;
+  margin: 15px;
+}
 
 /* Skills Progress Bar Tooltip  */
 
@@ -469,10 +539,6 @@ ul {
   position: absolute;
   font-size: 0;
 }
-
-/* Timeline Horizontal */
-
-
 /* Centres d'intérêt */
 .main-title{
 	max-width: 700px;
