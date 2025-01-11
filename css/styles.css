@@ -507,8 +507,8 @@ ul {
 .grid-container {
   margin:50px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 200px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 180px;
 }
 
 
@@ -516,9 +516,9 @@ ul {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 10px;
-  justify-content: space-around;
+  justify-content: space-between;
   
 }
 .interet img{
@@ -533,7 +533,7 @@ margin:45px;
 letter-spacing: 2px;
 font-family: "IBM Plex Mono", serif;
 font-weight: lighter;
-font-size: 18px;
+font-size: 20px;
 }
 
 
