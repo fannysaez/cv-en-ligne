@@ -135,7 +135,7 @@ section {
 }
 
 #aboutme{
-  background-image: url('/img/back-img.png');
+  background-image: url('assets/back-img.png');
   background-size: cover;
   background-attachment: scroll;
   text-align: center;
