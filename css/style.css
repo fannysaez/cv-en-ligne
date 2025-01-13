@@ -31,7 +31,7 @@ overflow: hidden;
 }
 
 .animatezoom{
-animation:animatezoom s
+animation:animatezoom 1s
 }
 /* Animation: page accueil */
 @keyframes animatezoom{
