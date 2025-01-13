@@ -12,7 +12,7 @@ align-items: center;
 color:white;
 font-family: 'Manrope', serif;
 background-color: #2f94c4;
-background-image: url('./img/back-bio.png')  ;
+background-image: url('back-bio.jpeg')  ;
 background-size:cover;
 background-attachment: fixed;
 overflow: hidden;
