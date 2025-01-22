@@ -12,7 +12,7 @@ body {
   color: white;
   font-family: "Manrope", serif;
   background-color: #2f94c4;
-  background-image: url(../assets/back-aboutme.png);
+  background-image: url(../assets/Accueil/back-aboutme.png);
   background-size: cover;
   background-attachment: fixed;
   overflow: hidden;
@@ -190,4 +190,44 @@ body {
 /* Espacement entre les divs */
 .container > div {
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 14px; /* Ajuster la taille de la police pour les petits écrans */
+  }
+
+  .container {
+    margin-top: 50px;
+    flex-direction: column; /* Empiler les éléments verticalement */
+    padding: 10px;
+  }
+
+  .flip-card {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 50px;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 8px 16px;
+    margin-top: 50px;
+  }
+
+  .social-icons {
+    margin-top: 100px;
+  }
+
+  .social-icons i {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  .social-icons i::after {
+    width: 40px;
+    height: 40px;
+  }
 }
