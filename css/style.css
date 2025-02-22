@@ -1,10 +1,11 @@
+/* Stylesheet */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body */
 body {
   display: flex;
   justify-content: center;
@@ -31,10 +32,10 @@ body {
 }
 
 .animatezoom {
-  animation: animatezoom 1s;
+  animation: animateZoom 1s;
 }
 /* Animation: page accueil */
-@keyframes animatezoom {
+@keyframes animateZoom {
   from {
     transform: scale(0);
   }
@@ -43,7 +44,6 @@ body {
   }
 }
 
-/* Milieu de page, photo de profil en flip card(recto et verso) avec changement de photo, titre en dessous, boutons lien page html et les icones sociales alignée les unes à coté des autres */
 .container {
   text-align: center;
   margin-top: 100px;
@@ -99,7 +99,6 @@ body {
   align-items: center;
   transform: rotateY(180deg);
 }
-
 /* Photo de profil */
 .profile-pic {
   width: 100%;
@@ -115,18 +114,18 @@ body {
   border: dotted 2px;
   border-radius: 25px 0px 25px 0px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 16px;
   margin-top: 150px;
   letter-spacing: 2px;
   font-family: "IBM Plex Mono", serif;
   font-weight: lighter;
+  line-height: 1.5; 
 }
 
 .btn:hover {
   box-shadow: -2px 2px #9c2af4, 2px -2px #2aa7f4;
 }
-
-/* Icônes sociales */
+/* Icones Sociales */
 .social-icons {
   margin-top: 200px;
 }
@@ -141,20 +140,20 @@ body {
 
 .social-icons i {
   padding: 10px;
+  font-size: 25px;
 }
 
 .social-icons i::after {
+  width: 60px;
+  height: 60px;
   position: relative;
   content: "";
   bottom: 45px;
   display: flex;
-  width: 60px;
-  height: 60px;
   border: 1px solid #fff;
   border-radius: 9px;
   transform: rotate(45deg);
 }
-
 .social-icons i:hover {
   color: #5ce4f4;
   animation: skakeRotate 3s ease 0s 1 normal none;
@@ -192,42 +191,41 @@ body {
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 300px) {
   body {
     justify-content: flex-start;
     align-items: flex-start;
-    font-size: 14px; /* Ajuster la taille de la police pour les petits écrans */
+    font-size: 14px; 
   }
 
   .container {
     margin-top: 50px;
-    flex-direction: column; /* Empiler les éléments verticalement */
+    flex-direction: column; 
     padding: 10px;
   }
 
   .flip-card {
     width: 150px;
     height: 150px;
-    margin: 0 auto 50px;
+    margin: 0 auto 25px;
   }
 
   .btn {
-    font-size: 16px;
-    padding: 8px 16px;
-    margin-top: 50px;
+    font-size: 12px;
+    padding: 6px 12px;
+    margin-top: 40px;
+    line-height: 2; 
   }
 
   .social-icons {
-    margin-top: 100px;
+    margin-top: 120px;
+    font-size: 13px;
+    gap: 25px;
   }
 
   .social-icons i {
-    padding: 8px;
-    font-size: 14px;
-  }
-
-  .social-icons i::after {
-    width: 40px;
-    height: 40px;
+    padding: 7px;
+    gap: 25px;
+    font-size: 13px;
   }
 }
