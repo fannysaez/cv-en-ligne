@@ -199,7 +199,7 @@ body {
   }
 
   .container {
-    margin-top: 50px;
+    margin-top: 20px;
     flex-direction: column; 
     padding: 10px;
   }
@@ -220,7 +220,7 @@ body {
   .social-icons {
     margin-top: 120px;
     font-size: 13px;
-    gap: 25px;
+    /* gap: 15px; */
   }
 
   .social-icons i {
