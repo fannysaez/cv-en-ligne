@@ -12,11 +12,10 @@ body {
   align-items: center;
   color: white;
   font-family: "Manrope", serif;
-  background-color: #2f94c4;
   background-image: url(../assets/Accueil/back-aboutme.png);
   background-size: cover;
   background-attachment: fixed;
-  overflow: hidden;
+  overflow:visible;
 }
 
 .transition-overlay {
@@ -46,7 +45,7 @@ body {
 
 .container {
   text-align: center;
-  margin-top: 100px;
+  margin-top: 80px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -225,7 +224,7 @@ body {
 
   .social-icons i {
     padding: 7px;
-    gap: 25px;
+    /* gap: 15px; */
     font-size: 13px;
   }
 }
