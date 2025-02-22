@@ -701,7 +701,9 @@
       left: 0;
       padding: 20px;
     }
-  
+    .menu a:hover {
+      color: #3be2ff;
+    }
     .menu.active {
       display: flex; 
     }
@@ -829,6 +831,9 @@
     }
     .menu a {
       font-size: 14px; 
+    }
+    .menu a:hover {
+      color: #3be2ff;
     }
   
     /* Section Bio */
