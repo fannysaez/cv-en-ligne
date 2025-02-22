@@ -9,6 +9,7 @@
 body {
   display: flex;
   justify-content: center;
+  min-height: 100vh; 
   align-items: center;
   color: white;
   font-family: "Manrope", serif;
@@ -42,23 +43,32 @@ body {
     transform: scale(1);
   }
 }
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 
 .container {
   text-align: center;
-  margin-top: 120px;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 70px; 
 }
+
 /* Flip Card */
 .flip-card {
   background-color: transparent;
   width: 200px;
   height: 200px;
   perspective: 1000px;
-  margin: 0 auto 100px;
+  margin-bottom: 60px;
 }
 
 .flip-card-inner {
@@ -114,7 +124,8 @@ body {
   border-radius: 25px 0px 25px 0px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 150px;
+  margin-top: 40px; 
+  margin-bottom: 60px; 
   letter-spacing: 2px;
   font-family: "IBM Plex Mono", serif;
   font-weight: lighter;
@@ -126,15 +137,17 @@ body {
 }
 /* Icones Sociales */
 .social-icons {
-  margin-top: 200px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .social-icons a {
-  margin: 0 10px;
+  margin: 0 15px;
   text-decoration: none;
   color: #ffffff;
   font-size: 16px;
   transition: color 0.3s;
+
 }
 
 .social-icons i {
@@ -190,41 +203,69 @@ body {
   margin-bottom: 50px;
 }
 
-@media screen and (max-width: 300px) {
+/* Styles pour les écrans mobiles standards (max-width: 768px) */
+@media screen and (max-width: 768px) {
   body {
-    justify-content: flex-start;
-    align-items: flex-start;
-    font-size: 14px; 
+    font-size: 15px;
   }
 
   .container {
-    margin-top: 50px;
-    flex-direction: column; 
+    margin-top: 40px;
+  }
+
+  .flip-card {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 40px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .social-icons {
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .social-icons i {
+    font-size: 20px;
+  }
+}
+
+/* Styles pour les très petits écrans (max-width: 300px) */
+@media screen and (max-width: 300px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    margin-top: 20px;
     padding: 10px;
   }
 
   .flip-card {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 25px;
+    margin-bottom: 20px;
   }
 
   .btn {
-    font-size: 12px;
-    padding: 6px 12px;
-    margin-top: 40px;
-    line-height: 2; 
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .social-icons {
-    margin-top: 50px;
-    font-size: 13px;
-    /* gap: 15px; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .social-icons a {
+    margin: 0 10px; /* Espacement légèrement augmenté pour les très petits écrans */
   }
 
   .social-icons i {
-    padding: 7px;
-    /* gap: 15px; */
-    font-size: 13px;
+    font-size: 18px; /* Taille des icônes réduite */
   }
 }
