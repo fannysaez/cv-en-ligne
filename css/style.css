@@ -16,7 +16,7 @@ body {
   background-image: url(../assets/Accueil/back-aboutme.png);
   background-size: cover;
   background-attachment: fixed;
-  overflow:visible;
+  overflow:hidden;
 }
 
 .transition-overlay {
