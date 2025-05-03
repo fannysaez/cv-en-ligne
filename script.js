@@ -25,4 +25,4 @@ document.getElementById('theme-toggle').addEventListener('change', function () {
     document.body.setAttribute('data-theme', this.checked ? 'dark' : 'light');
 });
 
-// Bouton au click pour afficher mes projets via GitHub
+// Bouton au click pour afficher/masquer mes projets via GitHub
