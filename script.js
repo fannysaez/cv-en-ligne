@@ -47,7 +47,7 @@ async function fetchGitHubProfile(username) {
         const profileHTML = `
             <img src="${data.avatar_url}" alt="${data.login}'s avatar" style="width: 150px; border-radius: 50%; margin-bottom: 10px;">
             <h2>${data.name || data.login}</h2>
-            <p>${data.bio || "Voici les différents projets que j'ai pu réaliser. <br>Acutellement en formation chez Simplon!"}</p><br>
+            <p>${data.bio || "Voici les différents projets que j'ai pu réaliser. <br>Actuellement en formation chez Simplon !"}</p><br>
             <p>Public Repositories: ${data.public_repos}</p>
         `;
         profileDiv.innerHTML = profileHTML;
