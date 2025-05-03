@@ -184,6 +184,7 @@ section {
   padding: 50px 30px;
 }
 
+
 #aboutme {
   background-image: url(../assets/a-propos/bio/back-bio.png);
   background-size: cover;
@@ -468,6 +469,44 @@ ul {
 .timeline-accordion-header.active::after {
   content: '-';
 }
+
+/* Projets Section */
+#projets {
+  background-color: var(--progress-bg);
+  padding: 50px 30px;
+  text-align: center;
+}
+
+#projets .project {
+  margin-bottom: 40px;
+  background-color: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border: var(--accent-color) dotted 2px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#projets .project h3 {
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+#projets .project p {
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+#projets .project a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#projets .project a:hover {
+  color: var(--accent-hover);
+}
+
+
 
 .container {
   position: relative;
