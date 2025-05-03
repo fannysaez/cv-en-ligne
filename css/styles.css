@@ -12,7 +12,8 @@
   --footer-link-color: #000000;
   --accordion-bg: #ffffffd5;
   --accordion-content-bg: #e5e5e5;
-  --accordion-text-color: #000000; /* Ajout de la couleur du texte des accordéons */
+  --accordion-text-color: #000000;
+  /* Ajout de la couleur du texte des accordéons */
   --accent-hover: #3be2ff;
 }
 
@@ -29,7 +30,8 @@
   --footer-link-color: #ffffff;
   --accordion-bg: #1a2244;
   --accordion-content-bg: #2c3454;
-  --accordion-text-color: #ffffff; /* Ajout de la couleur du texte des accordéons en mode dark */
+  --accordion-text-color: #ffffff;
+  /* Ajout de la couleur du texte des accordéons en mode dark */
   --accent-hover: #5ce5f4;
 }
 
@@ -105,11 +107,11 @@ footer a,
   z-index: 2;
 }
 
-input:checked + .slider {
+input:checked+.slider {
   background-color: var(--toggle-active);
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
   transform: translateX(30px);
 }
 
@@ -317,7 +319,8 @@ ul {
   cursor: pointer;
   font-family: 'Manrope', serif;
   letter-spacing: 1px;
-  color: var(--text-color); /* Ajout de la couleur du texte */
+  color: var(--text-color);
+  /* Ajout de la couleur du texte */
 }
 
 .accordion-content {
@@ -326,25 +329,30 @@ ul {
   display: none;
   background-color: var(--accordion-content-bg);
   letter-spacing: 2px;
-  color: var(--accordion-text-color); /* Ajout de la couleur du texte pour le contenu */
+  color: var(--accordion-text-color);
+  /* Ajout de la couleur du texte pour le contenu */
 }
 
 .accordion-content p {
   text-align: justify;
-  color: var(--accordion-text-color); /* Ajout pour assurer la cohérence des paragraphes */
+  color: var(--accordion-text-color);
+  /* Ajout pour assurer la cohérence des paragraphes */
 }
 
 .accordion-content ul {
-  color: var(--accordion-text-color); /* Ajout pour assurer la cohérence des listes */
+  color: var(--accordion-text-color);
+  /* Ajout pour assurer la cohérence des listes */
 }
 
 .accordion-content li {
-  color: var(--accordion-text-color); /* Ajout pour assurer la cohérence des éléments de liste */
+  color: var(--accordion-text-color);
+  /* Ajout pour assurer la cohérence des éléments de liste */
 }
 
 .accordion-header:hover {
   background-color: var(--accent-color);
-  color: #000000; /* Pour assurer la lisibilité sur fond accent lors du survol */
+  color: #000000;
+  /* Pour assurer la lisibilité sur fond accent lors du survol */
 }
 
 .accordion-header strong {
@@ -386,12 +394,14 @@ ul {
   justify-content: space-between;
   align-items: center;
   transition: background-color 0.3s;
-  color: var(--text-color); /* Ajout de la couleur du texte */
+  color: var(--text-color);
+  /* Ajout de la couleur du texte */
 }
 
 .timeline-accordion-header:hover {
   background-color: var(--accent-color);
-  color: #000000; /* Pour assurer la lisibilité sur fond accent lors du survol */
+  color: #000000;
+  /* Pour assurer la lisibilité sur fond accent lors du survol */
 }
 
 .timeline-accordion-header .year {
@@ -406,11 +416,13 @@ ul {
   overflow: hidden;
   transition: max-height 0.3s ease-out;
   background-color: var(--accordion-content-bg);
-  color: var(--accordion-text-color); /* Ajout de la couleur du texte */
+  color: var(--accordion-text-color);
+  /* Ajout de la couleur du texte */
 }
 
 .timeline-accordion-content.active {
-  max-height: 1000px; /* Adjust this value based on content size */
+  max-height: 1000px;
+  /* Adjust this value based on content size */
   padding: 15px;
 }
 
@@ -418,7 +430,8 @@ ul {
   font-size: 18px;
   margin: 8px 0;
   font-family: 'Manrope', serif;
-  color: var(--accordion-text-color); /* Ajout pour la cohérence des titres */
+  color: var(--accordion-text-color);
+  /* Ajout pour la cohérence des titres */
 }
 
 .timeline-accordion-content p {
@@ -427,18 +440,21 @@ ul {
   margin: 15px 0;
   font-family: 'Manrope', serif;
   letter-spacing: 1px;
-  color: var(--accordion-text-color); /* Ajout pour la cohérence des paragraphes */
+  color: var(--accordion-text-color);
+  /* Ajout pour la cohérence des paragraphes */
 }
 
 .timeline-accordion-content ul {
   padding-left: 20px;
   margin: 10px 0;
-  color: var(--accordion-text-color); /* Ajout pour la cohérence des listes */
+  color: var(--accordion-text-color);
+  /* Ajout pour la cohérence des listes */
 }
 
 .timeline-accordion-content li {
   margin-bottom: 10px;
-  color: var(--accordion-text-color); /* Ajout pour la cohérence des éléments de liste */
+  color: var(--accordion-text-color);
+  /* Ajout pour la cohérence des éléments de liste */
 }
 
 /* Plus icon */
@@ -755,6 +771,7 @@ footer {
 
 /* Écrans mobiles standard (max-width: 768px) */
 @media screen and (max-width: 768px) {
+
   /* Header */
   .custom-header {
     flex-direction: column;
@@ -898,12 +915,12 @@ footer {
   .footer-content i {
     font-size: 1.5rem;
   }
-  
+
   /* Section Timeline Accordeon */
   .formations-container {
     grid-template-columns: 1fr;
   }
-  
+
   .toggle-container {
     margin: 15px auto;
   }
@@ -911,6 +928,7 @@ footer {
 
 /* Très petits écrans (max-width: 300px) */
 @media screen and (max-width: 300px) {
+
   /* Header */
   .custom-header {
     padding: 5px;
@@ -1021,13 +1039,13 @@ footer {
   .footer-content i {
     font-size: 1.25rem;
   }
-  
+
   /* Section Timeline Accordeon */
   .timeline-accordion-header {
     font-size: 16px;
     padding: 10px;
   }
-  
+
   .timeline-accordion-content p {
     font-size: 14px;
   }

@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-document.getElementById('theme-toggle').addEventListener('change', function() {
+// JavaScript pour le changement de thème
+document.getElementById('theme-toggle').addEventListener('change', function () {
     document.body.setAttribute('data-theme', this.checked ? 'dark' : 'light');
-  });
+});
+
+// Bouton au click pour afficher mes projets via GitHub
