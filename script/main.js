@@ -1,3 +1,4 @@
+
 // script.js
 document.getElementById('transition-btn').addEventListener('click', function () {
     const overlay = document.querySelector('.transition-overlay');
