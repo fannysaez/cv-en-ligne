@@ -70,19 +70,19 @@ document.addEventListener('DOMContentLoaded', function () {
           z-index: 2;
       }
       .loader-logo-container {
-          margin-bottom: 30px;
+          margin-bottom: 1.875rem; /* 30px / 16px = 1.875rem */
           transform-origin: center;
           animation: float 3s ease-in-out infinite;
       }
       .loader-logo {
-          width: 120px;
-          height: 120px;
+          width: 7.5rem; /* 120px / 16px = 7.5rem */
+          height: 7.5rem; /* 120px / 16px = 7.5rem */
           object-fit: contain;
-          filter: drop-shadow(0 0 10px var(--accent-color));
+          filter: drop-shadow(0 0 0.625rem var(--accent-color)); /* 10px / 16px = 0.625rem */
       }
       @keyframes float {
           0% { transform: translateY(0); }
-          50% { transform: translateY(-10px); }
+          50% { transform: translateY(-0.625rem); } /* 10px / 16px = 0.625rem */
           100% { transform: translateY(0); }
       }
       .loader-progress-container {
@@ -92,8 +92,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       .progress-circle {
           position: relative;
-          width: 80px;
-          height: 80px;
+          width: 5rem; /* 80px / 16px = 5rem */
+          height: 5rem; /* 80px / 16px = 5rem */
           display: flex;
           justify-content: center;
           align-items: center;
@@ -120,13 +120,13 @@ document.addEventListener('DOMContentLoaded', function () {
       .progress-text {
           position: absolute;
           font-family: 'IBM Plex Mono', monospace;
-          font-size: 16px;
+          font-size: 1rem; /* 16px / 16px = 1rem */
           color: var(--text-color);
       }
       .loading-message {
-          margin-top: 15px;
+          margin-top: 0.9375rem; /* 15px / 16px = 0.9375rem */
           font-family: 'IBM Plex Mono', monospace;
-          font-size: 14px;
+          font-size: 0.875rem; /* 14px / 16px = 0.875rem */
           color: var(--text-color);
           letter-spacing: 1px;
           position: relative;
@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', function () {
           content: '...';
           position: absolute;
           animation: dots 1.5s infinite;
-          width: 24px;
+          width: 1.5rem; /* 24px / 16px = 1.5rem */
           text-align: left;
       }
       @keyframes dots {
@@ -163,7 +163,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function createParticles() {
       particles = [];
-      const particleCount = Math.min(Math.floor(window.innerWidth * window.innerHeight / 9000), 100);
+      // More aggressive scaling for mobile
+      const baseCount = Math.min(Math.floor(window.innerWidth * window.innerHeight / 15000), 75);
+      const particleCount = window.innerWidth <= 768 ? baseCount * 0.6 : baseCount; // Further reduce on smaller screens
+
       for (let i = 0; i < particleCount; i++) {
           particles.push({
               x: Math.random() * canvas.width,
@@ -213,10 +216,23 @@ document.addEventListener('DOMContentLoaded', function () {
   createParticles();
   animateParticles();
 
-  window.addEventListener('resize', () => {
+  function debounce(func, wait) {
+      let timeout;
+      return function() {
+          const context = this, args = arguments;
+          const later = function() {
+              timeout = null;
+              func.apply(context, args);
+          };
+          clearTimeout(timeout);
+          timeout = setTimeout(later, wait);
+      };
+  }
+
+  window.addEventListener('resize', debounce(() => {
       resizeCanvas();
       createParticles();
-  });
+  }, 200));
 
   let progress = 0;
   const progressIndicator = document.querySelector('.progress-indicator');
@@ -229,7 +245,6 @@ document.addEventListener('DOMContentLoaded', function () {
       progressText.textContent = value + '%';
   }
 
-  // Nouvel intervalle progressif
   let lastTarget = 100;
   const loadingStart = Date.now();
 
@@ -242,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (progress >= 100) {
           clearInterval(loadingInterval);
           const elapsed = Date.now() - loadingStart;
-          const wait = Math.max(0, 2000 - elapsed); // attendre au moins 2s
+          const wait = Math.max(0, 2000 - elapsed);
           setTimeout(() => {
               cancelAnimationFrame(animationFrameId);
               loaderWrapper.style.opacity = '0';
@@ -260,6 +275,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }, 200);
 
   window.addEventListener('load', () => {
-      lastTarget = 100; // activer la fin à 100%
+      lastTarget = 100;
   });
 });
