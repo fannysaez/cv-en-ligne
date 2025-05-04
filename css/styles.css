@@ -360,6 +360,12 @@ ul {
   float: right;
   text-align: center;
 }
+.date-right {
+  text-align: right;
+  font-style: italic;
+  color: #29b6f3;
+  font-size:12px;
+}
 
 /* Formations Section - Accordion Style */
 .formations-container {
