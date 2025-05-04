@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Définition directe des couleurs au lieu d'utiliser des variables CSS
+  const accentColor = '#24daf2';
+  const backgroundColor = '#000000';
+  const textColor = '#ffffff';
+  const progressBgColor = '#333333';
+
   const loaderWrapper = document.createElement('div');
   loaderWrapper.className = 'particles-loader';
 
@@ -47,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: var(--background-color);
+          background-color: ${backgroundColor};
           z-index: 9999;
           display: flex;
           justify-content: center;
@@ -70,19 +76,19 @@ document.addEventListener('DOMContentLoaded', function () {
           z-index: 2;
       }
       .loader-logo-container {
-          margin-bottom: 1.875rem; /* 30px / 16px = 1.875rem */
+          margin-bottom: 30px;
           transform-origin: center;
           animation: float 3s ease-in-out infinite;
       }
       .loader-logo {
-          width: 7.5rem; /* 120px / 16px = 7.5rem */
-          height: 7.5rem; /* 120px / 16px = 7.5rem */
+          width: 120px;
+          height: 120px;
           object-fit: contain;
-          filter: drop-shadow(0 0 0.625rem var(--accent-color)); /* 10px / 16px = 0.625rem */
+          filter: drop-shadow(0 0 10px ${accentColor});
       }
       @keyframes float {
           0% { transform: translateY(0); }
-          50% { transform: translateY(-0.625rem); } /* 10px / 16px = 0.625rem */
+          50% { transform: translateY(-10px); }
           100% { transform: translateY(0); }
       }
       .loader-progress-container {
@@ -92,8 +98,8 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       .progress-circle {
           position: relative;
-          width: 5rem; /* 80px / 16px = 5rem */
-          height: 5rem; /* 80px / 16px = 5rem */
+          width: 80px;
+          height: 80px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -105,12 +111,12 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       .progress-background {
           fill: none;
-          stroke: var(--progress-bg);
+          stroke: ${progressBgColor};
           stroke-width: 5;
       }
       .progress-indicator {
           fill: none;
-          stroke: var(--accent-color);
+          stroke: ${accentColor};
           stroke-width: 5;
           stroke-dasharray: 283;
           stroke-dashoffset: 283;
@@ -120,14 +126,14 @@ document.addEventListener('DOMContentLoaded', function () {
       .progress-text {
           position: absolute;
           font-family: 'IBM Plex Mono', monospace;
-          font-size: 1rem; /* 16px / 16px = 1rem */
-          color: var(--text-color);
+          font-size: 16px;
+          color: ${textColor};
       }
       .loading-message {
-          margin-top: 0.9375rem; /* 15px / 16px = 0.9375rem */
+          margin-top: 15px;
           font-family: 'IBM Plex Mono', monospace;
-          font-size: 0.875rem; /* 14px / 16px = 0.875rem */
-          color: var(--text-color);
+          font-size: 14px;
+          color: ${textColor};
           letter-spacing: 1px;
           position: relative;
       }
@@ -135,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
           content: '...';
           position: absolute;
           animation: dots 1.5s infinite;
-          width: 1.5rem; /* 24px / 16px = 1.5rem */
+          width: 24px;
           text-align: left;
       }
       @keyframes dots {
@@ -148,6 +154,42 @@ document.addEventListener('DOMContentLoaded', function () {
       @keyframes zoomIn {
           from { transform: scale(0.9); opacity: 0; }
           to { transform: scale(1); opacity: 1; }
+      }
+      
+      /* Styles pour les mobiles */
+      @media screen and (max-width: 768px) {
+          .loader-logo {
+              width: 80px;
+              height: 80px;
+          }
+          .progress-circle {
+              width: 60px;
+              height: 60px;
+          }
+          .progress-text {
+              font-size: 14px;
+          }
+          .loading-message {
+              font-size: 12px;
+          }
+      }
+      
+      /* Très petits écrans */
+      @media screen and (max-width: 300px) {
+          .loader-logo {
+              width: 60px;
+              height: 60px;
+          }
+          .progress-circle {
+              width: 50px;
+              height: 50px;
+          }
+          .progress-text {
+              font-size: 12px;
+          }
+          .loading-message {
+              font-size: 10px;
+          }
       }
   `;
   document.head.appendChild(style);
@@ -163,16 +205,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function createParticles() {
       particles = [];
-      // More aggressive scaling for mobile
-      const baseCount = Math.min(Math.floor(window.innerWidth * window.innerHeight / 15000), 75);
-      const particleCount = window.innerWidth <= 768 ? baseCount * 0.6 : baseCount; // Further reduce on smaller screens
-
+      // Réduire le nombre de particules sur mobile
+      const particleCount = Math.min(
+          Math.floor(window.innerWidth * window.innerHeight / (window.innerWidth < 768 ? 18000 : 9000)), 
+          window.innerWidth < 768 ? 50 : 100
+      );
+      
       for (let i = 0; i < particleCount; i++) {
           particles.push({
               x: Math.random() * canvas.width,
               y: Math.random() * canvas.height,
               radius: Math.random() * 2 + 1,
-              color: getComputedStyle(document.documentElement).getPropertyValue('--accent-color') || '#5ce5f4',
+              color: accentColor,
               speed: Math.random() * 0.5 + 0.2,
               direction: Math.random() * Math.PI * 2,
               opacity: Math.random() * 0.5 + 0.3
@@ -182,6 +226,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function animateParticles() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Optimisation pour mobile - réduire la distance de connexion
+      const connectionDistance = window.innerWidth < 768 ? 60 : 100;
+      
       particles.forEach(particle => {
           particle.x += Math.cos(particle.direction) * particle.speed;
           particle.y += Math.sin(particle.direction) * particle.speed;
@@ -195,16 +243,20 @@ document.addEventListener('DOMContentLoaded', function () {
           ctx.globalAlpha = particle.opacity;
           ctx.fill();
 
+          // Optimisation pour mobile - limiter le nombre de connexions
+          if (window.innerWidth < 768) return; // Pas de connexions sur mobile pour optimiser
+          
           particles.forEach(other => {
+              if (particle === other) return;
               const dx = particle.x - other.x;
               const dy = particle.y - other.y;
               const dist = Math.sqrt(dx * dx + dy * dy);
-              if (dist < 100) {
+              if (dist < connectionDistance) {
                   ctx.beginPath();
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(other.x, other.y);
                   ctx.strokeStyle = particle.color;
-                  ctx.globalAlpha = (1 - dist / 100) * 0.2;
+                  ctx.globalAlpha = (1 - dist / connectionDistance) * 0.2;
                   ctx.stroke();
               }
           });
@@ -216,23 +268,10 @@ document.addEventListener('DOMContentLoaded', function () {
   createParticles();
   animateParticles();
 
-  function debounce(func, wait) {
-      let timeout;
-      return function() {
-          const context = this, args = arguments;
-          const later = function() {
-              timeout = null;
-              func.apply(context, args);
-          };
-          clearTimeout(timeout);
-          timeout = setTimeout(later, wait);
-      };
-  }
-
-  window.addEventListener('resize', debounce(() => {
+  window.addEventListener('resize', () => {
       resizeCanvas();
       createParticles();
-  }, 200));
+  });
 
   let progress = 0;
   const progressIndicator = document.querySelector('.progress-indicator');
@@ -245,6 +284,7 @@ document.addEventListener('DOMContentLoaded', function () {
       progressText.textContent = value + '%';
   }
 
+  // Nouvel intervalle progressif
   let lastTarget = 100;
   const loadingStart = Date.now();
 
@@ -257,7 +297,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (progress >= 100) {
           clearInterval(loadingInterval);
           const elapsed = Date.now() - loadingStart;
-          const wait = Math.max(0, 2000 - elapsed);
+          const wait = Math.max(0, 2000 - elapsed); // attendre au moins 2s
           setTimeout(() => {
               cancelAnimationFrame(animationFrameId);
               loaderWrapper.style.opacity = '0';
@@ -275,6 +315,6 @@ document.addEventListener('DOMContentLoaded', function () {
   }, 200);
 
   window.addEventListener('load', () => {
-      lastTarget = 100;
+      lastTarget = 100; // activer la fin à 100%
   });
 });
