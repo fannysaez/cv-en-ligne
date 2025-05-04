@@ -1,5 +1,4 @@
-/* Stylesheet */
-
+/* ----------- Reset et base ----------- */
 * {
   margin: 0;
   padding: 0;
@@ -9,16 +8,84 @@
 body {
   display: flex;
   justify-content: center;
-  min-height: 100vh; 
+  min-height: 100vh;
   align-items: center;
   color: white;
   font-family: "Manrope", serif;
   background-image: url(../assets/Accueil/back-aboutme.png);
   background-size: cover;
   background-attachment: fixed;
-  overflow:hidden;
+  overflow: hidden;
 }
 
+/* ----------- Loader styles ----------- */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #000000, #1a1a1a);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.loader-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.loader-container p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border: 6px solid #24daf2;
+  border-top: 6px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 40px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.enter-button {
+  padding: 12px 28px;
+  background-color: #24daf2;
+  color: black;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.enter-button:hover {
+  background-color: #1aa5b6;
+  transform: scale(1.05);
+}
+
+/* ----------- Page Accueil Animation Zoom ----------- */
 .transition-overlay {
   position: fixed;
   top: 0;
@@ -34,7 +101,7 @@ body {
 .animatezoom {
   animation: animateZoom 1s;
 }
-/* Animation: page accueil */
+
 @keyframes animateZoom {
   from {
     transform: scale(0);
@@ -43,6 +110,8 @@ body {
     transform: scale(1);
   }
 }
+
+/* ----------- Contenu principal ----------- */
 .main {
   display: flex;
   justify-content: center;
@@ -59,7 +128,7 @@ body {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  gap: 70px; 
+  gap: 70px;
 }
 
 /* Flip Card */
@@ -108,7 +177,7 @@ body {
   align-items: center;
   transform: rotateY(180deg);
 }
-/* Photo de profil */
+
 .profile-pic {
   width: 100%;
   height: 100%;
@@ -124,17 +193,18 @@ body {
   border-radius: 25px 0px 25px 0px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 40px; 
-  margin-bottom: 60px; 
+  margin-top: 40px;
+  margin-bottom: 60px;
   letter-spacing: 2px;
   font-family: "IBM Plex Mono", serif;
   font-weight: lighter;
-  line-height: 1.5; 
+  line-height: 1.5;
 }
 
 .btn:hover {
   box-shadow: -2px 2px #9c2af4, 2px -2px #2aa7f4;
 }
+
 /* Icones Sociales */
 .social-icons {
   margin-top: 40px;
@@ -147,7 +217,6 @@ body {
   color: #ffffff;
   font-size: 16px;
   transition: color 0.3s;
-
 }
 
 .social-icons i {
@@ -166,44 +235,42 @@ body {
   border-radius: 9px;
   transform: rotate(45deg);
 }
+
 .social-icons i:hover {
   color: #5ce4f4;
   animation: skakeRotate 3s ease 0s 1 normal none;
 }
+
 @keyframes skakeRotate {
-  0%,
-  100% {
+  0%, 100% {
     transform: rotate(0deg);
     transform-origin: 50% 50%;
   }
   10% {
     transform: rotate(8deg);
   }
-  20%,
-  40%,
-  60% {
+  20%, 40%, 60% {
     transform: rotate(-10deg);
   }
-  30%,
-  50%,
-  70% {
+  30%, 50%, 70% {
     transform: rotate(10deg);
   }
-
   80% {
     transform: rotate(-8deg);
   }
-
   90% {
     transform: rotate(8deg);
   }
 }
-/* Espacement entre les divs */
+
+/* Espacement */
 .container > div {
   margin-bottom: 50px;
 }
 
-/* Styles pour les écrans mobiles standards (max-width: 768px) */
+/* ----------- Media Queries ----------- */
+
+/* Mobiles standards */
 @media screen and (max-width: 768px) {
   body {
     font-size: 15px;
@@ -234,9 +301,29 @@ body {
   .social-icons i {
     font-size: 20px;
   }
+
+  /* Loader responsive */
+  .loader-container h1 {
+    font-size: 2rem;
+  }
+
+  .loader-container p {
+    font-size: 1rem;
+  }
+
+  .circle {
+    width: 70px;
+    height: 70px;
+    border-width: 4px;
+  }
+
+  .enter-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
 }
 
-/* Styles pour les très petits écrans (max-width: 300px) */
+/* Très petits écrans */
 @media screen and (max-width: 300px) {
   body {
     font-size: 14px;
@@ -262,10 +349,30 @@ body {
   }
 
   .social-icons a {
-    margin: 0 10px; /* Espacement légèrement augmenté pour les très petits écrans */
+    margin: 0 10px;
   }
 
   .social-icons i {
-    font-size: 18px; /* Taille des icônes réduite */
+    font-size: 18px;
+  }
+
+  /* Loader ultra responsive */
+  .loader-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .loader-container p {
+    font-size: 0.9rem;
+  }
+
+  .circle {
+    width: 50px;
+    height: 50px;
+    border-width: 3px;
+  }
+
+  .enter-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
 }
