@@ -471,13 +471,13 @@ ul {
 }
 
 /* Projets Section */
-#projets {
+.projets {
   background-color: var(--progress-bg);
   padding: 50px 30px;
   text-align: center;
 }
 
-#projets .project {
+.projets .project {
   margin-bottom: 40px;
   background-color: var(--card-bg);
   box-shadow: var(--card-shadow);
@@ -486,23 +486,23 @@ ul {
   border-radius: 10px;
 }
 
-#projets .project h3 {
+.projets .project h3 {
   font-size: 24px;
   color: var(--text-color);
 }
 
-#projets .project p {
+.projets .project p {
   font-size: 16px;
   color: var(--text-color);
 }
 
-#projets .project a {
+.projets .project a {
   color: var(--accent-color);
   text-decoration: none;
   font-weight: bold;
 }
 
-#projets .project a:hover {
+.projets .project a:hover {
   color: var(--accent-hover);
 }
 
