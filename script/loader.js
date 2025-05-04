@@ -244,7 +244,7 @@ document.addEventListener('DOMContentLoaded', function () {
           ctx.fill();
 
           // Optimisation pour mobile - limiter le nombre de connexions
-          if (window.innerWidth < 768) return; // Pas de connexions sur mobile pour optimiser
+          if (window.innerWidth < 320) return; // Pas de connexions sur mobile pour optimiser
           
           particles.forEach(other => {
               if (particle === other) return;
