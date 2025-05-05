@@ -645,6 +645,7 @@ ul {
   background-color: var(--accent-color);
 }
 
+
 /* Skills Savoir-faire */
 .skills {
   display: flex;
@@ -671,12 +672,12 @@ ul {
   position: relative;
   width: 120px;
   height: 120px;
-  background: conic-gradient(var(--accent-color) calc(var(--percentage, 0) * 1%),
-      var(--progress-bg) 0);
+  background: conic-gradient(var(--accent-color) 0% 0%, var(--progress-bg) 0% 100%);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background 2s ease-out;
 }
 
 .inner-circle {
@@ -700,6 +701,7 @@ ul {
   position: absolute;
   font-size: 0;
 }
+
 
 /* Centres d'intérêt */
 .main-title {
