@@ -647,60 +647,64 @@ ul {
 
 
 /* Skills Savoir-faire */
-.skills {
-  display: flex;
-  gap: 15px;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-top: 40px;
-}
+  .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-.skill {
-  text-align: center;
-}
+    .skill p {
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+    }
 
-.skill p {
-  margin-top: 15px;
-  font-size: 18px;
-  letter-spacing: 2px;
-  font-family: "IBM Plex Mono", serif;
-  font-weight: lighter;
-  margin-bottom: 25px;
-}
+    .outer-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+        -6px -6px 10px -1px rgba(255, 255, 255, 0.4);
+      background: conic-gradient(var(--accent-color) 0deg, var(--progress-bg) 0deg);
+      transition: background 0.5s ease;
+    }
 
-.outer-circle {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  background: conic-gradient(var(--accent-color) 0% 0%, var(--progress-bg) 0% 100%);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background 2s ease-out;
-}
+    .inner-circle {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--card-bg);
+      box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.5);
+    }
 
-.inner-circle {
-  width: 110px;
-  height: 110px;
-  background-color: var(--background-color);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+    .inner-circle span {
+      font-weight: 600;
+      font-size: 24px;
+      color: var(--text-color);
+    }
 
-.inner-circle span {
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--text-color);
-}
-
-.outer-circle::after {
-  content: attr(data-percentage) '%';
-  position: absolute;
-  font-size: 0;
-}
+    /* Styles pour une démo dans la page */
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      padding: 10px;
+      background: var(--toggle-bg);
+      border-radius: 20px;
+      color: var(--text-color);
+    }
 
 
 /* Centres d'intérêt */
