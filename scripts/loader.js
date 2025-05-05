@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const loadingMessage = document.createElement('div');
   loadingMessage.className = 'loading-message';
-  loadingMessage.textContent = 'Chargement du cv en ligne';
+  loadingMessage.textContent = 'Chargement en cours ';
 
   progressContainer.appendChild(progressCircle);
   progressContainer.appendChild(loadingMessage);
