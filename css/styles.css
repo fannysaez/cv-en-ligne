@@ -294,7 +294,7 @@ p {
 
 section p,
 section ul {
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 
 ul {
@@ -305,13 +305,13 @@ ul {
 /* Section : Expériences: accordéon */
 .accordion {
   width: 100%;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .accordion-item {
-  border-radius: 20px 0px 20px 0px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
   overflow: hidden;
   color: var(--text-color);
   box-shadow: var(--card-shadow);
@@ -323,25 +323,35 @@ ul {
   background-color: var(--accordion-bg);
   border: none;
   text-align: left;
-  padding: 15px;
-  font-size: 18px;
+  padding: 15px 40px 15px 15px; /* Espace pour l'icône */
+  font-size: 12px;
   cursor: pointer;
   font-family: "Manrope", serif;
   letter-spacing: 1px;
   color: var(--text-color);
-  /* Ajout de la couleur du texte */
+  position: relative;
 }
 
 .accordion-content {
   font-family: "Manrope", serif;
-  padding: 15px;
+  padding: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
   display: none;
   background-color: var(--accordion-content-bg);
   letter-spacing: 2px;
   color: var(--accordion-text-color);
   /* Ajout de la couleur du texte pour le contenu */
 }
-
+.accordion-header[aria-expanded="true"] + .accordion-content {
+  padding: 15px;
+  max-height: 500px; /* Ajustez selon vos besoins */
+  display:block;
+}
+.accordion-header[aria-expanded="true"] .accordion-icon {
+  transform: translateY(-50%) rotate(45deg);
+}
 .accordion-content p {
   text-align: justify;
   color: var(--accordion-text-color);
@@ -357,16 +367,25 @@ ul {
   color: var(--accordion-text-color);
   /* Ajout pour assurer la cohérence des éléments de liste */
 }
-
+.accordion-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
 .accordion-header:hover {
   background-color: var(--accent-color);
   color: #000000;
-  /* Pour assurer la lisibilité sur fond accent lors du survol */
-}
+  float: right;
+  text-align: center;
+  margin-right: 20px; /* Pour laisser de la place à l'icône */}
 
 .accordion-header strong {
   float: right;
   text-align: center;
+  font-size:10px;
 }
 .date-right {
   text-align: right;
@@ -1202,6 +1221,19 @@ footer {
   
   .project-card p {
     font-size: 0.9rem; /* Taille de texte légèrement réduite */
+  }
+  .accordion-header {
+    font-size: 12px;
+    padding: 12px 40px 12px 12px; /* Plus d'espace à droite pour l'icône */
+  }
+  
+  .accordion-header strong {
+    float: none;
+    display: block;
+    width: 100%;
+    text-align: left;
+    margin-top: 5px;
+    margin-right: 0;
   }
 }
 
