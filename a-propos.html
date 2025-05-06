@@ -424,10 +424,46 @@
             <span>CSS</span>
             <span>JavaScript</span>
           </div>
-          <a href="https://fannysaez.github.io/my_portfolio/" class="btn" target="_blank">Voir le site</a>
+          <div class="buttons-container">
+            <a href="https://fannysaez.github.io/my_portfolio/" class="btn" target="_blank">Voir le site</a>
+            <button class="btn popup-trigger" data-project="portfolio">Plus d'infos</button>
+          </div>
         </div>
       </div>
-
+      
+      <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
+      <div id="popup-portfolio" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Portfolio - Détails du projet</h2>
+          <div class="modal-img">
+            <img src="./assets/a-propos/realisations/Mon Portfolio.png" alt="Portfolio">
+          </div>
+          <div class="modal-description">
+            <h3>Description</h3>
+            <p>
+              J'ai créer mon "premier portfolio" en juillet 2024 en seulement 2 semaines, l'idée m'est venu en parcourant
+            le site web "Le Reacteur" et j'avoue que je suis partie d'une des formations gratuites en HTML, CSS et JavaScript.
+            Depuis, je le mets à jour pour chacune des technologies et des projets lors de ma formation chez Simplon à Clermont-Ferrand !
+            </p>
+            <h3>Technologies utilisées</h3>
+            <div class="flex">
+              <span>HTML,</span>
+              <span>CSS et</span>
+              <span>JavaScript</span>
+            </div>
+            
+            <h3>Fonctionnalités</h3>
+            <ul>
+              <li>Présentation des projets</li>
+              <li>Design responsive</li>
+              <li>Apprendre de nouvelles technologies</li>
+            </ul>
+            
+            <a href="https://fannysaez.github.io/my_portfolio/" class="btn" target="_blank">Voir le site</a>
+          </div>
+        </div>
+      </div>
       <!-- Projet 2 -->
       <!--<div class="project-card animate-fadeInUp">
         <div class="relative">
@@ -810,6 +846,7 @@
 <script src="./scripts/a-propos/button-github.js"></script>
 <script src="./scripts/slideLeftDegradeColors.js"></script>
 <script src="./scripts/a-propos/skills-animation.js"></script>
+<script src="./scripts/a-propos/popup.js"></script>
 
 
 </html>
