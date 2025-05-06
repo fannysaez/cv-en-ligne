@@ -281,7 +281,7 @@ h2 {
 }
 
 p {
-  text-align: center;
+  text-align: justify;
 }
 
 section p,
@@ -477,6 +477,9 @@ ul {
 }
 
 /* Projets Section */
+.card p{
+  text-align: center;
+}
 .projets {
   background-color: var(--progress-bg);
   padding: 50px 30px;
@@ -705,6 +708,8 @@ ul {
 #realisations .text-center a:hover::after {
   height: 100%;
 }
+
+/*  */
 .container {
   position: relative;
   width: 100%;
@@ -961,7 +966,8 @@ figcaption {
   letter-spacing: 2px;
   font-family: "IBM Plex Mono", serif;
   font-weight: lighter;
-  font-size: 20px;
+  font-size: 10px;
+  text-align: center;
 }
 
 /* Styles de base pour le footer */
@@ -983,6 +989,7 @@ footer {
 
 .footer-content p {
   margin: 10px 0;
+  text-align: center;
 }
 
 .footer-content i {
@@ -1163,6 +1170,31 @@ footer {
   .toggle-container {
     margin: 15px auto;
   }
+  #realisations .grid {
+    grid-template-columns: 1fr; /* Passe à une seule colonne */
+    gap: 2rem;
+  }
+  
+  .project-card {
+    max-width: 500px; /* Largeur maximale pour une meilleure lisibilité */
+    margin: 0 auto; /* Centre les cartes */
+  }
+  
+  .project-card:hover {
+    transform: translateY(-3px); /* Effet plus léger sur mobile */
+  }
+  
+  .project-card .relative {
+    height: 180px; /* Ajustement de la hauteur des images */
+  }
+  
+  .project-card h3 {
+    font-size: 1.2rem; /* Taille de titre légèrement réduite */
+  }
+  
+  .project-card p {
+    font-size: 0.9rem; /* Taille de texte légèrement réduite */
+  }
 }
 
 /* Très petits écrans (max-width: 300px) */
@@ -1286,5 +1318,31 @@ footer {
 
   .timeline-accordion-content p {
     font-size: 14px;
+  }
+
+  #realisations h2 {
+    font-size: 1.3rem;
+  }
+  
+  .project-card .relative {
+    height: 140px;
+  }
+  
+  .project-card h3 {
+    font-size: 1rem;
+  }
+  
+  .project-card p {
+    font-size: 0.8rem;
+  }
+  
+  .project-card .flex span {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.4rem;
+  }
+  
+  .btn, .project-card a.btn {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.85rem;
   }
 }
