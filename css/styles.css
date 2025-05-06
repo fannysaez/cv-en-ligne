@@ -39,12 +39,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s, box-shadow 0.3s;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s,
+    box-shadow 0.3s;
 }
 
 /* Global */
 body {
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   font-weight: lighter;
   overflow-x: hidden;
   background-color: var(--background-color);
@@ -86,7 +87,7 @@ footer a,
   right: 0;
   bottom: 0;
   background-color: var(--toggle-bg);
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 34px;
   display: flex;
   align-items: center;
@@ -102,16 +103,16 @@ footer a,
   left: 3px;
   bottom: 3px;
   background-color: white;
-  transition: .4s;
+  transition: 0.4s;
   border-radius: 50%;
   z-index: 2;
 }
 
-input:checked+.slider {
+input:checked + .slider {
   background-color: var(--toggle-active);
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
   transform: translateX(30px);
 }
 
@@ -184,7 +185,6 @@ section {
   padding: 50px 30px;
 }
 
-
 #aboutme {
   background-image: url(../assets/a-propos/bio/back-bio.png);
   background-size: cover;
@@ -228,7 +228,7 @@ section {
 .bio-content h1 {
   line-height: 45px;
   color: #ffffff;
-  font-family: 'Manrope', serif;
+  font-family: "Manrope", serif;
 }
 
 .reveal-lines p {
@@ -242,7 +242,7 @@ section {
 }
 
 .reveal-lines p:nth-child(2) {
-  animation-delay: 1.0s;
+  animation-delay: 1s;
 }
 
 .reveal-lines p:nth-child(3) {
@@ -318,14 +318,14 @@ ul {
   padding: 15px;
   font-size: 18px;
   cursor: pointer;
-  font-family: 'Manrope', serif;
+  font-family: "Manrope", serif;
   letter-spacing: 1px;
   color: var(--text-color);
   /* Ajout de la couleur du texte */
 }
 
 .accordion-content {
-  font-family: 'Manrope', serif;
+  font-family: "Manrope", serif;
   padding: 15px;
   display: none;
   background-color: var(--accordion-content-bg);
@@ -364,7 +364,7 @@ ul {
   text-align: right;
   font-style: italic;
   color: #29b6f3;
-  font-size:12px;
+  font-size: 12px;
 }
 
 /* Formations Section - Accordion Style */
@@ -395,7 +395,7 @@ ul {
   padding: 15px;
   font-size: 18px;
   cursor: pointer;
-  font-family: 'Manrope', serif;
+  font-family: "Manrope", serif;
   letter-spacing: 1px;
   display: flex;
   justify-content: space-between;
@@ -436,7 +436,7 @@ ul {
 .timeline-accordion-content h3 {
   font-size: 18px;
   margin: 8px 0;
-  font-family: 'Manrope', serif;
+  font-family: "Manrope", serif;
   color: var(--accordion-text-color);
   /* Ajout pour la cohérence des titres */
 }
@@ -445,7 +445,7 @@ ul {
   font-size: 16px;
   text-align: justify;
   margin: 15px 0;
-  font-family: 'Manrope', serif;
+  font-family: "Manrope", serif;
   letter-spacing: 1px;
   color: var(--accordion-text-color);
   /* Ajout pour la cohérence des paragraphes */
@@ -466,14 +466,14 @@ ul {
 
 /* Plus icon */
 .timeline-accordion-header::after {
-  content: '+';
+  content: "+";
   font-size: 24px;
   font-weight: bold;
   transition: transform 0.3s;
 }
 
 .timeline-accordion-header.active::after {
-  content: '-';
+  content: "-";
 }
 
 /* Projets Section */
@@ -512,11 +512,204 @@ ul {
   color: var(--accent-hover);
 }
 
+/* Styles pour la section réalisations */
+#realisations {
+  background-color: var(--background-color);
+  transition: background-color 0.3s ease;
+}
+
+/* Titre de la section avec animation subtile */
+#realisations h2 {
+  color: var(--text-color);
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+#realisations h2 span {
+  transition: background-color 0.3s ease;
+}
+/* Grille de deux colonnes pour les projets */
+#realisations .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Effet de survol sur les cartes de projet */
+.project-card {
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s ease;
+}
+.project-card h3 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.project-card p {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.95rem;
+}
+
+.project-card .flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  justify-content: center;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(92, 229, 244, 0.3);
+}
+
+/* Style des badges de technologie */
+.project-card .flex span {
+  background-color: rgba(
+    92,
+    229,
+    244,
+    0.15
+  ); /* Basé sur votre couleur d'accent */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+[data-theme="dark"] .project-card .flex span {
+  background-color: rgba(59, 226, 255, 0.2); /* Version sombre */
+}
+
+/* Style des boutons */
+.project-card a,
+#realisations a {
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+.project-card a:hover,
+#realisations a:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(92, 229, 244, 0.3);
+} /* Style pour les boutons généraux et le bouton "Voir plus de projets" */
+.btn,
+.project-card a.btn,
+.project-card a,
+#realisations .text-center a {
+  display: block;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent-color);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  margin: 0 auto; /* Centre le bouton horizontalement */
+  text-align: center;
+  transition: all 0.3s ease;
+} /* Animation des images au survol */
+
+/* Style de base pour l’image dans une carte projet */
+.project-card .relative {
+  height: 200px; /* fixe une hauteur pour harmoniser toutes les cartes */
+  overflow: hidden;
+  border-radius: 8px; /* optionnel pour arrondir les coins */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* ombrage doux */
+}
+
+.project-card .relative img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block; /* évite les espaces blancs sous l'image */
+  border-radius: 8px;
+}
+.project-card .relative img {
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .relative img {
+  transform: scale(1.05);
+}
+
+/* Badge de technologie */
+.project-card .absolute {
+  transition: background-color 0.3s ease;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+
+  .project-card:hover {
+    transform: translateY(-3px); /* Effet plus léger sur mobile */
+  }
+}
+
+/* Animation pour l'apparition des projets (à utiliser avec JavaScript) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Délai d'animation pour chaque carte */
+.project-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.project-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.project-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.project-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.project-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.project-card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* Style pour le bouton "Voir plus de projets" */
+#realisations .text-center a {
+  position: relative;
+  overflow: hidden;
+}
+
+#realisations .text-center a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: height 0.3s ease;
+}
+
+#realisations .text-center a:hover::after {
+  height: 100%;
+}
 .container {
   position: relative;
   width: 100%;
   min-height: 100%;
-  padding: 10px
+  padding: 10px;
 }
 
 .container .main-title {
@@ -533,7 +726,7 @@ ul {
 }
 
 .container .main-title h2::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 1px;
@@ -542,7 +735,7 @@ ul {
 }
 
 .container .main-title h2::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 50%;
   height: 3px;
@@ -566,13 +759,13 @@ ul {
 .row .sub-title h2 {
   position: relative;
   font-size: 22px;
-  font-family: 'Manrope', serif;
+  font-family: "Manrope", serif;
   display: inline-block;
   margin-bottom: 70px;
 }
 
 .row .sub-title h2::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 1px;
@@ -581,7 +774,7 @@ ul {
 }
 
 .row .sub-title h2::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 25%;
   height: 3px;
@@ -634,7 +827,7 @@ ul {
 }
 
 .progress-line::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 13px;
   height: 13px;
@@ -645,67 +838,65 @@ ul {
   background-color: var(--accent-color);
 }
 
-
 /* Skills Savoir-faire */
-  .skills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 100px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    .skill p {
-      margin-top: 15px;
-      font-size: 16px;
-      font-weight: 600;
-      text-align: center;
-    }
+.skill p {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
 
-    .outer-circle {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-        -6px -6px 10px -1px rgba(255, 255, 255, 0.4);
-      background: conic-gradient(var(--accent-color) 0deg, var(--progress-bg) 0deg);
-      transition: background 0.5s ease;
-    }
+.outer-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
+    -6px -6px 10px -1px rgba(255, 255, 255, 0.4);
+  background: conic-gradient(var(--accent-color) 0deg, var(--progress-bg) 0deg);
+  transition: background 0.5s ease;
+}
 
-    .inner-circle {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--card-bg);
-      box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.5);
-    }
+.inner-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--card-bg);
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(255, 255, 255, 0.5);
+}
 
-    .inner-circle span {
-      font-weight: 600;
-      font-size: 24px;
-      color: var(--text-color);
-    }
+.inner-circle span {
+  font-weight: 600;
+  font-size: 24px;
+  color: var(--text-color);
+}
 
-    /* Styles pour une démo dans la page */
-    .theme-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      cursor: pointer;
-      padding: 10px;
-      background: var(--toggle-bg);
-      border-radius: 20px;
-      color: var(--text-color);
-    }
-
+/* Styles pour une démo dans la page */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  padding: 10px;
+  background: var(--toggle-bg);
+  border-radius: 20px;
+  color: var(--text-color);
+}
 
 /* Centres d'intérêt */
 .main-title {
@@ -722,7 +913,7 @@ ul {
 }
 
 .main-title h2::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 1px;
@@ -731,7 +922,7 @@ ul {
 }
 
 .main-title h2::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 50%;
   height: 3px;
@@ -820,7 +1011,6 @@ footer {
 
 /* Écrans mobiles standard (max-width: 768px) */
 @media screen and (max-width: 768px) {
-
   /* Header */
   .custom-header {
     flex-direction: column;
@@ -977,7 +1167,6 @@ footer {
 
 /* Très petits écrans (max-width: 300px) */
 @media screen and (max-width: 300px) {
-
   /* Header */
   .custom-header {
     padding: 5px;
