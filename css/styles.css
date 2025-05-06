@@ -322,9 +322,8 @@ ul {
   width: 100%;
   background-color: var(--accordion-bg);
   border: none;
-  text-align: left;
   padding: 15px 40px 15px 15px; /* Espace pour l'icône */
-  font-size: 12px;
+  font-size: 16px;
   cursor: pointer;
   font-family: "Manrope", serif;
   letter-spacing: 1px;
@@ -343,6 +342,9 @@ ul {
   letter-spacing: 2px;
   color: var(--accordion-text-color);
   /* Ajout de la couleur du texte pour le contenu */
+}
+.accordion-content h3{
+  text-align: center;
 }
 .accordion-header[aria-expanded="true"] + .accordion-content {
   padding: 15px;
@@ -385,7 +387,7 @@ ul {
 .accordion-header strong {
   float: right;
   text-align: center;
-  font-size:10px;
+  font-size:12px;
 }
 .date-right {
   text-align: right;
@@ -418,9 +420,9 @@ ul {
   width: 100%;
   background-color: var(--accordion-bg);
   border: none;
-  text-align: left;
+  text-align: center;
   padding: 15px;
-  font-size: 18px;
+  font-size: 14px;
   cursor: pointer;
   font-family: "Manrope", serif;
   letter-spacing: 1px;
@@ -439,7 +441,7 @@ ul {
 }
 
 .timeline-accordion-header .year {
-  font-size: 16px;
+  font-size: 14px;
   color: var(--accent-color);
   margin-right: 10px;
 }
@@ -1231,7 +1233,6 @@ footer {
     float: none;
     display: block;
     width: 100%;
-    text-align: left;
     margin-top: 5px;
     margin-right: 0;
   }
