@@ -1,5 +1,10 @@
 /* Styles de base avec variables CSS pour les thèmes */
 :root {
+  /* Polices principales */
+  --heading-font: 'Montserrat', sans-serif;  /* Police moderne pour les titres */
+  --body-font: 'Open Sans', sans-serif;      /* Police très lisible pour le texte */
+  
+  /* Couleurs existantes */
   --background-color: #ffffff;
   --text-color: #000000;
   --header-bg: #11162f;
@@ -13,11 +18,15 @@
   --accordion-bg: #ffffffd5;
   --accordion-content-bg: #e5e5e5;
   --accordion-text-color: #000000;
-  /* Ajout de la couleur du texte des accordéons */
   --accent-hover: #3be2ff;
 }
 
 [data-theme="dark"] {
+  /* Mêmes polices en mode sombre */
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+  
+  /* Couleurs du mode sombre existantes */
   --background-color: #11162f;
   --text-color: #ffffff;
   --header-bg: #0a0e1f;
@@ -31,10 +40,8 @@
   --accordion-bg: #1a2244;
   --accordion-content-bg: #2c3454;
   --accordion-text-color: #ffffff;
-  /* Ajout de la couleur du texte des accordéons en mode dark */
   --accent-hover: #5ce5f4;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -45,7 +52,8 @@
 
 /* Global */
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: var(--body-font);
+  line-height: 1.6;
   font-weight: lighter;
   overflow-x: hidden;
   background-color: var(--background-color);
