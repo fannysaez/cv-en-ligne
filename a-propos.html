@@ -464,106 +464,104 @@
           </div>
         </div>
       </div>
+
       <!-- Projet 2 -->
-      <!--<div class="project-card animate-fadeInUp">
+
+      <div class="project-card animate-fadeInUp">
         <div class="relative">
-          <img src="images/portfolio.jpg" alt="Portfolio">
+          <img src="./assets/a-propos/realisations/ComingSoonPage.png" alt="ComingSoonPage">
         </div>
         <div class="container">
-          <h3>Portfolio</h3>
-          <p>Site personnel présentant mon parcours, mes compétences et mes projets. Développé en HTML, CSS et
-            JavaScript.</p>
+          <h3>ComingSoonPage</h3>
+          <p>
+            Premier projet d'une page d'attente HTML et CSS sur le "Salon du chocolat". Une page statique seulement.
+          </p>
           <div class="flex">
             <span>HTML</span>
             <span>CSS</span>
-            <span>JavaScript</span>
           </div>
-          <a href="https://github.com/fannysaez/portfolio" class="btn" target="_blank">Voir le projet</a>
+          <div class="buttons-container">
+            <a href="https://fannysaez.github.io/ComingSoonPage/" class="btn" target="_blank">Voir le site</a>
+            <button class="btn popup-trigger" data-project="ComingSoonPage">Plus d'infos</button>
+          </div>
         </div>
-      </div>-->
+      </div>
+      
+      <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
+      <div id="popup-ComingSoonPage" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Portfolio - Détails du projet</h2>
+          <div class="modal-img">
+            <img src="./assets/a-propos/realisations/ComingSoonPage.png" alt="ComingSoonPage">
+          </div>
+          <div class="modal-description">
+            <h3>Description</h3>
+            <p>
+              J'ai réalié en décembre 2024, ma première page d'attente qui représente un évènement ou festival de mon choix, j'ai choisi
+              le " Salon du chocolat ". 
+            </p>
+            <h3>Technologies utilisées</h3>
+            <div class="flex">
+              <span>HTML,</span>
+              <span>CSS et</span>
+              <span> Version bureau et mobile</span>
+            </div>
+            
+            <h3>Fonctionnalités</h3>
+            <ul>
+              <li>Première mission en tant que développeuse web et mobile</li>
+              <li>Design responsive</li>
+              <li>Page Statique</li>
+            </ul>
+            
+            <a href="https://fannysaez.github.io/ComingSoonPage/" class="btn" target="_blank">Voir le site</a>
+          </div>
+        </div>
+      </div>
+
+
 
       <!-- Projet 3 -->
-      <!--<div class="project-card animate-fadeInUp">
-        <div class="relative">
-          <img src="images/portfolio.jpg" alt="Portfolio">
-        </div>
-        <div class="container">
-          <h3>Portfolio</h3>
-          <p>Site personnel présentant mon parcours, mes compétences et mes projets. Développé en HTML, CSS et
-            JavaScript.</p>
-          <div class="flex">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-          <a href="https://github.com/fannysaez/portfolio" class="btn" target="_blank">Voir le projet</a>
-        </div>
-      </div>-->
 
       <!-- Projet 4 -->
-      <!--<div class="project-card animate-fadeInUp">
-        <div class="relative">
-          <img src="images/portfolio.jpg" alt="Portfolio">
-        </div>
-        <div class="container">
-          <h3>Portfolio</h3>
-          <p>Site personnel présentant mon parcours, mes compétences et mes projets. Développé en HTML, CSS et
-            JavaScript.</p>
-          <div class="flex">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-          <a href="https://github.com/fannysaez/portfolio" class="btn" target="_blank">Voir le projet</a>
-        </div>
-      </div>-->
 
       <!-- Ajoute d'autres projets ici... -->
 
       <!-- Projet 5 -->
-      <!--<div class="project-card animate-fadeInUp">
-        <div class="relative">
-          <img src="images/portfolio.jpg" alt="Portfolio">
-        </div>
-        <div class="container">
-          <h3>Portfolio</h3>
-          <p>Site personnel présentant mon parcours, mes compétences et mes projets. Développé en HTML, CSS et
-            JavaScript.</p>
-          <div class="flex">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-          <a href="https://github.com/fannysaez/portfolio" class="btn" target="_blank">Voir le projet</a>
-        </div>
-      </div>-->
 
       <!-- Projet 6 -->
-      <!--<div class="project-card animate-fadeInUp">
-        <div class="relative">
-          <img src="images/portfolio.jpg" alt="Portfolio">
-        </div>
-        <div class="container">
-          <h3>Portfolio</h3>
-          <p>Site personnel présentant mon parcours, mes compétences et mes projets. Développé en HTML, CSS et
-            JavaScript.</p>
-          <div class="flex">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
-          </div>
-          <a href="https://github.com/fannysaez/portfolio" class="btn" target="_blank">Voir le projet</a>
-        </div>
-      </div>-->
+
+
 
       <br>
       <div class="container">
       </div>
     </div>
     <div class="text-center">
-      <a href="https://github.com/fannysaez?tab=repositories" class="btn" target="_blank">Voir plus de réalisations</a>
+      <button class="btn" id="openProjectsPopup">Voir plus de réalisations</button>
     </div>
 
+    <!-- Popup à ajouter dans votre page -->
+<div class="projects-popup-overlay" id="projectsPopupOverlay">
+  <div class="projects-popup-content">
+    <button class="projects-popup-close" id="closeProjectsPopup">&times;</button>
+    <h2 class="projects-popup-title">Mes Projets</h2>
+    
+    <div class="projects-grid">
+      <!-- Projet 1 -->
+      <div class="project-card">
+        <h3 class="project-title">Nom projet</h3>
+        <div class="project-tags">
+          <span class="project-tag">...</span>
+          <span class="project-tag">...</span>
+          <span class="project-tag">...</span>
+        </div>
+        <p class="project-description">....</p>
+        <a href="#" class="project-link" target="_blank">Voir le</a>
+      </div>
+      
+      <!-- Ajoutez d'autres projets ici -->
 
   </section>
 
