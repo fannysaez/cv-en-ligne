@@ -60,36 +60,68 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// JavaScript pour le fonctionnement du popup de projets
+// JavaScript pour le fonctionnement du popup de projets avec débogage
 document.addEventListener('DOMContentLoaded', function () {
-    // Récupération des éléments
-    const openButton = document.getElementById('openProjectsPopup'); // Bouton pour ouvrir la popup
-    const closeButton = document.getElementById('closeProjectsPopup'); // Bouton pour fermer la popup
-    const popupOverlay = document.getElementById('projectsPopupOverlay'); // Overlay de la popup
+    console.log('DOMContentLoaded déclenché');
+    
+    // Récupération des éléments avec vérification
+    const openButton = document.getElementById('openProjectsPopup');
+    const closeButton = document.getElementById('closeProjectsPopup');
+    const popupOverlay = document.getElementById('projectsPopupOverlay');
+    
+    // Vérification des éléments
+    console.log('Bouton ouverture trouvé:', !!openButton);
+    console.log('Bouton fermeture trouvé:', !!closeButton);
+    console.log('Overlay trouvé:', !!popupOverlay);
 
-    // Ouvrir la popup
+    // Ouvrir la popup avec gestion tactile améliorée
     if (openButton) {
-        openButton.addEventListener('click', function () {
-            popupOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Empêcher le défilement de la page
+        // Ajout de plusieurs types d'événements pour assurer la compatibilité mobile
+        ['click', 'touchend'].forEach(function(eventType) {
+            openButton.addEventListener(eventType, function(e) {
+                console.log('Événement déclenché sur le bouton d\'ouverture:', eventType);
+                e.preventDefault(); // Empêche le comportement par défaut
+                popupOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
         });
+    } else {
+        console.error('Le bouton pour ouvrir la popup n\'a pas été trouvé');
     }
 
     // Fermer la popup avec le bouton de fermeture
     if (closeButton) {
-        closeButton.addEventListener('click', function () {
-            popupOverlay.classList.remove('active');
-            document.body.style.overflow = ''; // Réactiver le défilement
+        ['click', 'touchend'].forEach(function(eventType) {
+            closeButton.addEventListener(eventType, function(e) {
+                console.log('Événement de fermeture déclenché:', eventType);
+                e.preventDefault();
+                popupOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
         });
     }
 
     // Fermer en cliquant en dehors du contenu de la popup
     if (popupOverlay) {
-        popupOverlay.addEventListener('click', function (e) {
-            if (e.target === popupOverlay) {
-                popupOverlay.classList.remove('active');
-                document.body.style.overflow = '';
-            }
+        ['click', 'touchend'].forEach(function(eventType) {
+            popupOverlay.addEventListener(eventType, function(e) {
+                if (e.target === popupOverlay) {
+                    console.log('Fermeture via clic sur l\'overlay');
+                    popupOverlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
         });
     }
+    
+    // Ajout d'un gestionnaire global pour la touche Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && popupOverlay && popupOverlay.classList.contains('active')) {
+            console.log('Fermeture via touche Escape');
+            popupOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    console.log('Initialisation du popup terminée');
 });
