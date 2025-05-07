@@ -921,8 +921,8 @@ ul {
   flex-wrap: wrap;
   gap: 5px;
   margin-bottom: 10px;
+  justify-content: center; /* Cette ligne centre les éléments horizontalement */
 }
-
 .project-tag {
   background-color: var(--accent-color);
   color: var(--header-bg);
@@ -955,6 +955,50 @@ ul {
   margin-top: 20px;
 }
 
+/* Styles pour l'aperçu d'image */
+.project-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  height: 160px;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+/* Overlay d'aperçu */
+.project-image:after {
+  content: 'Voir l\'aperçu';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(17, 22, 47, 0.7);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-image:hover:after {
+  opacity: 1;
+}
+
 /* Pour les écrans plus petits */
 @media (max-width: 768px) {
   .projects-grid {
@@ -970,6 +1014,11 @@ ul {
   .projects-popup-content {
     padding: 15px;
   }
+}
+
+/* Classe d'activation pour JavaScript */
+.projects-popup-overlay.active {
+  display: flex;
 }
 
 /* Animation pour l'apparition de la modal */
