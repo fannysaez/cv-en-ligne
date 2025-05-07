@@ -59,3 +59,30 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Sélectionner les éléments du DOM
+    const openButton = document.getElementById('openProjectsPopup');
+    const closeButton = document.getElementById('closeProjectsPopup');
+    const popup = document.getElementById('projectsPopupOverlay');
+
+    // Ouvrir le popup au clic sur le bouton
+    openButton.addEventListener('click', function () {
+        popup.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Bloquer le défilement
+    });
+
+    // Fermer le popup avec le bouton de fermeture
+    closeButton.addEventListener('click', function () {
+        popup.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Réactiver le défilement
+    });
+
+    // Fermer le popup en cliquant sur l'overlay
+    popup.addEventListener('click', function (event) {
+        if (event.target === popup) {
+            popup.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
