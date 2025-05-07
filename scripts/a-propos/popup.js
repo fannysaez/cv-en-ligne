@@ -60,29 +60,36 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// JavaScript pour le fonctionnement du popup de projets
 document.addEventListener('DOMContentLoaded', function () {
-    // Sélectionner les éléments du DOM
-    const openButton = document.getElementById('openProjectsPopup');
-    const closeButton = document.getElementById('closeProjectsPopup');
-    const popup = document.getElementById('projectsPopupOverlay');
+    // Récupération des éléments
+    const openButton = document.getElementById('openProjectsPopup'); // Bouton pour ouvrir la popup
+    const closeButton = document.getElementById('closeProjectsPopup'); // Bouton pour fermer la popup
+    const popupOverlay = document.getElementById('projectsPopupOverlay'); // Overlay de la popup
 
-    // Ouvrir le popup au clic sur le bouton
-    openButton.addEventListener('click', function () {
-        popup.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Bloquer le défilement
-    });
+    // Ouvrir la popup
+    if (openButton) {
+        openButton.addEventListener('click', function () {
+            popupOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Empêcher le défilement de la page
+        });
+    }
 
-    // Fermer le popup avec le bouton de fermeture
-    closeButton.addEventListener('click', function () {
-        popup.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Réactiver le défilement
-    });
+    // Fermer la popup avec le bouton de fermeture
+    if (closeButton) {
+        closeButton.addEventListener('click', function () {
+            popupOverlay.classList.remove('active');
+            document.body.style.overflow = ''; // Réactiver le défilement
+        });
+    }
 
-    // Fermer le popup en cliquant sur l'overlay
-    popup.addEventListener('click', function (event) {
-        if (event.target === popup) {
-            popup.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-    });
+    // Fermer en cliquant en dehors du contenu de la popup
+    if (popupOverlay) {
+        popupOverlay.addEventListener('click', function (e) {
+            if (e.target === popupOverlay) {
+                popupOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+    }
 });
