@@ -76,15 +76,9 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
     ├── 📄 structureApropos.md
     └── 📄 fonctionnaliteJavaScript.md
 ```
-
-## 📬 Contact
-- Email : [M'écrire](fanny.saez.0486@gmail.com)
-- LinkedIn : [Fanny Saez](https://www.linkedin.com/in/fannysaez)
-- GitHub : [GitHub Fanny](https://github.com/fannysaez)
-
 ---
 
-## Documentation
+## Documentations
 
 <div style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color: #f8f8f8;">
   <h3>Documentation imprimable</h3>
@@ -97,12 +91,10 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
       <ul style="list-style-type: none; padding-left: 5px;">
         <li style="margin-bottom: 15px;">
           <strong>CV-Fanny-DevWeb & Mobile-2025</strong><br>
-          <a href="./assets/Docs Print/SAEZ Fanny_DevWeb et Mobile.pdf" target="_blank">📄 Aperçu</a> | 
           <a href="./assets/Docs Print/SAEZ Fanny_DevWeb et Mobile.pdf" onclick="window.print(); return false;">🖨️ Imprimer</a>
         </li>
         <li>
           <strong>CV-Fanny-AlternanceCDA-en-2025-2026</strong><br>
-          <a href="./assets/Docs Print/SAEZ Fanny_Alternance en CDA.pdf" target="_blank">📄 Aperçu</a> | 
           <a href="./assets/Docs Print/SAEZ Fanny_Alternance en CDA.pdf" onclick="window.print(); return false;">🖨️ Imprimer</a>
         </li>
       </ul>
@@ -112,7 +104,16 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
 
 ---
 
+## 📬 Contact
+- Email : [M'écrire](fanny.saez.0486@gmail.com)
+- LinkedIn : [Fanny Saez](https://www.linkedin.com/in/fannysaez)
+- GitHub : [GitHub Fanny](https://github.com/fannysaez)
+
+---
+
+<p align="center">
 © 2025 Fanny Saez - Tous droits réservés
+</p>
 
 ---
 <p align="center">
