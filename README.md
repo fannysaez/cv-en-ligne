@@ -76,26 +76,32 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
     ├── 📄 structureApropos.md
     └── 📄 fonctionnaliteJavaScript.md
 ```
+
+## 📬 Contact
+- Email : [M'écrire](fanny.saez.0486@gmail.com)
+- LinkedIn : [Fanny Saez](https://www.linkedin.com/in/fannysaez)
+- GitHub : [GitHub Fanny](https://github.com/fannysaez)
+
 ---
 
 ## Documentation
 
-<div style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color:#000000;">
+<div style="padding: 10px; border: 1px solid #ddd; border-radius: 5px; background-color: #f8f8f8;">
   <h3>Documentation imprimable</h3>
   
   <details>
-    <summary style="cursor: pointer; padding: 5px 10px; background-color:#217484; border-radius: 4px; display: inline-block; border: 1px solid #ccc;">
-      📑 Sélectionner un document à consulter ou imprimer ▼
+    <summary style="cursor: pointer; padding: 5px 10px; background-color: #e7e7e7; border-radius: 4px; display: inline-block; border: 1px solid #ccc;">
+      📑 Sélectionner un document au choix ▼
     </summary>
-    <div style="padding: 10px; margin-top: 10px; border: 1px solid #eee; border-radius: 4px; background-color: black;">
+    <div style="padding: 10px; margin-top: 10px; border: 1px solid #eee; border-radius: 4px; background-color: white;">
       <ul style="list-style-type: none; padding-left: 5px;">
         <li style="margin-bottom: 15px;">
-          <strong>CV - SAEZ Fanny | DevWeb & Mobile 2025</strong><br>
+          <strong>CV-Fanny-DevWeb & Mobile-2025</strong><br>
           <a href="./assets/Docs Print/SAEZ Fanny_DevWeb et Mobile.pdf" target="_blank">📄 Aperçu</a> | 
           <a href="./assets/Docs Print/SAEZ Fanny_DevWeb et Mobile.pdf" onclick="window.print(); return false;">🖨️ Imprimer</a>
         </li>
         <li>
-          <strong>CV - SAEZ Fanny | Alternance CDA | 18 mois en 2025-2026</strong><br>
+          <strong>CV-Fanny-AlternanceCDA-en-2025-2026</strong><br>
           <a href="./assets/Docs Print/SAEZ Fanny_Alternance en CDA.pdf" target="_blank">📄 Aperçu</a> | 
           <a href="./assets/Docs Print/SAEZ Fanny_Alternance en CDA.pdf" onclick="window.print(); return false;">🖨️ Imprimer</a>
         </li>
@@ -103,13 +109,6 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
     </div>
   </details>
 </div>
-
----
-
-## 📬 Contact
-- Email : [M'écrire](fanny.saez.0486@gmail.com)
-- LinkedIn : [Fanny Saez](https://www.linkedin.com/in/fannysaez)
-- GitHub : [GitHub Fanny](https://github.com/fannysaez)
 
 ---
 
