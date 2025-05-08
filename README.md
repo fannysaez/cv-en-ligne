@@ -2,7 +2,7 @@
 # Mon premier CV en ligne
 
 <p align="center">
-  <img src="./assets/Accueil/logo-initiale.png" width="150" height="150" alt="Logo">
+  <img src="./assets/Accueil/logo-initiale.jpg" width="150" height="150" alt="Logo">
 </p>
 
 ## 🔗 Lien vers le site
