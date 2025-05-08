@@ -1394,6 +1394,65 @@ footer {
   font-size: 2rem;
 }
 
+/* Style du footer de copyright */
+.footer-copyright {
+  display: flex;
+  padding: 8px 0;
+  font-family: var(--body-font);
+  font-size: 1.2em;
+  transition: all 0.3s ease; /* Pour une transition douce lors du changement de thème */
+  justify-content: center;
+}
+
+/* Si vous souhaitez ajuster les liens dans le footer copyright */
+.footer-copyright a {
+  color: var(--header-bg);
+  text-decoration: underline;
+}
+
+.footer-copyright a:hover {
+  color: var(--background-color);
+}
+ hr{
+  border-bottom: var(--accent-color) 5px double;
+ }
+
+ /* Adaptation pour les petits écrans (smartphones) */
+@media (max-width: 480px) {
+  .footer-copyright {
+    font-size: 1em; /* Réduction de la taille de police */
+    padding: 6px 0;
+  }
+
+  hr {
+    border-bottom: var(--accent-color) 3px double; /* Réduction de l'épaisseur */
+  }
+}
+
+/* Adaptation pour les tablettes (jusqu'à 728px) */
+@media (min-width: 481px) and (max-width: 728px) {
+  .footer-copyright {
+    font-size: 1.1em;
+    padding: 7px 0;
+  }
+
+  hr {
+    border-bottom: var(--accent-color) 4px double;
+  }
+}
+
+/* Bureau et grands écrans */
+@media (min-width: 729px) {
+  .footer-copyright {
+    font-size: 1.2em;
+    padding: 8px 0;
+  }
+
+  hr {
+    border-bottom: var(--accent-color) 5px double;
+  }
+}
+
 /* Lien dans le footer */
 .mail-link {
   color: var(--text-color);
@@ -1617,6 +1676,7 @@ footer {
     margin-right: 0;
   }
 }
+
 
 /* Très petits écrans (max-width: 300px) */
 @media screen and (max-width: 300px) {
