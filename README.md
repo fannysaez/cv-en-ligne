@@ -91,11 +91,11 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
       <ul style="list-style-type: none; padding-left: 5px;">
         <li style="margin-bottom: 15px;">
           <strong>CV-Fanny-DevWeb & Mobile-2025</strong><br>
-          <a href="./assets/Docs Print/SAEZ Fanny_DevWeb et Mobile.pdf" onclick="window.print(); return false;">🖨️ Imprimer</a>
+          <a href="./assets/Docs Print/SAEZ Fanny_DevWeb et Mobile.pdf" onclick="window.print(); return false;">🖨️ Télécharger & Imprimer</a>
         </li>
         <li>
           <strong>CV-Fanny-AlternanceCDA-en-2025-2026</strong><br>
-          <a href="./assets/Docs Print/SAEZ Fanny_Alternance en CDA.pdf" onclick="window.print(); return false;">🖨️ Imprimer</a>
+          <a href="./assets/Docs Print/SAEZ Fanny_Alternance en CDA.pdf" onclick="window.print(); return false;">🖨️ Télécharger & Imprimer</a>
         </li>
       </ul>
     </div>
