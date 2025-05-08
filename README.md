@@ -85,7 +85,7 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
   
   <details>
     <summary style="cursor: pointer; padding: 5px 10px; background-color: #e7e7e7; border-radius: 4px; display: inline-block; border: 1px solid #ccc;">
-      📑 Sélectionner un document au choix ▼
+      📑 Sélectionner un document au choix
     </summary>
     <div style="padding: 10px; margin-top: 10px; border: 1px solid #eee; border-radius: 4px; background-color: white;">
       <ul style="list-style-type: none; padding-left: 5px;">
