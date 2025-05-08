@@ -47,6 +47,7 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
 ```bash
 
 📁 Structure de mon cv en ligne
+├── 📝 README.md
 ├── 📝 index.html
 ├── 📝 a-propos.html
 ├── 📁 css/
@@ -58,14 +59,22 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
 │   └── 📁 a-propos/
 │       ├── 🔧 header-buttonToggle.js
 │       ├── 🔧 accordeon-experiences.js
+│       ├── 🔧 accordeon-formation.js
+│       ├── 🔧 button-github.js
+│       ├── 🔧 popup.js
 │       ├── 🌗 theme-toggle.js
 │       └── ✨ skills-animation.js
-└── 📁 assets/
-    ├── 📁 Accueil/
-    └── 📁 a-propos/
-        ├── 📂 bio/
-        ├── 📂 realisations/
-        └── 📂 centresInteret/
+├── 📁 assets/
+│   ├── 📁 Accueil/
+│   └── 📁 a-propos/
+│       ├── 📂 bio/
+│       ├── 📂 realisations/
+│       └── 📂 centresInteret/
+└── 📁 Guide-CV-en-ligne/
+    ├── 📄 procedureImplantation.md
+    ├── 📄 structureAccueil.md
+    ├── 📄 structureApropos.md
+    └── 📄 fonctionnaliteJavaScript.md
 ```
 
 ## 📬 Contact
