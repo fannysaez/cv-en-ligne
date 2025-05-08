@@ -24,7 +24,7 @@ Le site est conçu pour s'adapter à toutes les tailles d'écran :
 ## 💻 Technologies utilisées
 - HTML5
 - CSS3
-- JavaScript (Vanilla)
+- JavaScript
 - FontAwesome pour les icônes
 - Boxicons pour les icônes supplémentaires
 - Google Fonts pour la typographie
