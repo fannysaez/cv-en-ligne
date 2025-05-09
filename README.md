@@ -42,10 +42,7 @@ cd cv-en-ligne
 3. **Lancer le site localement**
 Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (ex : Live Server dans VSCode).
 
-## 📂 Structure des fichiers
-
-```bash
-
+``` bash
 📁 Structure de mon cv en ligne
 ├── 📝 README.md
 ├── 📝 index.html
@@ -64,7 +61,8 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
 │       ├── 🔧 popup.js                   # Script pour les popups
 │       ├── 🌗 theme-toggle.js            # Script pour le changement de thème
 │       ├── ✨ skills-animation.js         # Script pour l'animation des compétences
-│       └── ✉️ formContact.js              # Script pour le formulaire de contact
+│       ├── ✉️ formContact.js              # Script pour le formulaire de contact
+│       └── ✂️ truncateText.js             # Script pour tronquer le texte trop long
 ├── 📁 assets/
 │   ├── 📁 Accueil/
 │   └── 📁 a-propos/
