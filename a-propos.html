@@ -845,30 +845,34 @@
     </div>
   </footer>
 
-  <!-- Modal Formulaire de Contact -->
-  <div id="contact-modal" class="modal">
+<!-- Modal Formulaire de Contact -->
+<div id="contact-modal" class="modal">
     <div class="modal-content">
-      <span class="close-modal">&times;</span>
-      <h3>Envoyez-moi un message</h3>
-      <form id="contact-form" class="contact-form">
-        <div class="form-group">
-          <input type="text" id="name" name="name" placeholder="Votre nom" required>
-        </div>
-        <div class="form-group">
-          <input type="email" id="email" name="email" placeholder="Votre email" required>
-        </div>
-        <div class="form-group">
-          <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="submit-btn">Envoyer</button>
-        </div>
-        <div id="form-status" class="form-status"></div>
-      </form>
+        <span class="close-modal">&times;</span>
+        <h3>Envoyez-moi un message</h3>
+        <form id="contact-form" class="contact-form" action="https://formsubmit.co/fanny.saez.0486@gmail.com" method="POST">
+            <!-- Champs cachés pour la configuration FormSubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_subject" value="Nouveau message via le formulaire de contact">
+            <input type="hidden" name="_next" value="https://fannysaez.github.io/cv-en-ligne/a-propos.html">
+
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Envoyer</button>
+            </div>
+            <div id="form-status" class="form-status"></div>
+        </form>
     </div>
-  </div>
-
-
+</div>
   <hr>
   <footer class="footer-copyright">
     <p align="center">
