@@ -692,7 +692,7 @@ ul {
 
 /* Style de base pour l’image dans une carte projet */
 .project-card .relative {
-  height: 200px;
+  height: 300px;
   /* fixe une hauteur pour harmoniser toutes les cartes */
   overflow: hidden;
   border-radius: 8px;
