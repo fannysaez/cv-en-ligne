@@ -839,10 +839,35 @@
       <p><i class="bx bx-map-pin fa-2x" title=""></i><br> Boulevard Lafayette<br>
         63000 - Clermont-Ferrand
       </p>
-      <p><i class="bx bx-mail-send fa-2x" title=""></i><a href="mailto:fanny.saez.0486@gmail.com" class="mail-link"><br>
+      <p><i class="bx bx-mail-send fa-2x" title=""></i><a href="mailto:fanny.saez.0486@gmail.com" class="mail-link"
+          id="contact-modal-open"><br>
           Écrivez-moi ici</a></p>
     </div>
   </footer>
+
+  <!-- Modal Formulaire de Contact -->
+  <div id="contact-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>Envoyez-moi un message</h3>
+      <form id="contact-form" class="contact-form">
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Votre email" required>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="submit-btn">Envoyer</button>
+        </div>
+        <div id="form-status" class="form-status"></div>
+      </form>
+    </div>
+  </div>
+
 
   <hr>
   <footer class="footer-copyright">
@@ -863,6 +888,7 @@
 <script src="./scripts/slideLeftDegradeColors.js"></script>
 <script src="./scripts/a-propos/skills-animation.js"></script>
 <script src="./scripts/a-propos/popup.js"></script>
+<script src="./scripts/a-propos/formContact.js"></script>
 
 
 </html>
