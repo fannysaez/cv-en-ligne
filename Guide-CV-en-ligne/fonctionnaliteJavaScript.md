@@ -14,6 +14,7 @@
 - **theme-toggle.js** : Permet de passer du thème clair au thème sombre
 - **skills-animation.js** : Anime les barres de progression des compétences
 - **button-github.js** : Connexion à l'API GitHub pour les projets
+- **formContact.js** : Gère l'envoi du formulaire de contact
 
 ---
 
