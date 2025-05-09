@@ -20,9 +20,15 @@ Cette page est divisée en plusieurs sections :
 ![Page à propos](../assets/Accueil/Section-Projets.png)
 ![Page à propos](../assets/Accueil/Section-BtnProjet-RepositorieGitHub.png)
 
-- **Compétences** : Barres de progression et cercles
+- **Compétences & Savoir-être** : Barres de progression et cercles
+![Page à propos](../assets/Accueil/Section-SavoirEtre-ModeSombre%20et%20dynamique.png)
+![Page à propos](../assets/Accueil/Section-SavoirEtre-ModeClair%20et%20dynamique.png)
+
 - **Centres d'intérêt** : Galerie d'images
 - **Contact** : Formulaire de contact et liens
+![Page à propos](../assets/a-propos/formContact/FormContact-Modale-Sombre.png)
+![Page à propos](../assets/a-propos/formContact/FormContact-Modale-Claire.png)
+
 
 ---
 <p align="center">
