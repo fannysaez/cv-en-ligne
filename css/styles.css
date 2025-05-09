@@ -1,67 +1,74 @@
 /* Styles existants inchangés */
 :root {
-    /* Polices principales */ 
-    --heading-font: 'Montserrat', sans-serif; /* Police moderne pour les titres */ 
-    --body-font: 'Open Sans', sans-serif; /* Police très lisible pour le texte */ 
-    
-    /* Couleurs existantes */ 
-    --background-color: #ffffff; 
-    --text-color: #000000; 
-    --header-bg: #11162f; 
-    --accent-color: #5ce5f4; 
-    --card-bg: #ffffffd5; 
-    --card-shadow: 0px 4px 15px #5ce5f4; 
-    --progress-bg: #e5e5e5; 
-    --toggle-bg: #ccc; 
-    --toggle-active: #5ce5f4; 
-    --footer-link-color: #000000; 
-    --accordion-bg: #ffffffd5; 
-    --accordion-content-bg: #e5e5e5; 
-    --accordion-text-color: #000000; 
-    --accent-hover: #3be2ff; 
-    --accents-color: #5cc2f4; 
+  /* Polices principales */
+  --heading-font: 'Montserrat', sans-serif;
+  /* Police moderne pour les titres */
+  --body-font: 'Open Sans', sans-serif;
+  /* Police très lisible pour le texte */
+  --hover-transform: translateY(-5px);
+  --shadow-opacity: 0.3;
+  --hover-shadow: 0 10px 15px rgba(92, 229, 244, var(--shadow-opacity));
+  /* Couleurs existantes */
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --header-bg: #11162f;
+  --accent-color: #5ce5f4;
+  --card-bg: #ffffffd5;
+  --card-shadow: 0px 4px 15px #5ce5f4;
+  --progress-bg: #e5e5e5;
+  --toggle-bg: #ccc;
+  --toggle-active: #5ce5f4;
+  --footer-link-color: #000000;
+  --accordion-bg: #ffffffd5;
+  --accordion-content-bg: #e5e5e5;
+  --accordion-text-color: #000000;
+  --accent-hover: #3be2ff;
+  --accents-color: #5cc2f4;
 
-    /* Nouvelles variables pour le formulaire */
-    --form-bg: var(--card-bg);
-    --form-input-bg: #f5f5f5;
-    --form-input-border: 1px solid #ddd;
-    --form-input-focus: var(--accent-color);
-    --form-submit-bg: var(--accent-color);
-    --form-submit-color: #ffffff;
-    --form-submit-hover: var(--accent-hover);
-    --modal-overlay: rgba(0, 0, 0, 0.6);
+  /* Nouvelles variables pour le formulaire */
+  --form-bg: var(--card-bg);
+  --form-input-bg: #f5f5f5;
+  --form-input-border: 1px solid #ddd;
+  --form-input-focus: var(--accent-color);
+  --form-submit-bg: var(--accent-color);
+  --form-submit-color: #ffffff;
+  --form-submit-hover: var(--accent-hover);
+  --modal-overlay: rgba(0, 0, 0, 0.6);
 }
 
 [data-theme="dark"] {
-    /* Mêmes polices en mode sombre */ 
-    --heading-font: 'Montserrat', sans-serif; 
-    --body-font: 'Open Sans', sans-serif; 
-    
-    /* Couleurs du mode sombre existantes */ 
-    --background-color: #11162f; 
-    --text-color: #ffffff; 
-    --header-bg: #0a0e1f; 
-    --accent-color: #3be2ff; 
-    --card-bg: #1a2244; 
-    --card-shadow: 0px 4px 15px #3be2ff; 
-    --progress-bg: #2c3454; 
-    --toggle-bg: #374068; 
-    --toggle-active: #3be2ff; 
-    --footer-link-color: #ffffff; 
-    --accordion-bg: #1a2244; 
-    --accordion-content-bg: #2c3454; 
-    --accordion-text-color: #ffffff; 
-    --accent-hover: #5ce5f4;
+  /* Mêmes polices en mode sombre */
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+  --hover-transform: translateY(-5px);
+  --shadow-opacity: 0.3;
+  --hover-shadow: 0 10px 15px rgba(59, 226, 255, var(--shadow-opacity));
+  /* Version de l'accent-color du thème sombre avec transparence */
+  /* Couleurs du mode sombre existantes */
+  --background-color: #11162f;
+  --text-color: #ffffff;
+  --header-bg: #0a0e1f;
+  --accent-color: #3be2ff;
+  --card-bg: #1a2244;
+  --card-shadow: 0px 4px 15px #3be2ff;
+  --progress-bg: #2c3454;
+  --toggle-bg: #374068;
+  --toggle-active: #3be2ff;
+  --footer-link-color: #ffffff;
+  --accordion-bg: #1a2244;
+  --accordion-content-bg: #2c3454;
+  --accordion-text-color: #ffffff;
+  --accent-hover: #5ce5f4;
 
-    /* Nouvelles variables pour le formulaire en mode sombre */
-    --form-bg: var(--card-bg);
-    --form-input-bg: #2c3454;
-    --form-input-border: 1px solid #374068;
-    --form-input-focus: var(--accent-color);
-    --form-submit-bg: var(--accent-color);
-    --form-submit-color: #11162f;
-    --form-submit-hover: var(--accent-hover);
-    --modal-overlay: rgba(0, 0, 0, 0.8);
+  /* Nouvelles variables pour le formulaire en mode sombre */
+  --form-bg: var(--card-bg);
+  --form-input-bg: #2c3454;
+  --form-input-border: 1px solid #374068;
+  --form-input-focus: var(--accent-color);
+  --form-submit-bg: var(--accent-color);
+  --form-submit-color: #11162f;
+  --form-submit-hover: var(--accent-hover);
+  --modal-overlay: rgba(0, 0, 0, 0.8);
 }
 
 * {
@@ -629,8 +636,8 @@ ul {
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px rgba(92, 229, 244, 0.3);
+  transform: var(--hover-transform);
+  box-shadow: var(--hover-shadow);
 }
 
 /* Style des badges de technologie */
@@ -951,11 +958,12 @@ ul {
 }
 
 .project-card {
-  background-color: var(--background-color);
+  background-color: var(--card-bg);
   border-radius: 10px;
   padding: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--card-shadow);
   transition: transform 0.3s;
+  border: 0.1em solid var(--accent-color);
 }
 
 .project-card:hover {
@@ -1477,148 +1485,148 @@ hr {
 
 /* Styles pour le lien "Écrivez-moi ici" */
 .mail-link {
-    color: var(--footer-link-color);
-    text-decoration: none;
-    transition: color 0.3s ease;
-    cursor: pointer;
+  color: var(--footer-link-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  cursor: pointer;
 }
 
 .mail-link:hover {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 /* Styles pour la fenêtre modale */
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--modal-overlay);
-    z-index: 1000;
-    overflow: auto;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--modal-overlay);
+  z-index: 1000;
+  overflow: auto;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .modal.active {
-    display: flex;
-    opacity: 1;
+  display: flex;
+  opacity: 1;
 }
 
 .modal-content {
-    position: relative;
-    background-color: var(--form-bg);
-    width: 90%;
-    max-width: 500px;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: var(--card-shadow);
-    transform: scale(0.9);
-    transition: transform 0.3s ease;
+  position: relative;
+  background-color: var(--form-bg);
+  width: 90%;
+  max-width: 500px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: var(--card-shadow);
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
 }
 
 .modal.active .modal-content {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 .close-modal {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--text-color);
-    cursor: pointer;
-    transition: color 0.3s ease;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .close-modal:hover {
-    color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .modal-content h3 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-family: var(--heading-font);
-    color: var(--text-color);
-    text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-family: var(--heading-font);
+  color: var(--text-color);
+  text-align: center;
 }
 
 /* Styles pour le formulaire de contact */
 .contact-form {
-    width: 100%;
+  width: 100%;
 }
 
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: var(--form-input-border);
-    background-color: var(--form-input-bg);
-    color: var(--text-color);
-    font-family: var(--body-font);
-    font-size: 14px;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: var(--form-input-border);
+  background-color: var(--form-input-bg);
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: 14px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form textarea {
-    height: 120px;
-    resize: vertical;
+  height: 120px;
+  resize: vertical;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-    outline: none;
-    border-color: var(--form-input-focus);
-    box-shadow: 0 0 5px rgba(92, 229, 244, 0.5);
+  outline: none;
+  border-color: var(--form-input-focus);
+  box-shadow: 0 0 5px rgba(92, 229, 244, 0.5);
 }
 
 .submit-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: var(--form-submit-bg);
-    color: var(--form-submit-color);
-    border: none;
-    border-radius: 5px;
-    font-family: var(--heading-font);
-    font-weight: 600;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  width: 100%;
+  padding: 10px;
+  background-color: var(--form-submit-bg);
+  color: var(--form-submit-color);
+  border: none;
+  border-radius: 5px;
+  font-family: var(--heading-font);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .submit-btn:hover {
-    background-color: var(--form-submit-hover);
+  background-color: var(--form-submit-hover);
 }
 
 .form-status {
-    margin-top: 10px;
-    padding: 8px;
-    border-radius: 5px;
-    font-size: 14px;
-    text-align: center;
-    display: none;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  display: none;
 }
 
 .success-message {
-    background-color: rgba(92, 229, 244, 0.2);
-    color: var(--accent-color);
-    display: block;
+  background-color: rgba(92, 229, 244, 0.2);
+  color: var(--accent-color);
+  display: block;
 }
 
 .error-message {
-    background-color: rgba(255, 87, 87, 0.2);
-    color: #ff5757;
-    display: block;
+  background-color: rgba(255, 87, 87, 0.2);
+  color: #ff5757;
+  display: block;
 }
 
 /* Card styles */
