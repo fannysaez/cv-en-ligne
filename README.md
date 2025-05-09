@@ -54,16 +54,17 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
 │   ├── 🎨 style.css
 │   └── 🎨 styles.css
 ├── 📁 scripts/
-│   ├── ⚙️ loader.js
-│   ├── ⚙️ slideLeftDegradeColors.js
+│   ├── ⚙️ loader.js                     # Script pour le loader animé
+│   ├── ⚙️ slideLeftDegradeColors.js      # Script pour l'animation de dégradé
 │   └── 📁 a-propos/
-│       ├── 🔧 header-buttonToggle.js
-│       ├── 🔧 accordeon-experiences.js
-│       ├── 🔧 accordeon-formation.js
-│       ├── 🔧 button-github.js
-│       ├── 🔧 popup.js
-│       ├── 🌗 theme-toggle.js
-│       └── ✨ skills-animation.js
+│       ├── 🔧 header-buttonToggle.js     # Script pour le bouton du header
+│       ├── 🔧 accordeon-experiences.js   # Script pour l'accordéon des expériences
+│       ├── 🔧 accordeon-formation.js     # Script pour l'accordéon des formations
+│       ├── 🔧 button-github.js           # Script pour le bouton GitHub
+│       ├── 🔧 popup.js                   # Script pour les popups
+│       ├── 🌗 theme-toggle.js            # Script pour le changement de thème
+│       ├── ✨ skills-animation.js         # Script pour l'animation des compétences
+│       └── ✉️ formContact.js              # Script pour le formulaire de contact
 ├── 📁 assets/
 │   ├── 📁 Accueil/
 │   └── 📁 a-propos/
@@ -75,7 +76,7 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
     ├── 📄 structureAccueil.md
     ├── 📄 structureApropos.md
     └── 📄 fonctionnaliteJavaScript.md
-```
+```    
 ---
 
 ## Documentations
