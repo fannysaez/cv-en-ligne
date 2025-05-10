@@ -248,7 +248,7 @@ section {
   display: flex;
   justify-content: center;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 4rem;
   /* Position absolue pour placer le conteneur en bas */
   position: absolute;
   bottom: -100px; /* Positionne le bouton plus bas que le conteneur */
@@ -1557,8 +1557,6 @@ hr {
   color: var(--accent-color);
 }
 
-
-
 /* Styles pour la fenêtre modale */
 .modal {
   display: none;
@@ -1754,9 +1752,6 @@ hr {
 
  .bio-content {
     height: auto;
-    max-width: 100%;
-    max-height: 70vh;
-    margin-top: 10px; 
   }
   .bio-content h1 {
     font-size: 24px;
