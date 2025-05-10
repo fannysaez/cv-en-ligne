@@ -1519,11 +1519,6 @@ hr {
     /* Réduction de la taille de police */
     padding: 6px 0;
   }
-
-  hr {
-    border-bottom: var(--accent-color) 3px double;
-    /* Réduction de l'épaisseur */
-  }
 }
 
 /* Adaptation pour les tablettes (jusqu'à 728px) */
@@ -1561,6 +1556,8 @@ hr {
 .mail-link:hover {
   color: var(--accent-color);
 }
+
+
 
 /* Styles pour la fenêtre modale */
 .modal {
