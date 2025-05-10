@@ -198,7 +198,7 @@ input:checked+.slider:before {
 .menu {
   display: flex;
   align-items: center;
-  gap: 43px;
+  gap: 100px;
 }
 
 .menu .i {
