@@ -47,29 +47,31 @@
     </nav>
   </header>
 
-<!-- Sections -->
-<!-- Biographie : Motivation -->
-<section id="aboutme">
-  <div class="overlay" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-    <div class="bio-content">
-      <h1>&thinsp;&thinsp;✦&thinsp;&thinsp; Ma Bio &thinsp;&thinsp;✦&thinsp;&thinsp;</h1>
-      <div class="reveal-lines">
-        <p>Passionnée par les métiers du web et du multimédia</p>
-        <p>Je suis en reconversion professionnelle pour devenir développeuse web et mobile.</p>
-        <p>Organisée, autonome, curieuse, travail en équipe, motivée et rigoureuse</p>
-        <p>J'ai acquis des compétences en conception graphique (suite Adobe),ainsi qu'en programmation front-end (HTML et CSS).</p>
-        <p>J'adore relever de nouveaux défis.</p>
-      </div>
-      <div class="scroll-down-container">
-        <button class="scroll-down-btn" aria-label="Défiler vers la section suivante">
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
+  <!-- Sections -->
+  <!-- Biographie : Motivation -->
+  <section id="aboutme">
+    <div class="overlay" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+      <div class="bio-content">
+        <h1>&thinsp;&thinsp;✦&thinsp;&thinsp; Ma Bio &thinsp;&thinsp;✦&thinsp;&thinsp;</h1>
+        <div class="reveal-lines">
+          <p>Passionnée par les métiers du web et du multimédia</p>
+          <p>Je suis en reconversion professionnelle pour devenir développeuse web et mobile.</p>
+          <p>Organisée, autonome, curieuse, travail en équipe, motivée et rigoureuse</p>
+          <p>J'ai acquis des compétences en conception graphique (suite Adobe),ainsi qu'en programmation front-end (HTML
+            et CSS).</p>
+          <p>J'adore relever de nouveaux défis.</p>
+        </div>
+        <div class="scroll-down-container">
+          <button class="scroll-down-btn" aria-label="Défiler vers la section suivante">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Parcours Professionnel : Accordéon + logos -->
   <section id="parcours">
@@ -432,6 +434,7 @@
             <span>HTML</span>
             <span>CSS</span>
             <span>JavaScript</span>
+            <span>Git & GitHub</span>
           </div>
           <div class="buttons-container">
             <a href="https://fannysaez.github.io/my_portfolio/" class="btn" target="_blank">Voir le site</a>
@@ -460,9 +463,12 @@
             </p><br>
             <h3>Technologies utilisées</h3>
             <div class="flex">
-              <span>HTML,</span>
-              <span>CSS et</span>
-              <span>JavaScript</span>
+              <ul>
+                <li><span>HTML </span></li>
+                <li><span>CSS</span></li>
+                <li><span>JavaScript</span></li>
+                <li><span>Git & GitHub</span></li>
+              </ul>
             </div><br>
 
             <h3>Fonctionnalités</h3>
@@ -493,6 +499,8 @@
           <div class="flex">
             <span>HTML</span>
             <span>CSS</span>
+            <span>Git & GitHub</span>
+
           </div>
           <div class="buttons-container">
             <a href="https://fannysaez.github.io/ComingSoonPage/" class="btn" target="_blank">Voir le site</a>
@@ -518,8 +526,11 @@
             </p><br>
             <h3>Technologies utilisées</h3>
             <div class="flex">
-              <span>HTML et </span>
-              <span>CSS</span>
+              <ul>
+                <li><span>HTML </span></li>
+                <li><span>CSS</span></li>
+                <li><span>Git & GitHub</span></li>
+              </ul>
             </div><br>
 
             <h3>Fonctionnalités</h3>
@@ -537,6 +548,70 @@
 
 
       <!-- Projet 3 -->
+      <div class="project-card animate-fadeInUp">
+        <div class="relative">
+          <img src="./assets/a-propos/realisations/App-MeteoZen.png" alt="MeteoZen">
+        </div>
+        <div class="container">
+          <h3>App MétéoZen</h3>
+          <p>
+            Projet d'une application Météo en collaboration. C'est un travail d'équipe en trinôme. Utilisation des
+            technos (sans
+            framework) HTML, CSS et JavaScript. Ajout d'une API </p>
+          <div class="flex">
+            <span>HTML et </span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>API OpenWeatherMap</span>
+            <span>Git & GitHub</span>
+          </div>
+          <div class="buttons-container">
+            <a href="https://fannysaez.github.io/App-MeteoZen/" class="btn" target="_blank">Voir le site</a>
+            <button class="btn popup-trigger" data-project="MeteoZen">Plus d'infos</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
+      <div id="popup-MeteoZen" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>App MétéoZen - Détails du projet</h2>
+          <div class="modal-img">
+            <img src="./assets/a-propos/realisations/App-MeteoZen.png" alt="MeteoZen">
+          </div>
+          <div class="modal-description">
+            <h3>Description</h3>
+            <p>
+              Créer une application météo dynamique et responsive avec une recherche de ville, un affichage des données
+              météo en temps réel, un beau design, et une documentation claire.
+              Application météo collaborative développée en HTML, CSS et JavaScript.
+              Elle permet de rechercher la météo d’une ville via l’API OpenWeatherMap
+            </p><br>
+            <h3>Technologies utilisées</h3>
+            <div class="flex">
+              <ul>
+                <li><span>HTML </span></li>
+                <li><span>CSS</span></li>
+                <li><span>JavaScript</span></li>
+                <li><span>API OpenWeatherMap</span></li>
+                <li><span>Git & GitHub</span></li>
+              </ul>
+
+            </div><br>
+
+            <h3>Fonctionnalités</h3>
+            <ul>
+              <li>Première mission en tant que développeuse web et mobile</li>
+              <li>Design responsive</li>
+              <li>Page Statique</li>
+            </ul>
+
+            <a href="https://fannysaez.github.io/ComingSoonPage/" class="btn" target="_blank">Voir le site</a>
+          </div>
+        </div>
+      </div>
+
 
       <!-- Projet 4 -->
 
@@ -849,33 +924,34 @@
     </div>
   </footer>
 
-<!-- Modal Formulaire de Contact -->
-<div id="contact-modal" class="modal">
+  <!-- Modal Formulaire de Contact -->
+  <div id="contact-modal" class="modal">
     <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h3>Envoyez-moi un message</h3>
-        <form id="contact-form" class="contact-form" action="https://formsubmit.co/fanny.saez.0486@gmail.com" method="POST">
-            <!-- Champs cachés pour la configuration FormSubmit -->
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_subject" value="Nouveau message via le formulaire de contact">
+      <span class="close-modal">&times;</span>
+      <h3>Envoyez-moi un message</h3>
+      <form id="contact-form" class="contact-form" action="https://formsubmit.co/fanny.saez.0486@gmail.com"
+        method="POST">
+        <!-- Champs cachés pour la configuration FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Nouveau message via le formulaire de contact">
 
-            <div class="form-group">
-                <input type="text" id="name" name="name" placeholder="Votre nom" required>
-            </div>
-            <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Votre email" required>
-            </div>
-            <div class="form-group">
-                <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-            </div>
-            <div class="form-group">
-                <button type="submit" class="submit-btn">Envoyer</button>
-            </div>
-            <div id="form-status" class="form-status"></div>
-        </form>
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Votre email" required>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="submit-btn">Envoyer</button>
+        </div>
+        <div id="form-status" class="form-status"></div>
+      </form>
     </div>
-</div>
+  </div>
 
   <hr>
   <footer class="footer-copyright">
