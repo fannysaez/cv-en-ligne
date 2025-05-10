@@ -62,7 +62,8 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
 │       ├── 🌗 theme-toggle.js            # Script pour le changement de thème
 │       ├── ✨ skills-animation.js         # Script pour l'animation des compétences
 │       ├── ✉️ formContact.js              # Script pour le formulaire de contact
-│       └── ✂️ truncateText.js             # Script pour tronquer le texte trop long
+│       ├── ✂️ truncateText.js             # Script pour tronquer le texte trop long
+│       └── 🔽 scrollDownButtonBio.js      # Script pour le bouton de défilement vers la bio
 ├── 📁 assets/
 │   ├── 📁 Accueil/
 │   └── 📁 a-propos/
