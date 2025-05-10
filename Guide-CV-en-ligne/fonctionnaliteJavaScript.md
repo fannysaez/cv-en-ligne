@@ -16,6 +16,7 @@
 - **button-github.js** : Connexion à l'API GitHub pour les projets
 - **formContact.js** : Gère l'envoi du formulaire de contact
 - **truncateText.js** : Tronque les textes trop longs dans les descriptions ou les parcours pour un affichage compact.
+- **scrollDownButtonBio.js** : Ajoute un bouton pour faire défiler jusqu'à la bio
 
 ---
 
