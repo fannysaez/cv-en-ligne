@@ -15,6 +15,9 @@ Cette page est divisée en plusieurs sections :
 ![Page à propos](../assets/Accueil/Section-Réalisations.png)
 ![Page à propos](../assets/Accueil/Section--RéalisationsPopup-PlusInfos.png)
 ![Page à propos](../assets/Accueil/Section-RéalisationsBtnPopup-VoirPlusRéalisations.png)
+![Page à propos](../assets/Accueil/Section-Réalisation-GalleriesImagesPopup-aperçu.png)
+![Page à propos](../assets/Accueil/Section-Réalisation-EffetZoomGalleriesImagesPopup.png)
+
 
 - **Projets GitHub** : Connexion API pour lister les dépôts
 ![Page à propos](../assets/Accueil/Section-Projets.png)
