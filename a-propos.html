@@ -57,7 +57,8 @@
           <p>Passionnée par les métiers du web et du multimédia</p>
           <p>Je suis en reconversion professionnelle pour devenir développeuse web et mobile.</p>
           <p>Organisée, autonome, curieuse, travail en équipe, motivée et rigoureuse</p>
-          <p>J'ai acquis des compétences en conception graphique (suite Adobe),ainsi qu'en développement web et mobile (HTML, CSS, JavaScript, Php, PhpMyAdmin, Symfony 7, Twig, Boostrap 5, Git, GitHub...)</p>
+          <p>J'ai acquis des compétences en conception graphique (suite Adobe),ainsi qu'en développement web et mobile
+            (HTML, CSS, JavaScript, Php, PhpMyAdmin, Symfony 7, Twig, Boostrap 5, Git, GitHub...)</p>
           <p>J'adore relever de nouveaux défis.</p>
         </div>
         <div class="scroll-down-container">
@@ -558,7 +559,7 @@
             technos (sans
             framework) HTML, CSS et JavaScript. Ajout d'une API </p>
           <div class="flex">
-            <span>HTML et </span>
+            <span>HTML</span>
             <span>CSS</span>
             <span>JavaScript</span>
             <span>API OpenWeatherMap</span>
@@ -603,7 +604,7 @@
             <ul>
               <li>Première mission en tant que développeuse web et mobile</li>
               <li>Design responsive</li>
-              <li>Page Statique</li>
+              <li>Page dynamique</li>
             </ul>
 
             <a href="https://fannysaez.github.io/App-MeteoZen/" class="btn" target="_blank">Voir le site</a>
@@ -611,8 +612,99 @@
         </div>
       </div>
 
-
       <!-- Projet 4 -->
+      <div class="project-card animate-fadeInUp">
+        <div class="relative">
+          <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Flanano.png" alt="Catalogue">
+        </div>
+        <div class="container">
+          <h3>Symfony | Travail en binôme "Flanano"</h3>
+          <p>
+            Créer une application Symfony avec une base de données MySQL, crée une entité Product, affiche les produits
+            dynamiquement grâce à Twig et structure l’application selon l’architecture MVC.
+            Projet d'un catalogue de produits avec gestion admin. C'est un travail d'équipe en binôme (Merci Antonin). Utilisation des
+            technos: Symfony7, Php, Sql etc...
+          </p>
+          <div class="flex">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>PHP & MySQL</span>
+            <span>Git & GitHub</span>
+          </div>
+          <div class="buttons-container">
+            <a href="https://github.com/HeyAnto/flanano-symfony" class="btn" target="_blank">Voir sur GitHub</a>
+            <button class="btn popup-trigger" data-project="Catalogue">Plus d'infos</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
+      <div id="popup-Catalogue" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Catalogue de produits - Détails du projet</h2>
+          <div class="modal-img">
+            <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Flanano.png" alt="Catalogue">
+          </div>
+
+          <!-- Ajout de la galerie d'images -->
+          <div class="project-gallery">
+            <div class="gallery-main">
+              <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Flanano.png"
+                alt="Catalogue Vue Principale" class="gallery-main-img">
+            </div>
+            <div class="gallery-thumbs">
+              <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Flanano-Binôme.png"
+                alt="Catalogue Vue Principale" class="gallery-thumb active"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Flanano-Binôme.png">
+              <!-- Remplacez par vos images supplémentaires -->
+              <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Inscrivez-vous Flanano.png"
+                alt="Catalogue Mobile" class="gallery-thumb"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Inscrivez-vous Flanano.png">
+              <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Lunettes Flanano.png"
+                alt="Catalogue Recherche" class="gallery-thumb"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Lunettes Flanano.png">
+              <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Makeup Flanano.png"
+                alt="Catalogue Résultats" class="gallery-thumb"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Makeup Flanano.png">
+            </div>
+          </div>
+
+          <div class="modal-description">
+            <h3>Description</h3>
+            <p>
+              Créer une application Symfony qui récupère des produits stockés en base de données et les affiche via
+              Twig.
+              Utilisation les entités Doctrine, les contrôleurs Symfony et les templates Twig pour afficher les
+              produits sous forme de liste et de pages détaillées.
+            </p><br>
+            <h3>Technologies utilisées</h3>
+            <div class="flex">
+              <ul>
+                <li><span>HTML </span></li>
+                <li><span>CSS</span></li>
+                <li><span>JavaScript</span></li>
+                <li><span>PHP</span></li>
+                <li><span>MySQL</span></li>
+                <li><span>Algorithmique</span></li>
+                <li><span>Git & GitHub</span></li>
+              </ul>
+
+            </div><br>
+
+            <h3>Fonctionnalités</h3>
+            <ul>
+              <li>Première version du catalogue en ligne</li>
+              <li>Design responsive</li>
+              <li>Page dynamique</li>
+            </ul>
+
+            <a href="https://github.com/HeyAnto/flanano-symfony" class="btn" target="_blank">Voir GitHub</a>
+          </div>
+        </div>
+      </div>
+
 
       <!-- Ajoute d'autres projets ici... -->
 
@@ -951,14 +1043,12 @@
       </form>
     </div>
   </div>
-
   <hr>
   <footer class="footer-copyright">
     <p align="center">
       © 2025 Fanny Saez - Tous droits réservés
     </p>
   </footer>
-
   <!-- Script -->
   <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </body>
@@ -972,6 +1062,7 @@
 <script src="./scripts/a-propos/popup.js"></script>
 <script src="./scripts/a-propos/formContact.js"></script>
 <script src="./scripts/a-propos/truncateText.js"></script>
+<script src="./scripts/a-propos/galleriesImg.js"></script>
 <script src="./scripts/a-propos/scrollDownButtonBio.js"></script
   
 </html>
