@@ -618,7 +618,7 @@
           <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Flanano.png" alt="Catalogue">
         </div>
         <div class="container">
-          <h3>Symfony | Travail en binôme "Flanano"</h3>
+          <h3>Flanano - Travail en binôme</h3>
           <p>
             Créer une application Symfony avec une base de données MySQL, crée une entité Product, affiche les produits
             dynamiquement grâce à Twig et structure l’application selon l’architecture MVC.
@@ -714,7 +714,104 @@
         </div>
       </div>
 
-      <!-- Ajoute d'autres projets ici... -->
+      <!-- Projet 5 -->
+      <div class="project-card animate-fadeInUp">
+        <div class="relative">
+          <img src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Espace Connexion.png" alt="Marmiton">
+        </div>
+        <div class="container">
+          <h3>Recette Marmiton</h3>
+          <p>
+            Créer une application Symfony permettant aux utilisateurs de publier, consulter, commenter et liker 
+            des recettes de cuisine, avec une interface d'administration et un système d'authentification.
+            Application Symfony avec une base de données MySQL et doit réaliser une première version d'une application en suivant un cachier des charges précis.
+          </p>
+          <div class="flex">
+            <span>HTML, CSS, Javascript</span>
+            <span>Symfony CLI, Composer, Doctrine ORM</span>
+            <span>Boostrap5</span>
+            <span>PHP & MySQL</span>
+            <span>Git & GitHub</span>
+          </div>
+          <div class="buttons-container">
+            <a href="https://github.com/fannysaez/symfony_recetteMarmiton" class="btn" target="_blank">Voir sur GitHub</a>
+            <button class="btn popup-trigger" data-project="Marmiton">Plus d'infos</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
+      <div id="popup-Marmiton" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Recette Marmiton - Détails du projet</h2>
+          <!-- Ajout de la galerie d'images -->
+          <div class="project-gallery">
+            <div class="gallery-main">
+              <img src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil.png"
+                alt="Marmiton Vue Principale" class="gallery-main-img">
+            </div>
+            <div class="gallery-thumbs">
+              <img src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Espace d'inscription.png"
+                alt="Marmiton Vue Principale" class="gallery-thumb active"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Espace d'inscription.png">
+              <!-- Remplacez par vos images supplémentaires -->
+              <img src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil - Utilisateur.png"
+                alt="Marmiton Mobile" class="gallery-thumb"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil - Utilisateur.png">
+              <img src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil - Admin.png"
+                alt="Marmiton Recherche" class="gallery-thumb"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil - Admin.png">
+              <img src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Détails de la recette.png"
+                alt="Marmiton Résultats" class="gallery-thumb"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Détails de la recette.png">
+            </div>
+          </div>
+
+          <div class="modal-description">
+            <h3>Description</h3>
+            <p>
+            Créer une application Symfony permettant aux utilisateurs de publier, consulter, commenter et liker 
+            des recettes de cuisine, avec une interface d'administration et un système d'authentification.
+            Application Symfony avec une base de données MySQL et doit réaliser une première version d'une application en suivant un cachier des charges précis.
+            </p><br>
+            <h3>Technologies utilisées</h3>
+            <div class="flex">
+              <ul>
+                <li><span>HTML, CSS, JavaScript </span></li>
+                <li><span>PHP et MySQL</span></li>
+                <li><span>Symfony CLI</span></li>
+                <li><span>Composer</span></li>
+                <li><span>Boostrap 5</span></li>
+                <li><span>Doctrine ORM</span></li>
+                <li><span>Git & GitHub</span></li>
+              </ul>
+
+            </div><br>
+
+            <h3>Fonctionnalités</h3>
+            <ul>
+              <li>Version d'une application de recettes marmiton</li>
+              <li>Design responsive</li>
+              <li>Page dynamique</li>
+            </ul>
+
+            <a href="https://github.com/fannysaez/symfony_recetteMarmiton" class="btn" target="_blank">Voir GitHub</a>
+          </div>
+        </div>
+      </div>
+      <!-- Ajout du HTML pour la lightbox (à placer à la fin de votre HTML, juste avant la fin du body) -->
+      <div id="image-lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-content">
+          <img src="" alt="" id="lightbox-img" class="lightbox-img">
+          <div class="lightbox-caption"></div>
+          <div class="lightbox-controls">
+            <button class="lightbox-prev">&lt;</button>
+            <button class="lightbox-next">&gt;</button>
+          </div>
+        </div>
+      </div>
 
       <!-- Projet 5 -->
 
