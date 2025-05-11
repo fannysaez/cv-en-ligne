@@ -63,7 +63,8 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
 │       ├── ✨ skills-animation.js         # Script pour l'animation des compétences
 │       ├── ✉️ formContact.js              # Script pour le formulaire de contact
 │       ├── ✂️ truncateText.js             # Script pour tronquer le texte trop long
-│       └── 🔽 scrollDownButtonBio.js      # Script pour le bouton de défilement vers la bio
+│       ├── 🔽 scrollDownButtonBio.js      # Script pour le bouton de défilement vers la bio
+│       └── 🖼️ galleriesImg.js             # Script pour la gestion de la galerie d'images avec un effet zoom
 ├── 📁 assets/
 │   ├── 📁 Accueil/
 │   └── 📁 a-propos/
