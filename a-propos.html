@@ -548,8 +548,14 @@
         <div class="modal-content">
           <span class="close-modal">&times;</span>
           <h2>Documentation SQL - Détails du projet</h2>
-          <div class="modal-img">
-            <img src="./assets/a-propos/realisations/Documentation-SQL.png" alt="DocSQL">
+          <!-- Modification ici pour rendre l'image zoomable -->
+          <div class="modal-img zoomable-container">
+            <img src="./assets/a-propos/realisations/Documentation-SQL.png" alt="DocSQL" class="zoomable-img">
+            <div class="zoom-controls">
+              <button class="zoom-btn zoom-in" title="Zoom in">+</button>
+              <button class="zoom-btn zoom-out" title="Zoom out">-</button>
+              <button class="zoom-btn zoom-reset" title="Reset zoom">↺</button>
+            </div>
           </div>
           <div class="modal-description">
             <h3>Description</h3>
@@ -1244,6 +1250,7 @@
 <script src="./scripts/a-propos/formContact.js"></script>
 <script src="./scripts/a-propos/truncateText.js"></script>
 <script src="./scripts/a-propos/galleriesImg.js"></script>
-<script src="./scripts/a-propos/scrollDownButtonBio.js"></script
+<script src="./scripts/a-propos/scrollDownButtonBio.js"></script>
+<script src="./scripts/a-propos/zoomImg.js"></script>
   
 </html>
