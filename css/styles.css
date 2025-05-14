@@ -966,6 +966,77 @@ ul {
 .modal-description .btn {
   margin-top: 1.5rem;
 }
+
+/* Zoom sur une image */
+/* Styles pour les images zoomables */
+.zoomable-container {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 800px;
+  background-color: var(--form-input-bg);
+  border-radius: 5px;
+}
+
+.zoomable-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: 0 0;
+  transition: transform 0.3s ease-out;
+  cursor: move; /* indique que l'image est déplaçable */
+}
+
+.zoom-controls {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
+  z-index: 10;
+}
+
+.zoom-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  color: var(--form-submit-color);
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease;
+}
+
+.zoom-btn:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.zoom-btn:active {
+  transform: translateY(0);
+}
+
+/* Animation lors du zoom */
+.zoom-btn.active {
+  background-color: var(--accent-hover);
+}
+
+/* Styles pour le bouton de réinitialisation */
+.zoom-reset {
+  font-size: 16px;
+}
+
+/* Adaptation pour le mode sombre */
+[data-theme="dark"] .zoom-btn {
+  background-color: var(--accent-color);
+  color: var(--form-submit-color);
+}
 /* Styles pour la galerie d'images */
 .project-gallery {
   width: 100%;
