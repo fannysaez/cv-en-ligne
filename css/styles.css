@@ -723,6 +723,7 @@ ul {
   box-shadow: 0 4px 8px rgba(92, 229, 244, 0.3);
 }
 
+
 /* Style pour les boutons généraux et le bouton "Voir plus de projets" */
 .btn,
 .project-card a.btn,
@@ -1570,6 +1571,8 @@ ul {
     width: 100%;
   }
 }
+
+
 
 /*  */
 .container {

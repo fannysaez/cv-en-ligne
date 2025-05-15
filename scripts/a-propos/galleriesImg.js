@@ -141,3 +141,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+//Galleries images pour l'atelier du bois - bouton voir plus de projets
