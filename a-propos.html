@@ -101,495 +101,552 @@
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Bouton pour ouvrir la visionneuse PDF -->
-    <div class="text-center" style="margin: 2rem 0;">
-      <button id="openPdfViewer" class="btn btn-primary">
-        <i class="bx bx-file-pdf"></i> Voir mon CV PDF
-      </button>
+
+  <!-- Section Réalisations effectuer pour les différents projets à Simplon -->
+  <section id="realisations">
+    <div class="container">
+      <div class="main-title">
+        <h2><span>Mes réalisations</span></h2>
+      </div>
+
     </div>
+    <div class="grid">
 
-    <!-- Visionneuse PDF en modal (cachée par défaut) -->
-    <div id="pdfModal" class="modal" style="display:none;">
-      <div class="modal-content" style="max-width:900px; width:95%; margin:auto;">
-        <span class="close-modal" id="closePdfModal" style="cursor:pointer;">&times;</span>
-        <h3><i class="bx bx-file-pdf"></i> Mon CV au format PDF</h3>
-        <div class="pdf-viewer-container" style="margin-bottom:1rem;">
-          <iframe id="pdf-viewer" src="./assets/docs-print/Fanny - CDA et DevOps en Alternance (18mois)  2025-2027.pdf"
-            width="100%" height="600px" frameborder="0">
-            <p>Votre navigateur ne supporte pas l'affichage des PDF.
-              <a href="./assets/docs-print/Fanny - CDA et DevOps en Alternance (18mois)  2025-2027.pdf"
-                target="_blank">Télécharger le PDF</a>
-            </p>
-          </iframe>
+      <!-- Projet 1 -->
+      <div class="project-card animate-fadeInUp">
+        <div class="relative">
+          <img src="./assets/a-propos/realisations/Mon Portfolio.png" alt="Portfolio">
         </div>
-        <div class="pdf-controls" style="text-align:center;">
-          <button id="print-pdf" class="btn btn-primary">
-            <i class="bx bx-printer"></i> Imprimer le CV
-          </button>
-          <a id="download-pdf" class="btn btn-secondary"
-            href="./assets/docs-print/Fanny - CDA et DevOps en Alternance (18mois)  2025-2027.pdf" download>
-            <i class="bx bx-download"></i> Télécharger le PDF
-          </a>
-          <button id="fullscreen-pdf" class="btn btn-tertiary">
-            <i class="bx bx-fullscreen"></i> Plein écran
-          </button>
+        <div class="container">
+          <h3>Portfolio</h3>
+          <p>Mon premier portfolio que j'ai développé en HTML, CSS et
+            un peu de JavaScript.
+            Ils présentent mes formations ainsi que les différents projets que je réalise pendant la formation de
+            développement web & mobile avec Simplon à Clermont-Ferrand.</p>
+          <div class="flex">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Git & GitHub</span>
+          </div>
+          <div class="buttons-container">
+            <a href="https://fannysaez.github.io/my_portfolio/" class="btn" target="_blank">Voir le site</a>
+            <button class="btn popup-trigger" data-project="portfolio">Plus d'infos</button>
+          </div>
         </div>
       </div>
-    </div>
-    <!-- Section Réalisations effectuer pour les différents projets à Simplon -->
-    <section id="realisations">
-      <div class="container">
-        <div class="main-title">
-          <h2><span>Mes réalisations</span></h2>
-        </div>
 
-      </div>
-      <div class="grid">
-
-        <!-- Projet 1 -->
-        <div class="project-card animate-fadeInUp">
-          <div class="relative">
+      <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
+      <div id="popup-portfolio" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Portfolio - Détails du projet</h2>
+          <div class="modal-img">
             <img src="./assets/a-propos/realisations/Mon Portfolio.png" alt="Portfolio">
           </div>
-          <div class="container">
-            <h3>Portfolio</h3>
-            <p>Mon premier portfolio que j'ai développé en HTML, CSS et
-              un peu de JavaScript.
-              Ils présentent mes formations ainsi que les différents projets que je réalise pendant la formation de
-              développement web & mobile avec Simplon à Clermont-Ferrand.</p>
+          <div class="modal-description">
+            <h3>Description</h3>
+            <p><br>
+              J'ai créer mon "premier portfolio" en juillet 2024 en seulement 2 semaines, l'idée m'est venu en
+              parcourant
+              le site web "Le Reacteur" et j'avoue que je suis partie d'une des formations gratuites en HTML, CSS et
+              JavaScript.
+              Depuis, je le mets à jour pour chacune des technologies et des projets lors de ma formation chez Simplon à
+              Clermont-Ferrand !
+            </p><br>
+            <h3>Technologies utilisées</h3>
             <div class="flex">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>Git & GitHub</span>
-            </div>
-            <div class="buttons-container">
-              <a href="https://fannysaez.github.io/my_portfolio/" class="btn" target="_blank">Voir le site</a>
-              <button class="btn popup-trigger" data-project="portfolio">Plus d'infos</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
-        <div id="popup-portfolio" class="modal">
-          <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Portfolio - Détails du projet</h2>
-            <div class="modal-img">
-              <img src="./assets/a-propos/realisations/Mon Portfolio.png" alt="Portfolio">
-            </div>
-            <div class="modal-description">
-              <h3>Description</h3>
-              <p><br>
-                J'ai créer mon "premier portfolio" en juillet 2024 en seulement 2 semaines, l'idée m'est venu en
-                parcourant
-                le site web "Le Reacteur" et j'avoue que je suis partie d'une des formations gratuites en HTML, CSS et
-                JavaScript.
-                Depuis, je le mets à jour pour chacune des technologies et des projets lors de ma formation chez Simplon
-                à
-                Clermont-Ferrand !
-              </p><br>
-              <h3>Technologies utilisées</h3>
-              <div class="flex">
-                <ul>
-                  <li><span>HTML </span></li>
-                  <li><span>CSS</span></li>
-                  <li><span>JavaScript</span></li>
-                  <li><span>Git & GitHub</span></li>
-                </ul>
-              </div><br>
-
-              <h3>Fonctionnalités</h3>
               <ul>
-                <li>Présentation des projets</li>
-                <li>Design responsive</li>
-                <li>Apprendre de nouvelles technologies</li>
+                <li><span>HTML </span></li>
+                <li><span>CSS</span></li>
+                <li><span>JavaScript</span></li>
+                <li><span>Git & GitHub</span></li>
               </ul>
+            </div><br>
 
-              <a href="https://fannysaez.github.io/my_portfolio/" class="btn" target="_blank">Voir le site</a>
-            </div>
+            <h3>Fonctionnalités</h3>
+            <ul>
+              <li>Présentation des projets</li>
+              <li>Design responsive</li>
+              <li>Apprendre de nouvelles technologies</li>
+            </ul>
+
+            <a href="https://fannysaez.github.io/my_portfolio/" class="btn" target="_blank">Voir le site</a>
           </div>
         </div>
+      </div>
 
-        <!-- Projet 2 -->
+      <!-- Projet 2 -->
 
-        <div class="project-card animate-fadeInUp">
-          <div class="relative">
+      <div class="project-card animate-fadeInUp">
+        <div class="relative">
+          <img src="./assets/a-propos/realisations/ComingSoonPage.png" alt="ComingSoonPage">
+        </div>
+        <div class="container">
+          <h3>ComingSoonPage</h3>
+          <p>
+            L’idée, c’est de créer une page qui capte l’attention et qui incite les visiteurs à s’inscrire à la
+            newsletter, tout en assurant une super expérience, surtout sur
+            mobile.SEO : La page doit être bien optimisée pour le référencement. Code clean et Accessibilité !!
+          </p>
+          <div class="flex">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>Git & GitHub</span>
+
+          </div>
+          <div class="buttons-container">
+            <a href="https://fannysaez.github.io/ComingSoonPage/" class="btn" target="_blank">Voir le site</a>
+            <button class="btn popup-trigger" data-project="ComingSoonPage">Plus d'infos</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
+      <div id="popup-ComingSoonPage" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Page d'attente - Détails du projet</h2>
+          <div class="modal-img">
             <img src="./assets/a-propos/realisations/ComingSoonPage.png" alt="ComingSoonPage">
           </div>
-          <div class="container">
-            <h3>ComingSoonPage</h3>
+          <div class="modal-description">
+            <h3>Description</h3>
             <p>
-              L’idée, c’est de créer une page qui capte l’attention et qui incite les visiteurs à s’inscrire à la
-              newsletter, tout en assurant une super expérience, surtout sur
-              mobile.SEO : La page doit être bien optimisée pour le référencement. Code clean et Accessibilité !!
-            </p>
+              J'ai réalié en décembre 2024, ma première page d'attente qui représente un évènement ou festival de mon
+              choix, j'ai choisi
+              le " Salon du chocolat ".
+            </p><br>
+            <h3>Technologies utilisées</h3>
             <div class="flex">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>Git & GitHub</span>
-
-            </div>
-            <div class="buttons-container">
-              <a href="https://fannysaez.github.io/ComingSoonPage/" class="btn" target="_blank">Voir le site</a>
-              <button class="btn popup-trigger" data-project="ComingSoonPage">Plus d'infos</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
-        <div id="popup-ComingSoonPage" class="modal">
-          <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Page d'attente - Détails du projet</h2>
-            <div class="modal-img">
-              <img src="./assets/a-propos/realisations/ComingSoonPage.png" alt="ComingSoonPage">
-            </div>
-            <div class="modal-description">
-              <h3>Description</h3>
-              <p>
-                J'ai réalié en décembre 2024, ma première page d'attente qui représente un évènement ou festival de mon
-                choix, j'ai choisi
-                le " Salon du chocolat ".
-              </p><br>
-              <h3>Technologies utilisées</h3>
-              <div class="flex">
-                <ul>
-                  <li><span>HTML </span></li>
-                  <li><span>CSS</span></li>
-                  <li><span>Git & GitHub</span></li>
-                </ul>
-              </div><br>
-
-              <h3>Fonctionnalités</h3>
               <ul>
-                <li>Première mission en tant que développeuse web et mobile</li>
-                <li>Design responsive</li>
-                <li>Page Statique</li>
+                <li><span>HTML </span></li>
+                <li><span>CSS</span></li>
+                <li><span>Git & GitHub</span></li>
               </ul>
+            </div><br>
 
-              <a href="https://fannysaez.github.io/ComingSoonPage/" class="btn" target="_blank">Voir le site</a>
-            </div>
+            <h3>Fonctionnalités</h3>
+            <ul>
+              <li>Première mission en tant que développeuse web et mobile</li>
+              <li>Design responsive</li>
+              <li>Page Statique</li>
+            </ul>
+
+            <a href="https://fannysaez.github.io/ComingSoonPage/" class="btn" target="_blank">Voir le site</a>
           </div>
         </div>
+      </div>
 
 
 
-        <!-- Projet 3 -->
-        <div class="project-card animate-fadeInUp">
-          <div class="relative">
+      <!-- Projet 3 -->
+      <div class="project-card animate-fadeInUp">
+        <div class="relative">
+          <img src="./assets/a-propos/realisations/App-MeteoZen.png" alt="MeteoZen">
+        </div>
+        <div class="container">
+          <h3>App MétéoZen</h3>
+          <p>
+            Projet d'une application Météo en collaboration. C'est un travail d'équipe en trinôme. Utilisation des
+            technos (sans
+            framework) HTML, CSS et JavaScript. Ajout d'une API </p>
+          <div class="flex">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>API OpenWeatherMap</span>
+            <span>Git & GitHub</span>
+          </div>
+          <div class="buttons-container">
+            <a href="https://fannysaez.github.io/App-MeteoZen/" class="btn" target="_blank">Voir le site</a>
+            <button class="btn popup-trigger" data-project="MeteoZen">Plus d'infos</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
+      <div id="popup-MeteoZen" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>App MétéoZen - Détails du projet</h2>
+          <div class="modal-img">
             <img src="./assets/a-propos/realisations/App-MeteoZen.png" alt="MeteoZen">
           </div>
-          <div class="container">
-            <h3>App MétéoZen</h3>
+          <div class="modal-description">
+            <h3>Description</h3>
             <p>
-              Projet d'une application Météo en collaboration. C'est un travail d'équipe en trinôme. Utilisation des
-              technos (sans
-              framework) HTML, CSS et JavaScript. Ajout d'une API </p>
+              Créer une application météo dynamique et responsive avec une recherche de ville, un affichage des données
+              météo en temps réel, un beau design, et une documentation claire.
+              Application météo collaborative développée en HTML, CSS et JavaScript.
+              Elle permet de rechercher la météo d’une ville via l’API OpenWeatherMap
+            </p><br>
+            <h3>Technologies utilisées</h3>
             <div class="flex">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>API OpenWeatherMap</span>
-              <span>Git & GitHub</span>
-            </div>
-            <div class="buttons-container">
-              <a href="https://fannysaez.github.io/App-MeteoZen/" class="btn" target="_blank">Voir le site</a>
-              <button class="btn popup-trigger" data-project="MeteoZen">Plus d'infos</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
-        <div id="popup-MeteoZen" class="modal">
-          <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>App MétéoZen - Détails du projet</h2>
-            <div class="modal-img">
-              <img src="./assets/a-propos/realisations/App-MeteoZen.png" alt="MeteoZen">
-            </div>
-            <div class="modal-description">
-              <h3>Description</h3>
-              <p>
-                Créer une application météo dynamique et responsive avec une recherche de ville, un affichage des
-                données
-                météo en temps réel, un beau design, et une documentation claire.
-                Application météo collaborative développée en HTML, CSS et JavaScript.
-                Elle permet de rechercher la météo d’une ville via l’API OpenWeatherMap
-              </p><br>
-              <h3>Technologies utilisées</h3>
-              <div class="flex">
-                <ul>
-                  <li><span>HTML </span></li>
-                  <li><span>CSS</span></li>
-                  <li><span>JavaScript</span></li>
-                  <li><span>API OpenWeatherMap</span></li>
-                  <li><span>Git & GitHub</span></li>
-                </ul>
-
-              </div><br>
-
-              <h3>Fonctionnalités</h3>
               <ul>
-                <li>Première mission en tant que développeuse web et mobile</li>
-                <li>Design responsive</li>
-                <li>Page dynamique</li>
+                <li><span>HTML </span></li>
+                <li><span>CSS</span></li>
+                <li><span>JavaScript</span></li>
+                <li><span>API OpenWeatherMap</span></li>
+                <li><span>Git & GitHub</span></li>
               </ul>
 
-              <a href="https://fannysaez.github.io/App-MeteoZen/" class="btn" target="_blank">Voir le site</a>
-            </div>
+            </div><br>
+
+            <h3>Fonctionnalités</h3>
+            <ul>
+              <li>Première mission en tant que développeuse web et mobile</li>
+              <li>Design responsive</li>
+              <li>Page dynamique</li>
+            </ul>
+
+            <a href="https://fannysaez.github.io/App-MeteoZen/" class="btn" target="_blank">Voir le site</a>
           </div>
         </div>
+      </div>
 
-        <!-- Projet 4 -->
-        <div class="project-card animate-fadeInUp">
-          <div class="relative">
-            <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Flanano.png" alt="Catalogue">
+      <!-- Projet 4 -->
+      <div class="project-card animate-fadeInUp">
+        <div class="relative">
+          <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Flanano.png" alt="Catalogue">
+        </div>
+        <div class="container">
+          <h3>Flanano - Travail en binôme</h3>
+          <p>
+            Créer une application Symfony avec une base de données MySQL, crée une entité Product, affiche les produits
+            dynamiquement grâce à Twig et structure l’application selon l’architecture MVC.
+            Projet d'un catalogue de produits avec gestion admin. C'est un travail d'équipe en binôme (Merci Antonin).
+            Utilisation des
+            technos: Symfony7, Php, Sql etc...
+          </p>
+          <div class="flex">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>PHP & MySQL</span>
+            <span>Git & GitHub</span>
           </div>
-          <div class="container">
-            <h3>Flanano - Travail en binôme</h3>
+          <div class="buttons-container">
+            <a href="https://github.com/HeyAnto/flanano-symfony" class="btn" target="_blank">Voir sur GitHub</a>
+            <button class="btn popup-trigger" data-project="Catalogue">Plus d'infos</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
+      <div id="popup-Catalogue" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Catalogue de produits - Détails du projet</h2>
+          <!-- Ajout de la galerie d'images -->
+          <div class="project-gallery">
+            <div class="gallery-main">
+              <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Flanano.png"
+                alt="Catalogue Vue Principale" class="gallery-main-img">
+            </div>
+            <div class="gallery-thumbs">
+              <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Flanano-Binôme.png"
+                alt="Catalogue Vue Principale" class="gallery-thumb active"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Flanano-Binôme.png">
+              <!-- Remplacez par vos images supplémentaires -->
+              <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Inscrivez-vous Flanano.png"
+                alt="Catalogue Mobile" class="gallery-thumb"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Inscrivez-vous Flanano.png">
+              <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Lunettes Flanano.png"
+                alt="Catalogue Recherche" class="gallery-thumb"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Lunettes Flanano.png">
+              <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Makeup Flanano.png"
+                alt="Catalogue Résultats" class="gallery-thumb"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Makeup Flanano.png">
+            </div>
+          </div>
+
+          <div class="modal-description">
+            <h3>Description</h3>
             <p>
-              Créer une application Symfony avec une base de données MySQL, crée une entité Product, affiche les
-              produits
-              dynamiquement grâce à Twig et structure l’application selon l’architecture MVC.
-              Projet d'un catalogue de produits avec gestion admin. C'est un travail d'équipe en binôme (Merci Antonin).
-              Utilisation des
-              technos: Symfony7, Php, Sql etc...
-            </p>
+              Créer une application Symfony qui récupère des produits stockés en base de données et les affiche via
+              Twig.
+              Utilisation les entités Doctrine, les contrôleurs Symfony et les templates Twig pour afficher les
+              produits sous forme de liste et de pages détaillées.
+            </p><br>
+            <h3>Technologies utilisées</h3>
             <div class="flex">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>PHP & MySQL</span>
-              <span>Git & GitHub</span>
-            </div>
-            <div class="buttons-container">
-              <a href="https://github.com/HeyAnto/flanano-symfony" class="btn" target="_blank">Voir sur GitHub</a>
-              <button class="btn popup-trigger" data-project="Catalogue">Plus d'infos</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
-        <div id="popup-Catalogue" class="modal">
-          <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Catalogue de produits - Détails du projet</h2>
-            <!-- Ajout de la galerie d'images -->
-            <div class="project-gallery">
-              <div class="gallery-main">
-                <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Flanano.png"
-                  alt="Catalogue Vue Principale" class="gallery-main-img">
-              </div>
-              <div class="gallery-thumbs">
-                <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Flanano-Binôme.png"
-                  alt="Catalogue Vue Principale" class="gallery-thumb active"
-                  data-src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Flanano-Binôme.png">
-                <!-- Remplacez par vos images supplémentaires -->
-                <img
-                  src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Inscrivez-vous Flanano.png"
-                  alt="Catalogue Mobile" class="gallery-thumb"
-                  data-src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Inscrivez-vous Flanano.png">
-                <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Lunettes Flanano.png"
-                  alt="Catalogue Recherche" class="gallery-thumb"
-                  data-src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Lunettes Flanano.png">
-                <img src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Makeup Flanano.png"
-                  alt="Catalogue Résultats" class="gallery-thumb"
-                  data-src="./assets/a-propos/realisations/GalleriesImg/Flanano Symfony - Binôme/Makeup Flanano.png">
-              </div>
-            </div>
-
-            <div class="modal-description">
-              <h3>Description</h3>
-              <p>
-                Créer une application Symfony qui récupère des produits stockés en base de données et les affiche via
-                Twig.
-                Utilisation les entités Doctrine, les contrôleurs Symfony et les templates Twig pour afficher les
-                produits sous forme de liste et de pages détaillées.
-              </p><br>
-              <h3>Technologies utilisées</h3>
-              <div class="flex">
-                <ul>
-                  <li><span>HTML </span></li>
-                  <li><span>CSS</span></li>
-                  <li><span>JavaScript</span></li>
-                  <li><span>PHP</span></li>
-                  <li><span>MySQL</span></li>
-                  <li><span>Algorithmique</span></li>
-                  <li><span>Git & GitHub</span></li>
-                </ul>
-
-              </div><br>
-
-              <h3>Fonctionnalités</h3>
               <ul>
-                <li>Première version du catalogue en ligne</li>
-                <li>Design responsive</li>
-                <li>Page dynamique</li>
+                <li><span>HTML </span></li>
+                <li><span>CSS</span></li>
+                <li><span>JavaScript</span></li>
+                <li><span>PHP</span></li>
+                <li><span>MySQL</span></li>
+                <li><span>Algorithmique</span></li>
+                <li><span>Git & GitHub</span></li>
               </ul>
 
-              <a href="https://github.com/HeyAnto/flanano-symfony" class="btn" target="_blank">Voir GitHub</a>
-            </div>
-          </div>
-        </div>
-        <!-- Ajout du HTML pour la lightbox (à placer à la fin de votre HTML, juste avant la fin du body) -->
-        <div id="image-lightbox" class="lightbox">
-          <span class="close-lightbox">&times;</span>
-          <div class="lightbox-content">
-            <img src="" alt="" id="lightbox-img" class="lightbox-img">
-            <div class="lightbox-caption"></div>
-            <div class="lightbox-controls">
-              <button class="lightbox-prev">&lt;</button>
-              <button class="lightbox-next">&gt;</button>
-            </div>
-          </div>
-        </div>
+            </div><br>
 
-        <!-- Projet 5 -->
-        <div class="project-card animate-fadeInUp">
-          <div class="relative">
-            <img src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Espace Connexion.png"
-              alt="Marmiton">
+            <h3>Fonctionnalités</h3>
+            <ul>
+              <li>Première version du catalogue en ligne</li>
+              <li>Design responsive</li>
+              <li>Page dynamique</li>
+            </ul>
+
+            <a href="https://github.com/HeyAnto/flanano-symfony" class="btn" target="_blank">Voir GitHub</a>
           </div>
-          <div class="container">
-            <h3>Recette Marmiton</h3>
+        </div>
+      </div>
+      <!-- Ajout du HTML pour la lightbox (à placer à la fin de votre HTML, juste avant la fin du body) -->
+      <div id="image-lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-content">
+          <img src="" alt="" id="lightbox-img" class="lightbox-img">
+          <div class="lightbox-caption"></div>
+          <div class="lightbox-controls">
+            <button class="lightbox-prev">&lt;</button>
+            <button class="lightbox-next">&gt;</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet 5 -->
+      <div class="project-card animate-fadeInUp">
+        <div class="relative">
+          <img src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Espace Connexion.png" alt="Marmiton">
+        </div>
+        <div class="container">
+          <h3>Recette Marmiton</h3>
+          <p>
+            Créer une application Symfony permettant aux utilisateurs de publier, consulter, commenter et liker
+            des recettes de cuisine, avec une interface d'administration et un système d'authentification.
+            Application Symfony avec une base de données MySQL et doit réaliser une première version d'une application
+            en suivant un cachier des charges précis.
+          </p>
+          <div class="flex">
+            <span>HTML, CSS, Javascript</span>
+            <span>Symfony CLI, Composer, Doctrine ORM</span>
+            <span>Boostrap5</span>
+            <span>PHP & MySQL</span>
+            <span>Git & GitHub</span>
+          </div>
+          <div class="buttons-container">
+            <a href="https://github.com/fannysaez/symfony_recetteMarmiton" class="btn" target="_blank">Voir sur
+              GitHub</a>
+            <button class="btn popup-trigger" data-project="Marmiton">Plus d'infos</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
+      <div id="popup-Marmiton" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Recette Marmiton - Détails du projet</h2>
+          <!-- Ajout de la galerie d'images -->
+          <div class="project-gallery">
+            <div class="gallery-main">
+              <img
+                src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil.png"
+                alt="Marmiton Vue Principale" class="gallery-main-img">
+            </div>
+            <div class="gallery-thumbs">
+              <img src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Espace d'inscription.png"
+                alt="Marmiton Vue Principale" class="gallery-thumb active"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Espace d'inscription.png">
+              <!-- Remplacez par vos images supplémentaires -->
+              <img
+                src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil - Utilisateur.png"
+                alt="Marmiton Mobile" class="gallery-thumb"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil - Utilisateur.png">
+              <img
+                src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil - Admin.png"
+                alt="Marmiton Recherche" class="gallery-thumb"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil - Admin.png">
+              <img src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Détails de la recette.png"
+                alt="Marmiton Résultats" class="gallery-thumb"
+                data-src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Détails de la recette.png">
+            </div>
+          </div>
+
+          <div class="modal-description">
+            <h3>Description</h3>
             <p>
               Créer une application Symfony permettant aux utilisateurs de publier, consulter, commenter et liker
               des recettes de cuisine, avec une interface d'administration et un système d'authentification.
               Application Symfony avec une base de données MySQL et doit réaliser une première version d'une application
               en suivant un cachier des charges précis.
-            </p>
+            </p><br>
+            <h3>Technologies utilisées</h3>
             <div class="flex">
-              <span>HTML, CSS, Javascript</span>
-              <span>Symfony CLI, Composer, Doctrine ORM</span>
-              <span>Boostrap5</span>
-              <span>PHP & MySQL</span>
-              <span>Git & GitHub</span>
-            </div>
-            <div class="buttons-container">
-              <a href="https://github.com/fannysaez/symfony_recetteMarmiton" class="btn" target="_blank">Voir sur
-                GitHub</a>
-              <button class="btn popup-trigger" data-project="Marmiton">Plus d'infos</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
-        <div id="popup-Marmiton" class="modal">
-          <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2>Recette Marmiton - Détails du projet</h2>
-            <!-- Ajout de la galerie d'images -->
-            <div class="project-gallery">
-              <div class="gallery-main">
-                <img
-                  src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil.png"
-                  alt="Marmiton Vue Principale" class="gallery-main-img">
-              </div>
-              <div class="gallery-thumbs">
-                <img src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Espace d'inscription.png"
-                  alt="Marmiton Vue Principale" class="gallery-thumb active"
-                  data-src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Espace d'inscription.png">
-                <!-- Remplacez par vos images supplémentaires -->
-                <img
-                  src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil - Utilisateur.png"
-                  alt="Marmiton Mobile" class="gallery-thumb"
-                  data-src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil - Utilisateur.png">
-                <img
-                  src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil - Admin.png"
-                  alt="Marmiton Recherche" class="gallery-thumb"
-                  data-src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Bienvenue sur la page d'accueil - Admin.png">
-                <img src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Détails de la recette.png"
-                  alt="Marmiton Résultats" class="gallery-thumb"
-                  data-src="./assets/a-propos/realisations/GalleriesImg/Marmiton - Symfony/Détails de la recette.png">
-              </div>
-            </div>
-
-            <div class="modal-description">
-              <h3>Description</h3>
-              <p>
-                Créer une application Symfony permettant aux utilisateurs de publier, consulter, commenter et liker
-                des recettes de cuisine, avec une interface d'administration et un système d'authentification.
-                Application Symfony avec une base de données MySQL et doit réaliser une première version d'une
-                application
-                en suivant un cachier des charges précis.
-              </p><br>
-              <h3>Technologies utilisées</h3>
-              <div class="flex">
-                <ul>
-                  <li><span>HTML, CSS, JavaScript </span></li>
-                  <li><span>PHP et MySQL</span></li>
-                  <li><span>Symfony CLI</span></li>
-                  <li><span>Composer</span></li>
-                  <li><span>Boostrap 5</span></li>
-                  <li><span>Doctrine ORM</span></li>
-                  <li><span>Git & GitHub</span></li>
-                </ul>
-
-              </div><br>
-
-              <h3>Fonctionnalités</h3>
               <ul>
-                <li>Version d'une application de recettes marmiton</li>
-                <li>Design responsive</li>
-                <li>Page dynamique</li>
+                <li><span>HTML, CSS, JavaScript </span></li>
+                <li><span>PHP et MySQL</span></li>
+                <li><span>Symfony CLI</span></li>
+                <li><span>Composer</span></li>
+                <li><span>Boostrap 5</span></li>
+                <li><span>Doctrine ORM</span></li>
+                <li><span>Git & GitHub</span></li>
               </ul>
 
-              <a href="https://github.com/fannysaez/symfony_recetteMarmiton" class="btn" target="_blank">Voir GitHub</a>
-            </div>
+            </div><br>
+
+            <h3>Fonctionnalités</h3>
+            <ul>
+              <li>Version d'une application de recettes marmiton</li>
+              <li>Design responsive</li>
+              <li>Page dynamique</li>
+            </ul>
+
+            <a href="https://github.com/fannysaez/symfony_recetteMarmiton" class="btn" target="_blank">Voir GitHub</a>
           </div>
         </div>
-        <!-- Ajout du HTML pour la lightbox (à placer à la fin de votre HTML, juste avant la fin du body) -->
-        <div id="image-lightbox" class="lightbox">
-          <span class="close-lightbox">&times;</span>
-          <div class="lightbox-content">
-            <img src="" alt="" id="lightbox-img" class="lightbox-img">
-            <div class="lightbox-caption"></div>
-            <div class="lightbox-controls">
-              <button class="lightbox-prev">&lt;</button>
-              <button class="lightbox-next">&gt;</button>
-            </div>
+      </div>
+      <!-- Ajout du HTML pour la lightbox (à placer à la fin de votre HTML, juste avant la fin du body) -->
+      <div id="image-lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-content">
+          <img src="" alt="" id="lightbox-img" class="lightbox-img">
+          <div class="lightbox-caption"></div>
+          <div class="lightbox-controls">
+            <button class="lightbox-prev">&lt;</button>
+            <button class="lightbox-next">&gt;</button>
           </div>
         </div>
+      </div>
 
-        <!-- Projet 5 -->
+      <!-- Projet 5 -->
 
-        <div class="project-card animate-fadeInUp">
-          <div class="relative">
-            <img src="./assets/a-propos/realisations/Documentation-SQL.png" alt="DocSQL">
+      <div class="project-card animate-fadeInUp">
+        <div class="relative">
+          <img src="./assets/a-propos/realisations/Documentation-SQL.png" alt="DocSQL">
+        </div>
+        <div class="container">
+          <h3>Documenter les bases SQL</h3>
+          <p>
+            En tant que développeur, on doit mettre en place une documentation pour faciliter l'intégration des
+            développeurs juniors. Un travail de groupe en trinôme.
+            C'est à dire concevoir une documentation technique destinée aux nouveaux développeurs,
+            couvrant les bases de SQL. Cette documentation aborde, la création, modification et suppression de tables.
+            Les commandes fondamentales (SELECT, INSERT, UPDATE, DELETE) et l'utilisation de phpMyAdmin.
+          </p>
+          <div class="flex">
+            <span>Documentation SQL</span>
+            <span>Markdown</span>
+            <span>format.md (README)</span>
+            <span>Git & GitHub</span>
+
           </div>
-          <div class="container">
-            <h3>Documenter les bases SQL</h3>
+          <div class="buttons-container">
+            <a href="https://github.com/fannysaez/Documentation-SQL" class="btn" target="_blank">Voir sur GitHub</a>
+            <button class="btn popup-trigger" data-project="DocSQL">Plus d'infos</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
+      <div id="popup-DocSQL" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Documentation SQL - Détails du projet</h2>
+          <!-- Modification ici pour rendre l'image zoomable -->
+          <div class="modal-img zoomable-container">
+            <img src="./assets/a-propos/realisations/Documentation-SQL.png" alt="DocSQL" class="zoomable-img">
+            <div class="zoom-controls">
+              <button class="zoom-btn zoom-in" title="Zoom in">+</button>
+              <button class="zoom-btn zoom-out" title="Zoom out">-</button>
+              <button class="zoom-btn zoom-reset" title="Reset zoom">↺</button>
+            </div>
+          </div>
+          <div class="modal-description">
+            <h3>Description</h3>
             <p>
               En tant que développeur, on doit mettre en place une documentation pour faciliter l'intégration des
-              développeurs juniors. Un travail de groupe en trinôme.
-              C'est à dire concevoir une documentation technique destinée aux nouveaux développeurs,
+              développeurs juniors. C'est à dire concevoir une documentation technique destinée aux nouveaux
+              développeurs,
               couvrant les bases de SQL. Cette documentation aborde, la création, modification et suppression de tables.
               Les commandes fondamentales (SELECT, INSERT, UPDATE, DELETE) et l'utilisation de phpMyAdmin.
-            </p>
+            </p><br>
+            <h3>Technologies utilisées</h3>
             <div class="flex">
-              <span>Documentation SQL</span>
-              <span>Markdown</span>
-              <span>format.md (README)</span>
-              <span>Git & GitHub</span>
+              <ul>
+                <li><span>Markdown </span></li>
+                <li><span>Documentation SQL</span></li>
+                <li><span>Git & GitHub</span></li>
+                <li><span>format.md (README)</span></li>
+              </ul>
+            </div><br>
 
-            </div>
-            <div class="buttons-container">
-              <a href="https://github.com/fannysaez/Documentation-SQL" class="btn" target="_blank">Voir sur GitHub</a>
-              <button class="btn popup-trigger" data-project="DocSQL">Plus d'infos</button>
-            </div>
+            <h3>Fonctionnalités</h3>
+            <ul>
+              <li>Première documentation SQL (README.md)</li>
+              <li>GitHub</li>
+              <li>Page Statique</li>
+            </ul>
+
+            <a href="https://github.com/fannysaez/Documentation-SQL" class="btn" target="_blank">Voir sur GitHub</a>
           </div>
         </div>
+      </div>
 
-        <!-- Modal/Popup (à placer à la fin de votre HTML, juste avant la fin du body) -->
-        <div id="popup-DocSQL" class="modal">
+      <!-- Projet 6 -->
+
+
+      <br>
+      <div class="container">
+      </div>
+    </div>
+    <div class="text-center">
+      <button class="btn" id="openProjectsPopup">Voir plus de réalisations</button>
+    </div>
+
+    <!-- Popup à ajouter dans votre page -->
+    <div class="projects-popup-overlay" id="projectsPopupOverlay">
+      <div class="projects-popup-content">
+        <button class="projects-popup-close" id="closeProjectsPopup">&times;</button>
+        <h2 class="projects-popup-title">Mes Projets</h2>
+
+        <div class="projects-grid">
+          <!-- Projet 1 -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./assets/a-propos/realisations/Application To Do List.png" alt="ToDoList App Preview">
+            </div>
+            <h3 class="project-title">App To-Do-List</h3>
+            <div class="project-tags">
+              <span class="project-tag"> HTML </span>
+              <span class="project-tag"> CSS</span>
+              <span class="project-tag"> JavaScript</span>
+            </div>
+            <p class="project-description"> En Janvier 2025, première application pour un espace de Coworking.</p>
+            <a href="https://fannysaez.github.io/App-ToDoList/" class="project-link" target="_blank">Voir le site</a>
+          </div>
+
+          <!-- Projet 2 | Atelier du bois (Front-end). Travail en binôme -->
+          <div class="project-card">
+            <div class="project-image">
+              <img src="./assets/a-propos/realisations/L'Atelier du Bois_Accueil.png" alt="Atelier du bois Preview">
+            </div>
+            <h3 class="project-title">Atelier du bois</h3>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">CSS</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Php</span>
+            </div>
+            <p class="project-description">Concevoir la page d’accueil et le formulaire de contact pour "L’Atelier du
+              Bois". </p>
+            <a href="https://github.com/fannysaez/AtelierDuBois" class="project-link" target="_blank">Voir le GitHub</a>
+<button class="btn popup-trigger" data-project="AtelierDuBois">Plus d'infos</button>          </div>
+        </div>
+        <!-- Modal/Popup pour l'Atelier du Bois -->
+        <div id="popup-AtelierDuBois" class="modal">
           <div class="modal-content">
             <span class="close-modal">&times;</span>
-            <h2>Documentation SQL - Détails du projet</h2>
-            <!-- Modification ici pour rendre l'image zoomable -->
+            <h2>Atelier du bois - Détails du projet</h2>
+            <!-- Image zoomable -->
             <div class="modal-img zoomable-container">
-              <img src="./assets/a-propos/realisations/Documentation-SQL.png" alt="DocSQL" class="zoomable-img">
+              <img src="./assets/a-propos/realisations/L'Atelier du Bois_Accueil.png" alt="Atelier du bois"
+                class="zoomable-img">
               <div class="zoom-controls">
                 <button class="zoom-btn zoom-in" title="Zoom in">+</button>
                 <button class="zoom-btn zoom-out" title="Zoom out">-</button>
@@ -599,756 +656,654 @@
             <div class="modal-description">
               <h3>Description</h3>
               <p>
-                En tant que développeur, on doit mettre en place une documentation pour faciliter l'intégration des
-                développeurs juniors. C'est à dire concevoir une documentation technique destinée aux nouveaux
-                développeurs,
-                couvrant les bases de SQL. Cette documentation aborde, la création, modification et suppression de
-                tables.
-                Les commandes fondamentales (SELECT, INSERT, UPDATE, DELETE) et l'utilisation de phpMyAdmin.
+                Projet de développement front-end pour "L'Atelier du Bois", une entreprise d'ébénisterie.
+                Le travail a été réalisé en binôme et consistait à concevoir la page d'accueil ainsi que le formulaire
+                de contact
+                du site web. L'objectif était de créer une interface utilisateur élégante et fonctionnelle mettant en
+                valeur
+                l'artisanat du bois.
               </p><br>
               <h3>Technologies utilisées</h3>
               <div class="flex">
                 <ul>
-                  <li><span>Markdown </span></li>
-                  <li><span>Documentation SQL</span></li>
+                  <li><span>HTML</span></li>
+                  <li><span>CSS</span></li>
+                  <li><span>JavaScript</span></li>
+                  <li><span>PHP</span></li>
                   <li><span>Git & GitHub</span></li>
-                  <li><span>format.md (README)</span></li>
                 </ul>
               </div><br>
 
               <h3>Fonctionnalités</h3>
               <ul>
-                <li>Première documentation SQL (README.md)</li>
-                <li>GitHub</li>
-                <li>Page Statique</li>
+                <li>Page d'accueil responsive</li>
+                <li>Formulaire de contact interactif</li>
+                <li>Validation des données côté client et serveur</li>
+                <li>Design adapté à l'identité visuelle de l'entreprise</li>
               </ul>
 
-              <a href="https://github.com/fannysaez/Documentation-SQL" class="btn" target="_blank">Voir sur GitHub</a>
+              <a href="https://github.com/fannysaez/AtelierDuBois" class="btn" target="_blank">Voir sur GitHub</a>
             </div>
           </div>
         </div>
 
-        <!-- Projet 6 -->
+  </section>
 
 
-        <br>
-        <div class="container">
-        </div>
-      </div>
-      <div class="text-center">
-        <button class="btn" id="openProjectsPopup">Voir plus de réalisations</button>
-      </div>
+  <!-- Skills Progress Bar sur deux colonnes -->
+  <section id="skills">
+    <div class="main-title">
+      <h2>Compétences techniques et créatives</h2>
+    </div>
 
-      <!-- Popup à ajouter dans votre page -->
-      <div class="projects-popup-overlay" id="projectsPopupOverlay">
-        <div class="projects-popup-content">
-          <button class="projects-popup-close" id="closeProjectsPopup">&times;</button>
-          <h2 class="projects-popup-title">Mes Projets</h2>
-
-          <div class="projects-grid">
-            <!-- Projet 1 -->
-            <div class="project-card">
-              <div class="project-image">
-                <img src="./assets/a-propos/realisations/Application To Do List.png" alt="ToDoList App Preview">
-              </div>
-              <h3 class="project-title">App To-Do-List</h3>
-              <div class="project-tags">
-                <span class="project-tag"> HTML </span>
-                <span class="project-tag"> CSS</span>
-                <span class="project-tag"> JavaScript</span>
-              </div>
-              <p class="project-description"> En Janvier 2025, première application pour un espace de Coworking.</p>
-              <a href="https://fannysaez.github.io/App-ToDoList/" class="project-link" target="_blank">Voir le site</a>
-            </div>
-
-            <!-- Projet 2 | Atelier du bois (Front-end). Travail en binôme -->
-            <div class="project-card">
-              <div class="project-image">
-                <img src="./assets/a-propos/realisations/L'Atelier du Bois_Accueil.png" alt="Atelier du bois Preview">
-              </div>
-              <h3 class="project-title">Atelier du bois</h3>
-              <div class="project-tags">
-                <span class="project-tag">HTML</span>
-                <span class="project-tag">CSS</span>
-                <span class="project-tag">JavaScript</span>
-                <span class="project-tag">Php</span>
-              </div>
-              <p class="project-description">Concevoir la page d’accueil et le formulaire de contact pour "L’Atelier du
-                Bois". </p>
-              <a href="https://github.com/fannysaez/AtelierDuBois" class="project-link" target="_blank">Voir le
-                GitHub</a>
-              <button class="btn popup-trigger" data-project="AtelierDuBois">Plus d'infos</button>
-            </div>
+    <div class="container">
+      <!-- skills à gauche -->
+      <div class="row">
+        <section class="col">
+          <div class="sub-title">
+            <h2>Compétences en programmation</h2>
           </div>
-          <!-- Modal/Popup pour l'Atelier du Bois -->
-          <div id="popup-AtelierDuBois" class="modal">
-            <div class="modal-content">
-              <span class="close-modal">&times;</span>
-              <h2>Atelier du bois - Détails du projet</h2>
-              <!-- Image zoomable -->
-              <div class="modal-img zoomable-container">
-                <img src="./assets/a-propos/realisations/L'Atelier du Bois_Accueil.png" alt="Atelier du bois"
-                  class="zoomable-img">
-                <div class="zoom-controls">
-                  <button class="zoom-btn zoom-in" title="Zoom in">+</button>
-                  <button class="zoom-btn zoom-out" title="Zoom out">-</button>
-                  <button class="zoom-btn zoom-reset" title="Reset zoom">↺</button>
-                </div>
+
+          <div class="skills-container">
+            <div class="skill">
+              <div class="subject">HTML</div>
+              <div class="progress-bar" value="95%">
+                <div class="progress-line" style="max-width: 95%"></div>
               </div>
-              <div class="modal-description">
-                <h3>Description</h3>
-                <p>
-                  Projet de développement front-end pour "L'Atelier du Bois", une entreprise d'ébénisterie.
-                  Le travail a été réalisé en binôme et consistait à concevoir la page d'accueil ainsi que le formulaire
-                  de contact
-                  du site web. L'objectif était de créer une interface utilisateur élégante et fonctionnelle mettant en
-                  valeur
-                  l'artisanat du bois.
-                </p><br>
-                <h3>Technologies utilisées</h3>
-                <div class="flex">
-                  <ul>
-                    <li><span>HTML</span></li>
-                    <li><span>CSS</span></li>
-                    <li><span>JavaScript</span></li>
-                    <li><span>PHP</span></li>
-                    <li><span>Git & GitHub</span></li>
-                  </ul>
-                </div><br>
+            </div>
 
-                <h3>Fonctionnalités</h3>
-                <ul>
-                  <li>Page d'accueil responsive</li>
-                  <li>Formulaire de contact interactif</li>
-                  <li>Validation des données côté client et serveur</li>
-                  <li>Design adapté à l'identité visuelle de l'entreprise</li>
-                </ul>
+            <div class="skill">
+              <div class="subject">CSS</div>
+              <div class="progress-bar" value="75%">
+                <div class="progress-line" style="max-width: 75%"></div>
+              </div>
+            </div>
 
-                <a href="https://github.com/fannysaez/AtelierDuBois" class="btn" target="_blank">Voir sur GitHub</a>
+            <div class="skill">
+              <div class="subject">Visual Studo Code & GitHub</div>
+              <div class="progress-bar" value="90%">
+                <div class="progress-line" style="max-width: 90%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="subject">Wordpress</div>
+              <div class="progress-bar" value="85%">
+                <div class="progress-line" style="max-width: 85%"></div>
               </div>
             </div>
           </div>
-
-    </section>
-
-
-    <!-- Skills Progress Bar sur deux colonnes -->
-    <section id="skills">
-      <div class="main-title">
-        <h2>Compétences techniques et créatives</h2>
-      </div>
-
-      <div class="container">
-        <!-- skills à gauche -->
-        <div class="row">
-          <section class="col">
-            <div class="sub-title">
-              <h2>Compétences en programmation</h2>
-            </div>
-
-            <div class="skills-container">
-              <div class="skill">
-                <div class="subject">HTML</div>
-                <div class="progress-bar" value="95%">
-                  <div class="progress-line" style="max-width: 95%"></div>
-                </div>
-              </div>
-
-              <div class="skill">
-                <div class="subject">CSS</div>
-                <div class="progress-bar" value="75%">
-                  <div class="progress-line" style="max-width: 75%"></div>
-                </div>
-              </div>
-
-              <div class="skill">
-                <div class="subject">Visual Studo Code & GitHub</div>
-                <div class="progress-bar" value="90%">
-                  <div class="progress-line" style="max-width: 90%"></div>
-                </div>
-              </div>
-
-              <div class="skill">
-                <div class="subject">Wordpress</div>
-                <div class="progress-bar" value="85%">
-                  <div class="progress-line" style="max-width: 85%"></div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- skills à droite -->
-          <section class="col">
-            <div class="sub-title">
-              <h2>Compétences Créatives</h2>
-            </div>
-            <div class="skills-container">
-              <div class="skill">
-                <div class="subject">Photoshop</div>
-                <div class="progress-bar" value="85%">
-                  <div class="progress-line" style="max-width: 85%"></div>
-                </div>
-              </div>
-
-              <div class="skill">
-                <div class="subject">Illustrator</div>
-                <div class="progress-bar" value="95%">
-                  <div class="progress-line" style="max-width: 95%"></div>
-                </div>
-              </div>
-
-              <div class="skill">
-                <div class="subject">Indesign</div>
-                <div class="progress-bar" value="75%">
-                  <div class="progress-line" style="max-width: 75%"></div>
-                </div>
-              </div>
-
-              <div class="skill">
-                <div class="subject">Silhouette Studio "Scrapbooking"</div>
-                <div class="progress-bar" value="80%">
-                  <div class="progress-line" style="max-width: 80%"></div>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-      </div>
-
-      <!-- Skills : savoir-être -->
-      <div class="main-title">
-        <h2>Savoir-être</h2>
-      </div>
-
-      <div class="skills">
-        <div class="skill">
-          <div class="outer-circle" data-percentage="100">
-            <div class="inner-circle">
-              <span>100%</span>
-            </div>
+        </section>
+        <!-- skills à droite -->
+        <section class="col">
+          <div class="sub-title">
+            <h2>Compétences Créatives</h2>
           </div>
-          <p>Autonomie</p>
-        </div>
-
-        <div class="skill">
-          <div class="outer-circle" data-percentage="95">
-            <div class="inner-circle">
-              <span>95%</span>
-            </div>
-          </div>
-          <p>Rigoureuse</p>
-        </div>
-
-        <div class="skill">
-          <div class="outer-circle" data-percentage="100">
-            <div class="inner-circle">
-              <span>100%</span>
-            </div>
-          </div>
-          <p>Organisée</p>
-        </div>
-
-        <div class="skill">
-          <div class="outer-circle" data-percentage="90">
-            <div class="inner-circle">
-              <span>90%</span>
-            </div>
-          </div>
-          <p>Curieuse</p>
-        </div>
-
-        <div class="skill">
-          <div class="outer-circle" data-percentage="95">
-            <div class="inner-circle">
-              <span>95%</span>
-            </div>
-          </div>
-          <p>Travail en équipe</p>
-        </div>
-
-        <!-- Nouveaux soft skills -->
-        <div class="skill">
-          <div class="outer-circle" data-percentage="85">
-            <div class="inner-circle">
-              <span>85%</span>
-            </div>
-          </div>
-          <p>Gestion du temps</p>
-        </div>
-
-        <div class="skill">
-          <div class="outer-circle" data-percentage="90">
-            <div class="inner-circle">
-              <span>90%</span>
-            </div>
-          </div>
-          <p>Créativité</p>
-        </div>
-
-        <div class="skill">
-          <div class="outer-circle" data-percentage="85">
-            <div class="inner-circle">
-              <span>85%</span>
-            </div>
-          </div>
-          <p>Calme sous pression</p>
-        </div>
-
-        <div class="skill">
-          <div class="outer-circle" data-percentage="80">
-            <div class="inner-circle">
-              <span>80%</span>
-            </div>
-          </div>
-          <p>Sens du détail</p>
-        </div>
-
-        <div class="skill">
-          <div class="outer-circle" data-percentage="90">
-            <div class="inner-circle">
-              <span>90%</span>
-            </div>
-          </div>
-          <p>Adaptabilité</p>
-        </div>
-      </div>
-    </section>
-
-
-
-
-    <!-- Timeline: Formations & Certification (transformé en accordéon) -->
-    <section id="formations">
-      <div class="container">
-        <div class="main-title">
-          <h2>Formations & Certifications</h2>
-        </div>
-
-        <div class="formations-container">
-          <!-- Première colonne -->
-          <div class="formations-column">
-            <!-- 2024-2025 -->
-            <div class="timeline-accordion-item">
-              <div class="timeline-accordion-header">
-                <span class="year"><i class="bx bxs-calendar"></i>2024 - 2025</span>
-                <span>Développement Web & Mobile</span>
-              </div>
-              <div class="timeline-accordion-content">
-                <h3>Développement Web & Mobile | Simplon (63)</h3>
-                <p>Acutuellement en formation chez Simplon du 16 décembre 2024 jusqu'au 09 octobre 2025</p>
+          <div class="skills-container">
+            <div class="skill">
+              <div class="subject">Photoshop</div>
+              <div class="progress-bar" value="85%">
+                <div class="progress-line" style="max-width: 85%"></div>
               </div>
             </div>
 
-            <!-- 2024 -->
-            <div class="timeline-accordion-item">
-              <div class="timeline-accordion-header">
-                <span class="year"><i class="bx bxs-calendar"></i>2024</span>
-                <span>Prépa-compétence</span>
-              </div>
-              <div class="timeline-accordion-content">
-                <h3>Prépa-compétence | Afpa de Beaumont (63)</h3>
-                <p>La Prépa Compétences, c'est un programme personnalisé proposé par l'AFPA pour aider les demandeurs
-                  d'emploi, notamment ceux ayant un niveau CAP/BEP ou Bac,
-                  à se préparer à une formation et à trouver un emploi.</p>
-                <p>Ce programme permet de :</p>
-                <ul>
-                  <li>Faire le point sur vos compétences et vos objectifs.</li>
-                  <li>Bénéficier d'un accompagnement personnalisé pour construire votre projet professionnel.</li>
-                  <li>Développer des compétences clés pour réussir en entretien et trouver un emploi.</li>
-                </ul>
+            <div class="skill">
+              <div class="subject">Illustrator</div>
+              <div class="progress-bar" value="95%">
+                <div class="progress-line" style="max-width: 95%"></div>
               </div>
             </div>
 
-            <!-- 2023 -->
-            <div class="timeline-accordion-item">
-              <div class="timeline-accordion-header">
-                <span class="year"><i class="bx bxs-calendar"></i>2023</span>
-                <span>Autodidacte et Doubles Casquettes</span>
-              </div>
-              <div class="timeline-accordion-content">
-                <h3>Autodidacte | +1 an 1/2</h3>
-                <p>OpenClassroom | Cours de Développement Web - Certifications</p>
-                <ul>
-                  <li>Comprendre le web</li>
-                  <li>Créez votre site web avec HTML5 et CSS3</li>
-                  <li>Concevez votre site web avec PHP et MySQL</li>
-                  <li>Gérez votre code avec Git et GitHub</li>
-                  <li>Créez votre premier site avec WordPress 6</li>
-                  <li>Créez une maquette web avec Figma</li>
-                  <li>Apprenez à utiliser la ligne de commande dans le terminal</li>
-                  <li>Apprenez à programmer avec Javascript</li>
-                  <li>Mettez en place votre environnement front-end</li>
-                  <li>Mettez en place votre environnement Python</li>
-                  <li>Apprenez les bases du langage Python</li>
-                  <li>Mettez en ligne votre site web</li>
-                </ul>
-                <p>La Créa qui te va | Papéterie Personnalisée</p>
+            <div class="skill">
+              <div class="subject">Indesign</div>
+              <div class="progress-bar" value="75%">
+                <div class="progress-line" style="max-width: 75%"></div>
               </div>
             </div>
 
-            <!-- 2022 -->
-            <div class="timeline-accordion-item">
-              <div class="timeline-accordion-header">
-                <span class="year"><i class="bx bxs-calendar"></i>2022</span>
-                <span>Premiers Secours en Équipe de niveau 1</span>
-              </div>
-              <div class="timeline-accordion-content">
-                <h3>PSE 1 | UDSP à Clermont-Ferrand (63)</h3>
-                <p>Le PSE 1 avec l'Union Départementale des Sapeurs-Pompiers du
-                  Puy-de-Dôme (UDSP 63)
-                  est une formation qui nous prépare à intervenir lors d'un événement nécessitant des secours, en
-                  complément des services d'urgence.</p>
+            <div class="skill">
+              <div class="subject">Silhouette Studio "Scrapbooking"</div>
+              <div class="progress-bar" value="80%">
+                <div class="progress-line" style="max-width: 80%"></div>
               </div>
             </div>
           </div>
-
-          <!-- Deuxième colonne -->
-          <div class="formations-column">
-            <!-- 2020-2022 -->
-            <div class="timeline-accordion-item">
-              <div class="timeline-accordion-header">
-                <span class="year"><i class="bx bxs-calendar"></i>2020 - 2022</span>
-                <span>Brevet National de Sécurité et de Sauvetage Aquatique</span>
-              </div>
-              <div class="timeline-accordion-content">
-                <h3>BNSSA | 2 ans à Vic-le-comte (63)</h3>
-                <p>Le BNSSA est une formation de 2 ans sans diplôme que j'ai réalisé.</p>
-                <ul>
-                  <li>Technique de sauvetage</li>
-                  <li>Premiers Secours</li>
-                  <li>Réglementation</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- 2017-2018 -->
-            <div class="timeline-accordion-item">
-              <div class="timeline-accordion-header">
-                <span class="year"><i class="bx bxs-calendar"></i>2017 - 2018</span>
-                <span>Formation Wordpress & Drupal (DBM)</span>
-              </div>
-              <div class="timeline-accordion-content">
-                <h3>Wordpress & Drupal | DBM à Clermont-Ferrand (63)</h3>
-                <ul>
-                  <li>DBM est une agence spécialisée dans le développement de sites web sur mesure avec WordPress et
-                    Drupal.</li>
-                  <li>WordPress et Drupal sont des outils puissants pour créer et gérer des sites web. WordPress et
-                    Drupal
-                    : c'est un CMS</li>
-                  <li>WordPress est plus facile à utiliser pour les débutants, tandis que Drupal offre plus de
-                    flexibilité
-                    pour les projets complexes.</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- 2015 -->
-            <div class="timeline-accordion-item">
-              <div class="timeline-accordion-header">
-                <span class="year"><i class="bx bxs-calendar"></i>2015</span>
-                <span>Publication Assistée par Ordinateur en Multimédia</span>
-              </div>
-              <div class="timeline-accordion-content">
-                <h3>PAO Multimédia | Gréta (63)</h3>
-                <p>PAO Multimédia m'a permis d'acquérir les compétences
-                  nécessaires pour créer des visuels percutants et des contenus multimédias de qualité.</p>
-                <ul>
-                  <li>Maîtriser les logiciels de PAO: Photoshop, Illustrator, InDesign</li>
-                  <li>Créer des visuels attractifs: logos, affiches, brochures</li>
-                  <li>Mettre en page des documents: rapports, magazines, livres</li>
-                  <li>Réaliser des animations et des vidéos: motion design, montage vidéo</li>
-                  <li>Optimiser vos créations pour le web et les réseaux sociaux</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- Troisième colonne -->
-          <div class="formations-column">
-            <!-- 2013 -->
-            <div class="timeline-accordion-item">
-              <div class="timeline-accordion-header">
-                <span class="year"><i class="bx bxs-calendar"></i>2013</span>
-                <span>Développement Web & Logiciels d'Adobe</span>
-              </div>
-              <div class="timeline-accordion-content">
-                <h3>Développement Web | Vecteur Formation (63)</h3>
-                <p>Vecteur Formation 63 est un acteur incontournable dans le domaine de la formation professionnelle,
-                  offrant des parcours adaptés aux besoins croissants du marché du numérique.</p>
-                <ul>
-                  <li>Les fondamentaux du web: HTML, CSS</li>
-                  <li>Les frameworks et CMS: WordPress</li>
-                  <li>Les bases de données: MySQL</li>
-                  <li>Les logiciels d'adobe : Photoshop, Flash, Dreamweaver</li>
-                  <li>Le référencement naturel (SEO)</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- 2012 -->
-            <div class="timeline-accordion-item">
-              <div class="timeline-accordion-header">
-                <span class="year"><i class="bx bxs-calendar"></i>2012</span>
-                <span>Flockage du centre</span>
-              </div>
-              <div class="timeline-accordion-content">
-                <h3>Flockage du centre | Stage à vic-le-comte (63)</h3>
-                <p>Flockage du Centre : Plongez au cœur d'un stage créatif à Vic-le-Comte (63) !
-                  Le flockage, une technique qui consiste à appliquer des fibres courtes sur un support pour créer des
-                  textures douces et veloutées, est une activité aussi ludique que créative.</p>
-                <ul>
-                  <li>Découvrir une technique originale: Apprenez à appliquer des fibres courtes sur différents supports
-                    pour créer des textures douces et veloutées.</li>
-                  <li>Créer des objets uniques: Personnalisez vos vêtements, accessoires et objets de décoration.</li>
-                  <li>Développer votre créativité: Laissez libre cours à votre imagination et expérimentez différentes
-                    couleurs et motifs.</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- 2008-2011 -->
-            <div class="timeline-accordion-item">
-              <div class="timeline-accordion-header">
-                <span class="year"><i class="bx bxs-calendar"></i>2005 - 2011</span>
-                <span>Études et Expériences</span>
-              </div>
-              <div class="timeline-accordion-content">
-                <h3>2011 | Logistique | Gréta à Issoire (63)</h3>
-                <p>La logistique, c'est l'ensemble des opérations qui permettent de faire circuler les biens et les
-                  services, depuis leur production jusqu'à leur consommation finale.</p>
-                <ul>
-                  <li>Organisation et planification</li>
-                  <li>Sens du service client</li>
-                  <li>Maîtrise des outils informatiques</li>
-                </ul>
-
-                <h3>2010 - 2011 | École de Gendarmerie | Tulle (19)</h3>
-                <p>Le statut de GAV-EP est une voie d'accès à la Gendarmerie nationale particulièrement adaptée aux
-                  profils ayant des compétences spécifiques.</p>
-                <ul>
-                  <li>Traitement des courriers</li>
-                  <li>Appels téléphoniques</li>
-                  <li>Gestion des dossiers</li>
-                </ul>
-
-                <h3>2009 | Comptabilité | Gréta à Bourges (18)</h3>
-                <ul>
-                  <li>Maîtrise des outils informatiques</li>
-                  <li>Connaissance de la réglementation comptable</li>
-                  <li>Rigueur et méthode</li>
-                </ul>
-
-                <h3>2008 - 2005 | BAC PRO Secrétariat & BEP Métier du Secrétariat | Clermont-Ferrand (63)</h3>
-                <p>Lycée Anna Rodier</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- Parcours Professionnel : Accordéon + logos -->
-    <section id="parcours">
-      <div class="main-title">
-        <h2>Expériences</h2>
-      </div>
-      <div class="accordion">
-        <!-- Nouvelle expérience Hackathon -->
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            Hackathon | DevWeb & Mobile
-            <strong>Simplon Clermont-Ferrand (63) | 36 heures</strong>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <h3>Porteur de projet : AirNAM | Équipe Rouge</h3><br>
-            <ul>
-              <li>Thématique : Éco-conception & Accessibilité</li><br>
-              <li>Création d'un site WordPress écoresponsable autour de la qualité de l'air dans les transports</li><br>
-              <li>Conception d'un prototype fonctionnel, au design réfléchi et optimisé pour le SEO et la performance
-              </li>
-              <br>
-              <li>Compétences mobilisées : leadership, travail d'équipe, coordination, organisation, créativité, gestion
-                du temps</li>
-            </ul><br>
-            <div class="date-right">Du 23 au 25 Avril 2025</div>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            Comité Régional des Offices Municipaux du Sport | Secrétaire
-            <strong>Clermont-Ferrand (63) | 1 an</strong>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <ul>
-              <li>Prise de note,</li><br>
-              <li>Traitement administratif,</li><br>
-              <li>Dactylographie,</li><br>
-              <li>Mise à jour d'une base de donnée.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            Tupperware | Conseillère Culinaire
-            <strong>Cournon-d'Auvergne (63) | 6 mois</strong>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <ul>
-              <li>Organiser,</li><br>
-              <li>Animer des ateliers,</li><br>
-              <li>Gestion des ventes à domicile,</li><br>
-              <li>Travail d'équipe.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            E.Leclerc | Employé Libre Service
-            <strong>Enval (63) | 3 jours</strong>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <ul>
-              <li>Participer à un inventaire,</li><br>
-              <li>Ranger des produits selon leurs dates de validité,</li><br>
-              <li>Contrôler l'état des stocks.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            Gendarmerie Nationale | Secrétaire
-            <strong>Grenoble (38) | 1 an</strong>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <ul>
-              <li>Renseigner le public,</li><br>
-              <li>Rédiger des rapports,</li><br>
-              <li>Identifiter les appels téléphoniques.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="accordion-item">
-          <button class="accordion-header" aria-expanded="false">
-            Bénévolat | Association Zénith Aulnat
-            <strong>Aulnat (63) | +10 ans</strong>
-            <span class="accordion-icon">+</span>
-          </button>
-          <div class="accordion-content">
-            <ul>
-              <li>Renseigner le public,</li><br>
-              <li>Rédiger des rapports,</li><br>
-              <li>Identifiter les appels téléphoniques.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!--  Loisirs/passions -->
-    <section id="centres-interet">
-      <div class="main-title">
-        <h2>Centres d'intérêt</h2>
-      </div>
-      <div class="grid-container">
-        <figure class="interet">
-          <img src="./assets/a-propos/centresInteret/plongee.jpg" alt="plongee-sous-marine">
-          <figcaption>Plongée <br>sous-marine</figcaption>
-
-        </figure>
-
-        <figure class="interet">
-          <img src="./assets/a-propos/centresInteret/Randonnée.jpg" alt="randonnee">
-          <figcaption>Randonnée</figcaption>
-        </figure>
-        <figure class="interet">
-          <img src="./assets/a-propos/centresInteret/natation.jpg" alt="natation">
-          <figcaption>Natation</figcaption>
-        </figure>
-
-        <figure class="interet">
-          <img src="./assets/a-propos/centresInteret/cuisiner.jpg" alt="cuisiner">
-          <figcaption>Cuisiner</figcaption>
-        </figure>
-
-        <figure class="interet">
-          <img src="./assets/a-propos/centresInteret/jeux-video.jpg" alt="jeux-video">
-          <figcaption>Jeux Vidéo</figcaption>
-        </figure>
-
-        <figure class="interet">
-          <img src="./assets/a-propos/centresInteret/creativeDesign.jpg" alt="creativeDesign">
-          <figcaption>Design</figcaption>
-        </figure>
-
-
-    </section>
-
-
-    <!-- Footer -->
-    <footer id="contact" class="footer">
-      <div class="main-title">
-        <h2>Me Contacter</h2>
-      </div>
-
-      <div class="footer-content">
-        <p><i class="bx bx-home-smile fa-2x" title=""></i><a href="index.html"><br> Accueil </a></p>
-
-        <p><i class="bx bx-map-pin fa-2x" title=""></i><br> Boulevard Lafayette<br>
-          63000 - Clermont-Ferrand
-        </p>
-        <p><i class="bx bx-mail-send fa-2x" title=""></i><a href="mailto:fanny.saez.0486@gmail.com" class="mail-link"
-            id="contact-modal-open"><br>
-            Écrivez-moi ici</a></p>
-      </div>
-    </footer>
-
-    <!-- Modal Formulaire de Contact -->
-    <div id="contact-modal" class="modal">
-      <div class="modal-content">
-        <span class="close-modal">&times;</span>
-        <h3>Envoyez-moi un message</h3>
-        <form id="contact-form" class="contact-form" action="https://formsubmit.co/fanny.saez.0486@gmail.com"
-          method="POST">
-          <!-- Champs cachés pour la configuration FormSubmit -->
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_subject" value="Nouveau message via le formulaire de contact">
-
-          <div class="form-group">
-            <input type="text" id="name" name="name" placeholder="Votre nom" required>
-          </div>
-          <div class="form-group">
-            <input type="email" id="email" name="email" placeholder="Votre email" required>
-          </div>
-          <div class="form-group">
-            <textarea id="message" name="message" placeholder="Votre message" required></textarea>
-          </div>
-          <div class="form-group">
-            <button type="submit" class="submit-btn">Envoyer</button>
-          </div>
-          <div id="form-status" class="form-status"></div>
-        </form>
       </div>
     </div>
-    <hr>
-    <footer class="footer-copyright">
-      <p align="center">
-        © 2025 Fanny Saez - Tous droits réservés
+    </div>
+
+    <!-- Skills : savoir-être -->
+    <div class="main-title">
+      <h2>Savoir-être</h2>
+    </div>
+
+    <div class="skills">
+      <div class="skill">
+        <div class="outer-circle" data-percentage="100">
+          <div class="inner-circle">
+            <span>100%</span>
+          </div>
+        </div>
+        <p>Autonomie</p>
+      </div>
+
+      <div class="skill">
+        <div class="outer-circle" data-percentage="95">
+          <div class="inner-circle">
+            <span>95%</span>
+          </div>
+        </div>
+        <p>Rigoureuse</p>
+      </div>
+
+      <div class="skill">
+        <div class="outer-circle" data-percentage="100">
+          <div class="inner-circle">
+            <span>100%</span>
+          </div>
+        </div>
+        <p>Organisée</p>
+      </div>
+
+      <div class="skill">
+        <div class="outer-circle" data-percentage="90">
+          <div class="inner-circle">
+            <span>90%</span>
+          </div>
+        </div>
+        <p>Curieuse</p>
+      </div>
+
+      <div class="skill">
+        <div class="outer-circle" data-percentage="95">
+          <div class="inner-circle">
+            <span>95%</span>
+          </div>
+        </div>
+        <p>Travail en équipe</p>
+      </div>
+
+      <!-- Nouveaux soft skills -->
+      <div class="skill">
+        <div class="outer-circle" data-percentage="85">
+          <div class="inner-circle">
+            <span>85%</span>
+          </div>
+        </div>
+        <p>Gestion du temps</p>
+      </div>
+
+      <div class="skill">
+        <div class="outer-circle" data-percentage="90">
+          <div class="inner-circle">
+            <span>90%</span>
+          </div>
+        </div>
+        <p>Créativité</p>
+      </div>
+
+      <div class="skill">
+        <div class="outer-circle" data-percentage="85">
+          <div class="inner-circle">
+            <span>85%</span>
+          </div>
+        </div>
+        <p>Calme sous pression</p>
+      </div>
+
+      <div class="skill">
+        <div class="outer-circle" data-percentage="80">
+          <div class="inner-circle">
+            <span>80%</span>
+          </div>
+        </div>
+        <p>Sens du détail</p>
+      </div>
+
+      <div class="skill">
+        <div class="outer-circle" data-percentage="90">
+          <div class="inner-circle">
+            <span>90%</span>
+          </div>
+        </div>
+        <p>Adaptabilité</p>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Timeline: Formations & Certification (transformé en accordéon) -->
+  <section id="formations">
+    <div class="container">
+      <div class="main-title">
+        <h2>Formations & Certifications</h2>
+      </div>
+
+      <div class="formations-container">
+        <!-- Première colonne -->
+        <div class="formations-column">
+          <!-- 2024-2025 -->
+          <div class="timeline-accordion-item">
+            <div class="timeline-accordion-header">
+              <span class="year"><i class="bx bxs-calendar"></i>2024 - 2025</span>
+              <span>Développement Web & Mobile</span>
+            </div>
+            <div class="timeline-accordion-content">
+              <h3>Développement Web & Mobile | Simplon (63)</h3>
+              <p>Acutuellement en formation chez Simplon du 16 décembre 2024 jusqu'au 09 octobre 2025</p>
+            </div>
+          </div>
+
+          <!-- 2024 -->
+          <div class="timeline-accordion-item">
+            <div class="timeline-accordion-header">
+              <span class="year"><i class="bx bxs-calendar"></i>2024</span>
+              <span>Prépa-compétence</span>
+            </div>
+            <div class="timeline-accordion-content">
+              <h3>Prépa-compétence | Afpa de Beaumont (63)</h3>
+              <p>La Prépa Compétences, c'est un programme personnalisé proposé par l'AFPA pour aider les demandeurs
+                d'emploi, notamment ceux ayant un niveau CAP/BEP ou Bac,
+                à se préparer à une formation et à trouver un emploi.</p>
+              <p>Ce programme permet de :</p>
+              <ul>
+                <li>Faire le point sur vos compétences et vos objectifs.</li>
+                <li>Bénéficier d'un accompagnement personnalisé pour construire votre projet professionnel.</li>
+                <li>Développer des compétences clés pour réussir en entretien et trouver un emploi.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 2023 -->
+          <div class="timeline-accordion-item">
+            <div class="timeline-accordion-header">
+              <span class="year"><i class="bx bxs-calendar"></i>2023</span>
+              <span>Autodidacte et Doubles Casquettes</span>
+            </div>
+            <div class="timeline-accordion-content">
+              <h3>Autodidacte | +1 an 1/2</h3>
+              <p>OpenClassroom | Cours de Développement Web - Certifications</p>
+              <ul>
+                <li>Comprendre le web</li>
+                <li>Créez votre site web avec HTML5 et CSS3</li>
+                <li>Concevez votre site web avec PHP et MySQL</li>
+                <li>Gérez votre code avec Git et GitHub</li>
+                <li>Créez votre premier site avec WordPress 6</li>
+                <li>Créez une maquette web avec Figma</li>
+                <li>Apprenez à utiliser la ligne de commande dans le terminal</li>
+                <li>Apprenez à programmer avec Javascript</li>
+                <li>Mettez en place votre environnement front-end</li>
+                <li>Mettez en place votre environnement Python</li>
+                <li>Apprenez les bases du langage Python</li>
+                <li>Mettez en ligne votre site web</li>
+              </ul>
+              <p>La Créa qui te va | Papéterie Personnalisée</p>
+            </div>
+          </div>
+
+          <!-- 2022 -->
+          <div class="timeline-accordion-item">
+            <div class="timeline-accordion-header">
+              <span class="year"><i class="bx bxs-calendar"></i>2022</span>
+              <span>Premiers Secours en Équipe de niveau 1</span>
+            </div>
+            <div class="timeline-accordion-content">
+              <h3>PSE 1 | UDSP à Clermont-Ferrand (63)</h3>
+              <p>Le PSE 1 avec l'Union Départementale des Sapeurs-Pompiers du
+                Puy-de-Dôme (UDSP 63)
+                est une formation qui nous prépare à intervenir lors d'un événement nécessitant des secours, en
+                complément des services d'urgence.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Deuxième colonne -->
+        <div class="formations-column">
+          <!-- 2020-2022 -->
+          <div class="timeline-accordion-item">
+            <div class="timeline-accordion-header">
+              <span class="year"><i class="bx bxs-calendar"></i>2020 - 2022</span>
+              <span>Brevet National de Sécurité et de Sauvetage Aquatique</span>
+            </div>
+            <div class="timeline-accordion-content">
+              <h3>BNSSA | 2 ans à Vic-le-comte (63)</h3>
+              <p>Le BNSSA est une formation de 2 ans sans diplôme que j'ai réalisé.</p>
+              <ul>
+                <li>Technique de sauvetage</li>
+                <li>Premiers Secours</li>
+                <li>Réglementation</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 2017-2018 -->
+          <div class="timeline-accordion-item">
+            <div class="timeline-accordion-header">
+              <span class="year"><i class="bx bxs-calendar"></i>2017 - 2018</span>
+              <span>Formation Wordpress & Drupal (DBM)</span>
+            </div>
+            <div class="timeline-accordion-content">
+              <h3>Wordpress & Drupal | DBM à Clermont-Ferrand (63)</h3>
+              <ul>
+                <li>DBM est une agence spécialisée dans le développement de sites web sur mesure avec WordPress et
+                  Drupal.</li>
+                <li>WordPress et Drupal sont des outils puissants pour créer et gérer des sites web. WordPress et Drupal
+                  : c'est un CMS</li>
+                <li>WordPress est plus facile à utiliser pour les débutants, tandis que Drupal offre plus de flexibilité
+                  pour les projets complexes.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 2015 -->
+          <div class="timeline-accordion-item">
+            <div class="timeline-accordion-header">
+              <span class="year"><i class="bx bxs-calendar"></i>2015</span>
+              <span>Publication Assistée par Ordinateur en Multimédia</span>
+            </div>
+            <div class="timeline-accordion-content">
+              <h3>PAO Multimédia | Gréta (63)</h3>
+              <p>PAO Multimédia m'a permis d'acquérir les compétences
+                nécessaires pour créer des visuels percutants et des contenus multimédias de qualité.</p>
+              <ul>
+                <li>Maîtriser les logiciels de PAO: Photoshop, Illustrator, InDesign</li>
+                <li>Créer des visuels attractifs: logos, affiches, brochures</li>
+                <li>Mettre en page des documents: rapports, magazines, livres</li>
+                <li>Réaliser des animations et des vidéos: motion design, montage vidéo</li>
+                <li>Optimiser vos créations pour le web et les réseaux sociaux</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Troisième colonne -->
+        <div class="formations-column">
+          <!-- 2013 -->
+          <div class="timeline-accordion-item">
+            <div class="timeline-accordion-header">
+              <span class="year"><i class="bx bxs-calendar"></i>2013</span>
+              <span>Développement Web & Logiciels d'Adobe</span>
+            </div>
+            <div class="timeline-accordion-content">
+              <h3>Développement Web | Vecteur Formation (63)</h3>
+              <p>Vecteur Formation 63 est un acteur incontournable dans le domaine de la formation professionnelle,
+                offrant des parcours adaptés aux besoins croissants du marché du numérique.</p>
+              <ul>
+                <li>Les fondamentaux du web: HTML, CSS</li>
+                <li>Les frameworks et CMS: WordPress</li>
+                <li>Les bases de données: MySQL</li>
+                <li>Les logiciels d'adobe : Photoshop, Flash, Dreamweaver</li>
+                <li>Le référencement naturel (SEO)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 2012 -->
+          <div class="timeline-accordion-item">
+            <div class="timeline-accordion-header">
+              <span class="year"><i class="bx bxs-calendar"></i>2012</span>
+              <span>Flockage du centre</span>
+            </div>
+            <div class="timeline-accordion-content">
+              <h3>Flockage du centre | Stage à vic-le-comte (63)</h3>
+              <p>Flockage du Centre : Plongez au cœur d'un stage créatif à Vic-le-Comte (63) !
+                Le flockage, une technique qui consiste à appliquer des fibres courtes sur un support pour créer des
+                textures douces et veloutées, est une activité aussi ludique que créative.</p>
+              <ul>
+                <li>Découvrir une technique originale: Apprenez à appliquer des fibres courtes sur différents supports
+                  pour créer des textures douces et veloutées.</li>
+                <li>Créer des objets uniques: Personnalisez vos vêtements, accessoires et objets de décoration.</li>
+                <li>Développer votre créativité: Laissez libre cours à votre imagination et expérimentez différentes
+                  couleurs et motifs.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 2008-2011 -->
+          <div class="timeline-accordion-item">
+            <div class="timeline-accordion-header">
+              <span class="year"><i class="bx bxs-calendar"></i>2005 - 2011</span>
+              <span>Études et Expériences</span>
+            </div>
+            <div class="timeline-accordion-content">
+              <h3>2011 | Logistique | Gréta à Issoire (63)</h3>
+              <p>La logistique, c'est l'ensemble des opérations qui permettent de faire circuler les biens et les
+                services, depuis leur production jusqu'à leur consommation finale.</p>
+              <ul>
+                <li>Organisation et planification</li>
+                <li>Sens du service client</li>
+                <li>Maîtrise des outils informatiques</li>
+              </ul>
+
+              <h3>2010 - 2011 | École de Gendarmerie | Tulle (19)</h3>
+              <p>Le statut de GAV-EP est une voie d'accès à la Gendarmerie nationale particulièrement adaptée aux
+                profils ayant des compétences spécifiques.</p>
+              <ul>
+                <li>Traitement des courriers</li>
+                <li>Appels téléphoniques</li>
+                <li>Gestion des dossiers</li>
+              </ul>
+
+              <h3>2009 | Comptabilité | Gréta à Bourges (18)</h3>
+              <ul>
+                <li>Maîtrise des outils informatiques</li>
+                <li>Connaissance de la réglementation comptable</li>
+                <li>Rigueur et méthode</li>
+              </ul>
+
+              <h3>2008 - 2005 | BAC PRO Secrétariat & BEP Métier du Secrétariat | Clermont-Ferrand (63)</h3>
+              <p>Lycée Anna Rodier</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Parcours Professionnel : Accordéon + logos -->
+  <section id="parcours">
+    <div class="main-title">
+      <h2>Expériences</h2>
+    </div>
+    <div class="accordion">
+      <!-- Nouvelle expérience Hackathon -->
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          Hackathon | DevWeb & Mobile
+          <strong>Simplon Clermont-Ferrand (63) | 36 heures</strong>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <h3>Porteur de projet : AirNAM | Équipe Rouge</h3><br>
+          <ul>
+            <li>Thématique : Éco-conception & Accessibilité</li><br>
+            <li>Création d'un site WordPress écoresponsable autour de la qualité de l'air dans les transports</li><br>
+            <li>Conception d'un prototype fonctionnel, au design réfléchi et optimisé pour le SEO et la performance</li>
+            <br>
+            <li>Compétences mobilisées : leadership, travail d'équipe, coordination, organisation, créativité, gestion
+              du temps</li>
+          </ul><br>
+          <div class="date-right">Du 23 au 25 Avril 2025</div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          Comité Régional des Offices Municipaux du Sport | Secrétaire
+          <strong>Clermont-Ferrand (63) | 1 an</strong>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <ul>
+            <li>Prise de note,</li><br>
+            <li>Traitement administratif,</li><br>
+            <li>Dactylographie,</li><br>
+            <li>Mise à jour d'une base de donnée.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          Tupperware | Conseillère Culinaire
+          <strong>Cournon-d'Auvergne (63) | 6 mois</strong>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <ul>
+            <li>Organiser,</li><br>
+            <li>Animer des ateliers,</li><br>
+            <li>Gestion des ventes à domicile,</li><br>
+            <li>Travail d'équipe.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          E.Leclerc | Employé Libre Service
+          <strong>Enval (63) | 3 jours</strong>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <ul>
+            <li>Participer à un inventaire,</li><br>
+            <li>Ranger des produits selon leurs dates de validité,</li><br>
+            <li>Contrôler l'état des stocks.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          Gendarmerie Nationale | Secrétaire
+          <strong>Grenoble (38) | 1 an</strong>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <ul>
+            <li>Renseigner le public,</li><br>
+            <li>Rédiger des rapports,</li><br>
+            <li>Identifiter les appels téléphoniques.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-header" aria-expanded="false">
+          Bénévolat | Association Zénith Aulnat
+          <strong>Aulnat (63) | +10 ans</strong>
+          <span class="accordion-icon">+</span>
+        </button>
+        <div class="accordion-content">
+          <ul>
+            <li>Renseigner le public,</li><br>
+            <li>Rédiger des rapports,</li><br>
+            <li>Identifiter les appels téléphoniques.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--  Loisirs/passions -->
+  <section id="centres-interet">
+    <div class="main-title">
+      <h2>Centres d'intérêt</h2>
+    </div>
+    <div class="grid-container">
+      <figure class="interet">
+        <img src="./assets/a-propos/centresInteret/plongee.jpg" alt="plongee-sous-marine">
+        <figcaption>Plongée <br>sous-marine</figcaption>
+
+      </figure>
+
+      <figure class="interet">
+        <img src="./assets/a-propos/centresInteret/Randonnée.jpg" alt="randonnee">
+        <figcaption>Randonnée</figcaption>
+      </figure>
+      <figure class="interet">
+        <img src="./assets/a-propos/centresInteret/natation.jpg" alt="natation">
+        <figcaption>Natation</figcaption>
+      </figure>
+
+      <figure class="interet">
+        <img src="./assets/a-propos/centresInteret/cuisiner.jpg" alt="cuisiner">
+        <figcaption>Cuisiner</figcaption>
+      </figure>
+
+      <figure class="interet">
+        <img src="./assets/a-propos/centresInteret/jeux-video.jpg" alt="jeux-video">
+        <figcaption>Jeux Vidéo</figcaption>
+      </figure>
+
+      <figure class="interet">
+        <img src="./assets/a-propos/centresInteret/creativeDesign.jpg" alt="creativeDesign">
+        <figcaption>Design</figcaption>
+      </figure>
+
+
+  </section>
+
+
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="main-title">
+      <h2>Me Contacter</h2>
+    </div>
+
+    <div class="footer-content">
+      <p><i class="bx bx-home-smile fa-2x" title=""></i><a href="index.html"><br> Accueil </a></p>
+
+      <p><i class="bx bx-map-pin fa-2x" title=""></i><br> Boulevard Lafayette<br>
+        63000 - Clermont-Ferrand
       </p>
-    </footer>
-    <!-- Script -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <p><i class="bx bx-mail-send fa-2x" title=""></i><a href="mailto:fanny.saez.0486@gmail.com" class="mail-link"
+          id="contact-modal-open"><br>
+          Écrivez-moi ici</a></p>
+    </div>
+  </footer>
+
+  <!-- Modal Formulaire de Contact -->
+  <div id="contact-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h3>Envoyez-moi un message</h3>
+      <form id="contact-form" class="contact-form" action="https://formsubmit.co/fanny.saez.0486@gmail.com"
+        method="POST">
+        <!-- Champs cachés pour la configuration FormSubmit -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Nouveau message via le formulaire de contact">
+
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Votre nom" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Votre email" required>
+        </div>
+        <div class="form-group">
+          <textarea id="message" name="message" placeholder="Votre message" required></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="submit-btn">Envoyer</button>
+        </div>
+        <div id="form-status" class="form-status"></div>
+      </form>
+    </div>
+  </div>
+  <hr>
+  <footer class="footer-copyright">
+    <p align="center">
+      © 2025 Fanny Saez - Tous droits réservés
+    </p>
+  </footer>
+  <!-- Script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </body>
 <script src="./scripts/a-propos/header-buttonToggle.js"></script>
 <script src="./scripts/a-propos/accordeon-experiences.js"></script>
@@ -1363,6 +1318,5 @@
 <script src="./scripts/a-propos/galleriesImg.js"></script>
 <script src="./scripts/a-propos/scrollDownButtonBio.js"></script>
 <script src="./scripts/a-propos/zoomImg.js"></script>
-<script src="./scripts/a-propos/button-pdf.js"></script>
 
 </html>
