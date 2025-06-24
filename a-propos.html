@@ -101,8 +101,39 @@
         </div>
       </div>
     </div>
-  </section>
 
+    <!-- Bouton pour ouvrir la visionneuse PDF -->
+    <div class="text-center" style="margin: 2rem 0;">
+      <button id="openPdfViewer" class="btn btn-primary">
+        <i class="bx bx-file-pdf"></i> Voir mon CV PDF
+      </button>
+    </div>
+
+    <!-- Visionneuse PDF en modal (cachée par défaut) -->
+    <div id="pdfModal" class="modal" style="display:none;">
+      <div class="modal-content" style="max-width:900px; width:95%; margin:auto;">
+        <span class="close-modal" id="closePdfModal" style="cursor:pointer;">&times;</span>
+        <h3><i class="bx bx-file-pdf"></i> Mon CV au format PDF</h3>
+        <div class="pdf-viewer-container" style="margin-bottom:1rem;">
+          <iframe id="pdf-viewer" src="./assets/docs-print/Fanny - CDA et DevOps en Alternance (18mois)  2025-2027.pdf" width="100%" height="600px" frameborder="0">
+            <p>Votre navigateur ne supporte pas l'affichage des PDF.
+              <a href="./assets/docs-print/Fanny - CDA et DevOps en Alternance (18mois)  2025-2027.pdf target="_blank">Télécharger le PDF</a>
+            </p>
+          </iframe>
+        </div>
+        <div class="pdf-controls" style="text-align:center;">
+          <button id="print-pdf" class="btn btn-primary">
+            <i class="bx bx-printer"></i> Imprimer le CV
+          </button>
+          <a id="download-pdf" class="btn btn-secondary" href="./assets/Docs Print/Fanny - CDA et DevOps en Alternance (18mois)  2025-2027.pdf" download>
+            <i class="bx bx-download"></i> Télécharger le PDF
+          </a>
+          <button id="fullscreen-pdf" class="btn btn-tertiary">
+            <i class="bx bx-fullscreen"></i> Plein écran
+          </button>
+        </div>
+      </div>
+    </div>
 
   <!-- Section Réalisations effectuer pour les différents projets à Simplon -->
   <section id="realisations">
@@ -636,7 +667,8 @@
             <p class="project-description">Concevoir la page d’accueil et le formulaire de contact pour "L’Atelier du
               Bois". </p>
             <a href="https://github.com/fannysaez/AtelierDuBois" class="project-link" target="_blank">Voir le GitHub</a>
-<button class="btn popup-trigger" data-project="AtelierDuBois">Plus d'infos</button>          </div>
+            <button class="btn popup-trigger" data-project="AtelierDuBois">Plus d'infos</button>
+          </div>
         </div>
         <!-- Modal/Popup pour l'Atelier du Bois -->
         <div id="popup-AtelierDuBois" class="modal">
@@ -1318,5 +1350,6 @@
 <script src="./scripts/a-propos/galleriesImg.js"></script>
 <script src="./scripts/a-propos/scrollDownButtonBio.js"></script>
 <script src="./scripts/a-propos/zoomImg.js"></script>
+<script src="./scripts/a-propos/button-pdf.js"></script>
 
 </html>
