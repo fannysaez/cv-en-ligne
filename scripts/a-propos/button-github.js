@@ -85,3 +85,104 @@ display.addEventListener("click", async () => {
 
 // Chargement initial du profil
 fetchGitHubProfile(username);
+
+// Chargement initial du profil
+fetchGitHubProfile(username);
+
+// ===== GESTION DU PDF =====
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Script PDF chargé dans button-github.js');
+    
+    // Éléments pour la modal PDF
+    const openPdfBtn = document.getElementById('openPdfViewer');
+    const pdfModal = document.getElementById('pdfModal');
+    const closePdfBtn = document.getElementById('closePdfModal');
+    
+    console.log('Éléments PDF trouvés:', { openPdfBtn, pdfModal, closePdfBtn });
+    
+    // Ouvrir la modal PDF
+    if (openPdfBtn && pdfModal) {
+        openPdfBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Ouverture de la modal PDF');
+            pdfModal.style.display = 'flex';
+            pdfModal.style.visibility = 'visible';
+            pdfModal.style.opacity = '1';
+            document.body.style.overflow = 'hidden';
+        });
+    } else {
+        console.error('Éléments manquants pour la modal PDF');
+    }
+    
+    // Fermer la modal PDF
+    if (closePdfBtn && pdfModal) {
+        closePdfBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('Fermeture de la modal PDF');
+            pdfModal.style.display = 'none';
+            document.body.style.overflow = '';
+        });
+    }
+    
+    // Fermer en cliquant à l'extérieur
+    if (pdfModal) {
+        pdfModal.addEventListener('click', function(e) {
+            if (e.target === pdfModal) {
+                console.log('Fermeture de la modal PDF (clic extérieur)');
+                pdfModal.style.display = 'none';
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    
+    // Boutons de contrôle PDF
+    const printPdfBtn = document.getElementById('print-pdf');
+    const fullscreenPdfBtn = document.getElementById('fullscreen-pdf');
+    
+    // Imprimer le PDF
+    if (printPdfBtn) {
+        printPdfBtn.addEventListener('click', function() {
+            console.log('Tentative d\'impression du PDF');
+            const iframe = document.getElementById('pdf-viewer');
+            if (iframe) {
+                try {
+                    iframe.contentWindow.focus();
+                    iframe.contentWindow.print();
+                } catch (error) {
+                    console.error('Erreur lors de l\'impression:', error);
+                    window.open(iframe.src, '_blank');
+                }
+            }
+        });
+    }
+    
+    // Plein écran
+    if (fullscreenPdfBtn) {
+        fullscreenPdfBtn.addEventListener('click', function() {
+            console.log('Tentative de plein écran');
+            const iframe = document.getElementById('pdf-viewer');
+            if (iframe) {
+                if (iframe.requestFullscreen) {
+                    iframe.requestFullscreen();
+                } else if (iframe.mozRequestFullScreen) {
+                    iframe.mozRequestFullScreen();
+                } else if (iframe.webkitRequestFullscreen) {
+                    iframe.webkitRequestFullscreen();
+                } else if (iframe.msRequestFullscreen) {
+                    iframe.msRequestFullscreen();
+                }
+            }
+        });
+    }
+    
+    // Fermer avec la touche Échap
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && pdfModal && pdfModal.style.display === 'flex') {
+            console.log('Fermeture de la modal PDF (touche Échap)');
+            pdfModal.style.display = 'none';
+            document.body.style.overflow = '';
+        }
+    });
+});
