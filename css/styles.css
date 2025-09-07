@@ -71,6 +71,33 @@
   --modal-overlay: rgba(0, 0, 0, 0.8);
 }
 
+/* Espacement entre les deux listes <ul> dans la section expérience pro */
+.flex-colonnes .colonne li+li {
+  margin-top: 12px;
+}
+
+/* Espacement sous les titres h4 dans la section expérience pro */
+.flex-colonnes .colonne h4 {
+  margin-bottom: 12px;
+}
+
+/* Grille de deux colonnes pour Expérience professionnelle et Réalisations */
+#experience-pro .grid,
+#realisations .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Grille de deux colonnes pour la section Expérience professionnelle */
+#experience-pro .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -87,6 +114,19 @@ body {
   overflow-x: hidden;
   background-color: var(--background-color);
   color: var(--text-color);
+}
+
+/* Colonnes côte à côte pour l'accordéon Expérience professionnelle */
+.flex-colonnes {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.flex-colonnes .colonne {
+  flex: 1;
+  min-width: 0;
 }
 
 /* Liens dans le footer */
@@ -397,12 +437,13 @@ ul {
 }
 
 .accordion-item {
-  margin-bottom: 15px;
+  margin-bottom: 9px;
   border-radius: 10px;
   overflow: hidden;
   color: var(--text-color);
   box-shadow: var(--card-shadow);
   border: var(--accent-color) dotted 2px;
+  margin-top: 25px;
 }
 
 .accordion-header {
@@ -649,12 +690,15 @@ ul {
   padding: 50px 30px;
   transition: background-color 0.3s ease;
 }
+
 /* Section Skills avec fond alternatif */
 #skills {
-  background-color: var(--progress-bg); /* Utilise la couleur alternative comme formations */
+  background-color: var(--progress-bg);
+  /* Utilise la couleur alternative comme formations */
   padding: 50px 30px;
   transition: background-color 0.3s ease;
 }
+
 /* Titre de la section avec animation subtile */
 #realisations h2 {
   color: var(--text-color);
@@ -868,8 +912,8 @@ ul {
 .buttons-container {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 2rem;
+  margin-top: 3rem;
 }
 
 .project-card .buttons-container .btn {
