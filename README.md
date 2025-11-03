@@ -1,9 +1,21 @@
 
-# Mon premier CV en ligne
+# Mon premier CV en ligne | QR Code - Accès rapide
 
 <p align="center">
-  <img src="./assets/Accueil/logo-initiale.jpg" width="150" height="150" alt="Logo">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="./assets/Accueil/logo-initiale.jpg" width="150" height="150" alt="Logo">
+      </td>
+      <td align="center">
+        <img src="./assets/img/qr-code-cv-en-ligne.png" width="200" height="200" alt="QR Code du projet"><br>
+        <em>Scannez pour accéder à l'App web & web mobile</em>
+      </td>
+    </tr>
+  </table>
 </p>
+
+---
 
 ## 🔗 Lien vers le site
 [CV en ligne | Fanny](https://fannysaez.github.io/cv-en-ligne/)
