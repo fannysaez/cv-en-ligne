@@ -86,14 +86,10 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
   
   <details>
     <summary style="cursor: pointer; padding: 5px 10px; background-color: #e7e7e7; border-radius: 4px; display: inline-block; border: 1px solid #ccc;">
-      📑 Sélectionner un document au choix
+      📑 Sélectionner le document
     </summary>
     <div style="padding: 10px; margin-top: 10px; border: 1px solid #eee; border-radius: 4px; background-color: white;">
       <ul style="list-style-type: none; padding-left: 5px;">
-        <li style="margin-bottom: 15px;">
-          <strong>CV-Fanny-DevWeb & Mobile-2025</strong><br>
-          <a href="./assets/Docs Print/SAEZ Fanny_DevWeb et Mobile.pdf" onclick="window.print(); return false;">🖨️ Télécharger & Imprimer</a>
-        </li>
         <li>
           <strong>CV-Fanny-AlternanceCDA-en-2025-2026</strong><br>
           <a href="./assets/Docs Print/SAEZ Fanny_Alternance en CDA.pdf" onclick="window.print(); return false;">🖨️ Télécharger & Imprimer</a>
