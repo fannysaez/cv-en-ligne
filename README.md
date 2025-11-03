@@ -2,13 +2,12 @@
 # Mon premier CV en ligne | QR Code - Accès rapide
 
 <p align="center">
-  <div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
-    <img src="./assets/Accueil/logo-initiale.jpg" width="150" height="150" alt="Logo">
-    <div style="text-align: center;">
-      <img src="./assets/img/qr-code-cv-en-ligne.png" width="200" height="200" alt="QR Code du projet">
-      <p><em>Scannez pour accéder à l'App web & web mobile</em></p>
-    </div>
-  </div>
+  <img src="./assets/Accueil/logo-initiale.jpg" width="150" height="150" alt="Logo">
+  <img src="./assets/img/qr-code-cv-en-ligne.png" width="200" height="200" alt="QR Code du projet">
+</p>
+<p align="center">
+  <em>Scannez pour accéder à l'App web & web mobile</em>
+</p>
 
 ---
 
