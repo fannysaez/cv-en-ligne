@@ -91,7 +91,7 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
     <div style="padding: 10px; margin-top: 10px; border: 1px solid #eee; border-radius: 4px; background-color: white;">
       <ul style="list-style-type: none; padding-left: 5px;">
         <li>
-          <strong>CV-Fanny-AlternanceCDA-en-2025-2026</strong><br>
+          <strong>CV-Fanny-AlternanceCDA-en-2026-2027</strong><br>
           <a href="./assets/Docs Print/SAEZ Fanny_Alternance en CDA.pdf" onclick="window.print(); return false;">🖨️ Télécharger & Imprimer</a>
         </li>
       </ul>
