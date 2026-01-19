@@ -579,6 +579,12 @@ ul {
   /* Pour assurer la lisibilité sur fond accent lors du survol */
 }
 
+/* Forcer la couleur du libellé année et de l'icône calendrier au survol */
+.timeline-accordion-header:hover .year,
+.timeline-accordion-header:hover .year i {
+  color: #000000;
+}
+
 .timeline-accordion-header .year {
   font-size: 14px;
   color: var(--accent-color);
@@ -617,6 +623,24 @@ ul {
   letter-spacing: 1px;
   color: var(--accordion-text-color);
   /* Ajout pour la cohérence des paragraphes */
+}
+
+/* Lien vers le projet final (DWWM) */
+.timeline-accordion-content a.project-final-link {
+  color: var(--accent-color);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px dotted var(--accent-color);
+  padding-bottom: 2px;
+  display: block;
+  width: fit-content;
+  margin: 8px auto 0;
+  text-align: center;
+}
+
+.timeline-accordion-content a.project-final-link:hover {
+  color: var(--accent-hover);
+  border-color: var(--accent-hover);
 }
 
 .timeline-accordion-content ul {
