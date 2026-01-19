@@ -95,11 +95,11 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
       <ul style="list-style-type: none; padding-left: 5px;">
         <li>
           <strong>CV Alternance CDA 2026</strong><br>
-          <a href="./assets/Docs Print/CV Alternance CDA 2026.pdf" onclick="window.print(); return false;">🖨️CV Alternance CDA 2026</a>
+          <a href="./assets/Docs Print/CV Alternance CDA 2026.pdf" onclick="window.print(); return false;">🖨️CV Alternance à imprimer</a>
         </li>
               <li>
           <strong>CV Complet 2026 - Fanny</strong><br>
-          <a href="./assets/Docs Print/CV Complet 2026 - Fanny.pdf" onclick="window.print(); return false;">🖨️ CV Complet 2026 - Fanny</a>
+          <a href="./assets/Docs Print/CV Complet 2026 - Fanny.pdf" onclick="window.print(); return false;">🖨️ CV Complet à imprimer</a>
         </li>
       </ul>
     </div>
