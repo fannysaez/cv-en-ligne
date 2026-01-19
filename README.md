@@ -89,13 +89,17 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
   
   <details>
     <summary style="cursor: pointer; padding: 5px 10px; background-color: #e7e7e7; border-radius: 4px; display: inline-block; border: 1px solid #ccc;">
-      📑 Sélectionner le document
+      📑 Sélectionner les documents
     </summary>
     <div style="padding: 10px; margin-top: 10px; border: 1px solid #eee; border-radius: 4px; background-color: white;">
       <ul style="list-style-type: none; padding-left: 5px;">
         <li>
-          <strong>CV-Fanny-AlternanceCDA-en-2026-2027</strong><br>
-          <a href="./assets/Docs Print/SAEZ Fanny_Alternance en CDA.pdf" onclick="window.print(); return false;">🖨️ Télécharger & Imprimer</a>
+          <strong>CV Alternance CDA 2026</strong><br>
+          <a href="./assets/Docs Print/CV Alternance CDA 2026.pdf" onclick="window.print(); return false;">🖨️CV Alternance CDA 2026</a>
+        </li>
+              <li>
+          <strong>CV Complet 2026 - Fanny</strong><br>
+          <a href="./assets/Docs Print/CV Complet 2026 - Fanny.pdf" onclick="window.print(); return false;">🖨️ CV Complet 2026 - Fanny</a>
         </li>
       </ul>
     </div>
