@@ -59,7 +59,7 @@ async function fetchGitHubRepos(username) {
         if (repos.length > 6) {
             reposDiv.innerHTML += `
                 <div style="margin-top: 15px; text-align: center;">
-                    <a href="${repos[0].owner.html_url}/repos" target="_blank" style="text-decoration: none; color: var(--accent-color);">Voir plus de projets</a>
+                    <a href="${repos[0].owner.html_url}?tab=repositories" target="_blank" style="text-decoration: none; color: var(--accent-color);">Voir plus de projets</a>
                 </div>
             `;
         }
