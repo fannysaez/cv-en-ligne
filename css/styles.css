@@ -857,6 +857,27 @@ ul {
   transition: background-color 0.3s ease;
 }
 
+/* Responsive design pour petits desktops (15-17 pouces) et tablettes */
+@media (min-width: 769px) and (max-width: 1400px) {
+  .custom-header {
+    padding: 5px 20px;
+  }
+
+  .logo-content img {
+    height: 40px;
+  }
+
+  .menu {
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .menu a {
+    font-size: 13px;
+    letter-spacing: 0.4px;
+  }
+}
+
 /* Responsive design adjustments */
 @media (max-width: 768px) {
   .project-card {
