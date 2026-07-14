@@ -345,9 +345,6 @@ section {
   /* Ajout des propriétés pour le centrage */
   margin-left: auto;
   margin-right: auto;
-  position: relative;
-  top: 17%;
-  transform: translateY(-50%);
 }
 
 .bio-content p {
@@ -2616,4 +2613,33 @@ hr {
     flex-direction: row;
     justify-content: center;
   }
+}
+
+/* Toast "CV en attente" */
+.cv-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%) translateY(20px);
+  max-width: 90%;
+  width: 420px;
+  padding: 14px 20px;
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  font-family: var(--body-font);
+  font-size: 0.95rem;
+  text-align: center;
+  z-index: 3000;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.cv-toast.cv-toast-visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
 }

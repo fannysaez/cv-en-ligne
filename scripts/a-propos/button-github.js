@@ -90,21 +90,49 @@ fetchGitHubProfile(username);
 fetchGitHubProfile(username);
 
 // ===== GESTION DU PDF =====
+
+// Passer à true dès que le CV PDF est de nouveau disponible en ligne
+const CV_DISPONIBLE = false;
+
+// Affiche un message temporaire quand le CV n'est pas encore disponible
+function showCvIndisponibleToast() {
+    const existing = document.querySelector('.cv-toast');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.className = 'cv-toast';
+    toast.textContent = "En attente du CV : il est en cours de préparation, vous ne pouvez pas encore le télécharger.";
+    document.body.appendChild(toast);
+
+    requestAnimationFrame(() => toast.classList.add('cv-toast-visible'));
+
+    setTimeout(() => {
+        toast.classList.remove('cv-toast-visible');
+        setTimeout(() => toast.remove(), 300);
+    }, 4000);
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     console.log('Script PDF chargé dans button-github.js');
-    
+
     // Éléments pour la modal PDF
     const openPdfBtn = document.getElementById('openPdfViewer');
     const pdfModal = document.getElementById('pdfModal');
     const closePdfBtn = document.getElementById('closePdfModal');
-    
+
     console.log('Éléments PDF trouvés:', { openPdfBtn, pdfModal, closePdfBtn });
-    
+
     // Ouvrir la modal PDF
     if (openPdfBtn && pdfModal) {
         openPdfBtn.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
+
+            if (!CV_DISPONIBLE) {
+                showCvIndisponibleToast();
+                return;
+            }
+
             console.log('Ouverture de la modal PDF');
             pdfModal.style.display = 'flex';
             pdfModal.style.visibility = 'visible';
