@@ -124,7 +124,7 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
 ---
 
 <p align="center">
-© 2025 Fanny Saez - Tous droits réservés
+© 2026 Fanny Saez - Tous droits réservés
 </p>
 
 ---

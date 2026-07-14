@@ -1971,6 +1971,47 @@ ul {
   background-color: var(--accent-color);
 }
 
+/* Savoir-être : badges icône + libellé, sans pourcentage */
+.softskills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.softskill-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--card-bg);
+  border: 2px solid var(--accent-color);
+  border-radius: 100px;
+  color: var(--text-color);
+  font-family: var(--heading-font);
+  font-size: 1rem;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+.softskill-badge i {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  transition: color 0.25s ease;
+}
+
+.softskill-badge:hover {
+  background-color: var(--accent-color);
+  color: var(--header-bg);
+  transform: translateY(-2px);
+  box-shadow: var(--hover-shadow);
+}
+
+.softskill-badge:hover i {
+  color: var(--header-bg);
+}
+
 /* Skills Savoir-faire */
 .skills {
   display: flex;
