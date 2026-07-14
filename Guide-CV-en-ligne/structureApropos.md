@@ -19,7 +19,7 @@ Cette page est divisée en plusieurs sections :
 ![Page à propos](../assets/Accueil/Section-Réalisation-EffetZoomGalleriesImagesPopup.png)
 
 
-- **Projets GitHub** : Connexion API pour lister les dépôts
+- **Projets** : Connexion à l'API GitHub pour lister mes dépôts publics, et bouton "Voir mon CV PDF" ouvrant une visionneuse (impression, téléchargement, plein écran). Tant que le CV n'est pas encore en ligne, ce bouton affiche un message d'attente au lieu d'ouvrir la visionneuse.
 ![Page à propos](../assets/Accueil/Section-Projets.png)
 ![Page à propos](../assets/Accueil/Section-BtnProjet-RepositorieGitHub.png)
 

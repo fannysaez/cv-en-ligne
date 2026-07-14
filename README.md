@@ -28,6 +28,9 @@ Le site est conçu pour s'adapter à toutes les tailles d'écran :
 - HTML5
 - CSS3
 - JavaScript
+- API GitHub (REST) pour lister mes dépôts publics
+- Swiper.js pour les carrousels
+- FormSubmit pour l'envoi du formulaire de contact
 - FontAwesome pour les icônes
 - Boxicons pour les icônes supplémentaires
 - Google Fonts pour la typographie
@@ -55,25 +58,30 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
 │   └── 🎨 styles.css
 ├── 📁 scripts/
 │   ├── ⚙️ loader.js                     # Script pour le loader animé
-│   ├── ⚙️ slideLeftDegradeColors.js      # Script pour l'animation de dégradé
+│   ├── ⚙️ slideLeftDegradeColors.js      # Script pour l'animation de dégradé (page d'accueil uniquement)
 │   └── 📁 a-propos/
-│       ├── 🔧 header-buttonToggle.js     # Script pour le bouton du header
+│       ├── 🔧 header-buttonToggle.js     # Script pour le bouton du header (menu hamburger)
 │       ├── 🔧 accordeon-experiences.js   # Script pour l'accordéon des expériences
-│       ├── 🔧 accordeon-formation.js     # Script pour l'accordéon des formations
-│       ├── 🔧 button-github.js           # Script pour le bouton GitHub
-│       ├── 🔧 popup.js                   # Script pour les popups
+│       ├── 🔧 accordeon-formations.js    # Script pour l'accordéon des formations & certifications
+│       ├── 🔧 button-github.js           # Connexion à l'API GitHub + visionneuse du CV en PDF
+│       ├── 🔧 popup.js                   # Script pour les popups de réalisations
 │       ├── 🌗 theme-toggle.js            # Script pour le changement de thème
 │       ├── ✨ skills-animation.js         # Script pour l'animation des compétences
 │       ├── ✉️ formContact.js              # Script pour le formulaire de contact
 │       ├── ✂️ truncateText.js             # Script pour tronquer le texte trop long
 │       ├── 🔽 scrollDownButtonBio.js      # Script pour le bouton de défilement vers la bio
-│       └── 🖼️ galleriesImg.js             # Script pour la gestion de la galerie d'images avec un effet zoom
+│       ├── 🖼️ galleriesImg.js             # Script pour la gestion de la galerie d'images avec un effet zoom
+│       └── 🔍 zoomImg.js                 # Script pour zoomer/déplacer les images des popups de réalisations
 ├── 📁 assets/
 │   ├── 📁 Accueil/
-│   └── 📁 a-propos/
-│       ├── 📂 bio/
-│       ├── 📂 realisations/
-│       └── 📂 centresInteret/
+│   ├── 📁 a-propos/
+│   │   ├── 📂 bio/
+│   │   ├── 📂 realisations/
+│   │   ├── 📂 centresInteret/
+│   │   ├── 📂 formContact/
+│   │   └── 📂 freelance/
+│   ├── 📁 docs-print/                   # CV en PDF (imprimable / téléchargeable)
+│   └── 📁 img/                          # QR code du projet
 └── 📁 Guide-CV-en-ligne/
     ├── 📄 procedureImplantation.md
     ├── 📄 structureAccueil.md
@@ -95,11 +103,11 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
       <ul style="list-style-type: none; padding-left: 5px;">
         <li>
           <strong>CV Alternance CDA 2026</strong><br>
-          <a href="./assets/Docs Print/CV Alternance CDA 2026.pdf" onclick="window.print(); return false;">🖨️CV Alternance à imprimer</a>
+          <a href="./assets/docs-print/CV Alternance CDA 2026.pdf" onclick="window.print(); return false;">🖨️CV Alternance à imprimer</a>
         </li>
               <li>
           <strong>CV Complet 2026 - Fanny</strong><br>
-          <a href="./assets/Docs Print/CV Complet 2026 - Fanny.pdf" onclick="window.print(); return false;">🖨️ CV Complet à imprimer</a>
+          <a href="./assets/docs-print/CV Complet 2026 - Fanny.pdf" onclick="window.print(); return false;">🖨️ CV Complet à imprimer</a>
         </li>
       </ul>
     </div>
@@ -109,7 +117,7 @@ Ouvrir le fichier `index.html` dans un navigateur ou utiliser un serveur local (
 ---
 
 ## 📬 Contact
-- Email : [M'écrire](fanny.saez.0486@gmail.com)
+- Email : [M'écrire](mailto:fanny.saez.0486@gmail.com)
 - LinkedIn : [Fanny Saez](https://www.linkedin.com/in/fannysaez)
 - GitHub : [GitHub Fanny](https://github.com/fannysaez)
 
