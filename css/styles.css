@@ -289,6 +289,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
   color: white;
   text-align: center;
   padding: 80px;
@@ -358,6 +359,8 @@ section {
   /* Ajout des propriétés pour le centrage */
   margin-left: auto;
   margin-right: auto;
+  /* Repère de positionnement pour le bouton de défilement (.scroll-down-container) */
+  position: relative;
 }
 
 .bio-content p {
@@ -728,7 +731,14 @@ ul {
 /* Section Skills avec fond alternatif */
 #skills {
   background-color: var(--progress-bg);
-  /* Utilise la couleur alternative comme formations */
+  padding: 50px 30px;
+  transition: background-color 0.3s ease;
+}
+
+/* Section Savoir-être : fond opposé à Compétences et à Formations,
+   pour bien séparer visuellement les trois sections */
+#savoir-etre {
+  background-color: var(--background-color);
   padding: 50px 30px;
   transition: background-color 0.3s ease;
 }
@@ -2357,7 +2367,9 @@ hr {
   }
 
   .overlay {
-    padding: 40px;
+    height: auto;
+    align-items: flex-start;
+    padding: 20px 40px 40px;
   }
 
   .bio-content {
