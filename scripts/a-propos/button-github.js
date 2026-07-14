@@ -8,12 +8,23 @@ const display = document.querySelector("#bouton2");
 // Utilisateur GitHub public
 const username = "fannysaez";
 
+// Message d'erreur adapté selon le type d'échec de l'appel à l'API GitHub
+function githubErrorMessage(response, notFoundLabel) {
+    if (response.status === 403) {
+        return "Trop de requêtes vers GitHub pour le moment (limite atteinte), réessayez dans quelques minutes.";
+    }
+    if (response.status === 404) {
+        return notFoundLabel;
+    }
+    return `Erreur GitHub (${response.status})`;
+}
+
 // Fonction pour récupérer et afficher le profil GitHub
 async function fetchGitHubProfile(username) {
     try {
         const response = await fetch(`https://api.github.com/users/${username}`);
         if (!response.ok) {
-            throw new Error(`GitHub user not found: ${response.statusText}`);
+            throw new Error(githubErrorMessage(response, "Utilisateur GitHub introuvable"));
         }
         const data = await response.json();
 
@@ -29,12 +40,14 @@ async function fetchGitHubProfile(username) {
     }
 }
 
-// Fonction pour récupérer et afficher les dépôts GitHub
+// Fonction pour récupérer et afficher les dépôts GitHub. Renvoie true si le
+// chargement a réussi, false sinon (pour ne pas afficher "Masquer les
+// projets" alors qu'aucun projet n'a pu être chargé).
 async function fetchGitHubRepos(username) {
     try {
         const response = await fetch(`https://api.github.com/users/${username}/repos`);
         if (!response.ok) {
-            throw new Error(`GitHub repos not found: ${response.statusText}`);
+            throw new Error(githubErrorMessage(response, "Dépôts GitHub introuvables"));
         }
         const repos = await response.json();
 
@@ -63,8 +76,10 @@ async function fetchGitHubRepos(username) {
                 </div>
             `;
         }
+        return true;
     } catch (error) {
         reposDiv.innerHTML = `<p style="color: red;">Erreur : ${error.message}</p>`;
+        return false;
     }
 }
 
@@ -73,18 +88,16 @@ let isVisible = false;
 
 display.addEventListener("click", async () => {
     if (!isVisible) {
-        display.textContent = "Masquer les projets";
-        await fetchGitHubRepos(username);
-        isVisible = true;
+        display.textContent = "Chargement...";
+        const success = await fetchGitHubRepos(username);
+        display.textContent = success ? "Masquer les projets" : "Afficher mes projets";
+        isVisible = success;
     } else {
         reposDiv.innerHTML = "";
         display.textContent = "Afficher mes projets";
         isVisible = false;
     }
 });
-
-// Chargement initial du profil
-fetchGitHubProfile(username);
 
 // Chargement initial du profil
 fetchGitHubProfile(username);

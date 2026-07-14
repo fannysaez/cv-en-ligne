@@ -3,20 +3,44 @@
 // ============================================
 const menuToggle = document.getElementById('menu-toggle');
 const menu = document.getElementById('menu');
+const menuOverlay = document.getElementById('menu-overlay');
+const menuClose = document.getElementById('menu-close');
 
-// Afficher/masquer le menu au clic sur le bouton
+function openMenu() {
+  menu.classList.add('active');
+  menuOverlay.classList.add('active');
+}
+
+function closeMenu() {
+  menu.classList.remove('active');
+  menuOverlay.classList.remove('active');
+}
+
+// Afficher/masquer le panneau au clic sur le bouton burger
 menuToggle.addEventListener('click', () => {
-  menu.classList.toggle('active');
+  if (menu.classList.contains('active')) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
 });
 
-// Masquer le menu lorsqu'on clique en dehors
-document.addEventListener('click', (event) => {
-  const isClickInsideMenu = menu.contains(event.target);
-  const isClickOnToggle = menuToggle.contains(event.target);
+// Masquer le panneau au clic sur le bouton "✕"
+menuClose.addEventListener('click', closeMenu);
 
-  if (!isClickInsideMenu && !isClickOnToggle) {
-    menu.classList.remove('active');
+// Masquer le panneau au clic sur le calque assombri
+menuOverlay.addEventListener('click', closeMenu);
+
+// Masquer le panneau avec la touche Échap
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && menu.classList.contains('active')) {
+    closeMenu();
   }
+});
+
+// Masquer le panneau lorsqu'on clique sur un lien de navigation
+menu.querySelectorAll('a').forEach((link) => {
+  link.addEventListener('click', closeMenu);
 });
 
 // ============================================

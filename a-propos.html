@@ -24,9 +24,14 @@
     <div class="logo-content">
       <img src="./assets/a-propos/bio/logo-initiale.png" alt="Logo" />
     </div>
-    <div class="menu-toggle" id="menu-toggle">☰</div> <!-- Bouton de bascule -->
-    <!-- Menu de navigation  -->
+
+    <!-- Calque d'assombrissement derrière le panneau (mobile/tablette) -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <!-- Menu de navigation (barre horizontale desktop / panneau latéral mobile) -->
     <nav class="menu" id="menu">
+      <button class="menu-close" id="menu-close" type="button" aria-label="Fermer le menu">✕</button>
+      <div class="menu-separator"></div>
       <a href="#aboutme"><i class="fas fa-house-user fa-1x" title=""></i> À propos</a>
       <a href="#projets"><i class="fas fa-tasks fa-1x" title=""></i> Projets</a>
       <a href="#realisations"><i class="fas fa-check-circle fa-1x" title=""></i> Réalisations</a>
@@ -35,17 +40,18 @@
       <a href="#parcours"><i class="fas fa-briefcase fa-1x" title=""></i> Parcours</a>
       <a href="#centres-interet"><i class="fas fa-cogs fa-1x" title=""></i> Centres d'intérêt</a>
       <a href="#contact"><i class="fas fa-pen fa-1x" title=""></i> M'écrire</a>
-
-      <div class="toggle-container">
-        <label class="theme-switch">
-          <input type="checkbox" id="theme-toggle">
-          <span class="slider">
-            <i class="fas fa-sun"></i>
-            <i class="fas fa-moon"></i>
-          </span>
-        </label>
-      </div>
     </nav>
+
+    <div class="toggle-container">
+      <label class="theme-switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider">
+          <i class="fas fa-sun"></i>
+          <i class="fas fa-moon"></i>
+        </span>
+      </label>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
   </header>
 
   <!-- Sections -->
@@ -1467,6 +1473,7 @@
 <script src="./scripts/a-propos/popup.js"></script>
 <script src="./scripts/a-propos/formContact.js"></script>
 <script src="./scripts/a-propos/truncateText.js"></script>
+<script src="./scripts/a-propos/truncateBio.js"></script>
 <script src="./scripts/a-propos/galleriesImg.js"></script>
 <script src="./scripts/a-propos/scrollDownButtonBio.js"></script>
 <script src="./scripts/a-propos/zoomImg.js"></script>
