@@ -737,18 +737,23 @@ ul {
 
 .skills-icon-cloud {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
   width: 100%;
-  max-width: 680px;
+  max-width: 960px;
   margin: 20px auto 0;
 }
 
-.skill-row {
+.skills-icon-cloud-col {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-content: flex-start;
   gap: 16px;
+  flex: 1 1 420px;
+  max-width: 460px;
 }
 
 .skill-icon {
@@ -2505,8 +2510,15 @@ hr {
 
   /* Nuage d'icônes de compétences : plus compact sur mobile */
   .skills-icon-cloud {
-    height: 320px;
     max-width: 100%;
+    gap: 16px;
+  }
+
+  .skills-icon-cloud-col {
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: none;
+    gap: 10px;
   }
 
   .skill-icon {
