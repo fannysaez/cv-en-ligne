@@ -105,7 +105,7 @@ fetchGitHubProfile(username);
 // ===== GESTION DU PDF =====
 
 // Passer à true dès que le CV PDF est de nouveau disponible en ligne
-const CV_DISPONIBLE = false;
+const CV_DISPONIBLE = true;
 
 // Affiche un message temporaire quand le CV n'est pas encore disponible
 function showCvIndisponibleToast() {
