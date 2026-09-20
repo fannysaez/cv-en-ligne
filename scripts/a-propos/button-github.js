@@ -132,11 +132,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const openPdfBtn = document.getElementById('openPdfViewer');
     const pdfModal = document.getElementById('pdfModal');
     const closePdfBtn = document.getElementById('closePdfModal');
+    const pdfDropdown = document.getElementById('pdfDropdown');
+    const pdfDropdownMenu = document.getElementById('pdfDropdownMenu');
+    const pdfDropdownItems = document.querySelectorAll('.pdf-dropdown-item');
+    const pdfViewer = document.getElementById('pdf-viewer');
+    const pdfModalTitle = document.getElementById('pdfModalTitle');
+    const downloadPdfLink = document.getElementById('download-pdf');
 
     console.log('Éléments PDF trouvés:', { openPdfBtn, pdfModal, closePdfBtn });
 
-    // Ouvrir la modal PDF
-    if (openPdfBtn && pdfModal) {
+    // Ouvrir/fermer le dropdown des versions du CV
+    if (openPdfBtn && pdfDropdown) {
         openPdfBtn.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
@@ -146,16 +152,47 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            console.log('Ouverture de la modal PDF');
+            const isOpen = pdfDropdown.classList.toggle('open');
+            openPdfBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    } else {
+        console.error('Éléments manquants pour la modal PDF');
+    }
+
+    // Fermer le dropdown en cliquant à l'extérieur
+    document.addEventListener('click', function(e) {
+        if (pdfDropdown && !pdfDropdown.contains(e.target)) {
+            pdfDropdown.classList.remove('open');
+            openPdfBtn.setAttribute('aria-expanded', 'false');
+        }
+    });
+
+    // Choix d'une version du CV dans le dropdown : ouvre la modal avec le bon PDF
+    pdfDropdownItems.forEach(function(item) {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            const pdfPath = item.getAttribute('data-pdf');
+            const pdfTitle = item.getAttribute('data-title') || 'Mon CV au format PDF';
+
+            if (pdfViewer) pdfViewer.src = pdfPath;
+            if (downloadPdfLink) downloadPdfLink.href = pdfPath;
+            if (pdfModalTitle) {
+                pdfModalTitle.innerHTML = `<i class="bx bx-file-pdf"></i> ${pdfTitle}`;
+            }
+
+            pdfDropdown.classList.remove('open');
+            openPdfBtn.setAttribute('aria-expanded', 'false');
+
+            console.log('Ouverture de la modal PDF :', pdfPath);
             pdfModal.style.display = 'flex';
             pdfModal.style.visibility = 'visible';
             pdfModal.style.opacity = '1';
             document.body.style.overflow = 'hidden';
         });
-    } else {
-        console.error('Éléments manquants pour la modal PDF');
-    }
-    
+    });
+
     // Fermer la modal PDF
     if (closePdfBtn && pdfModal) {
         closePdfBtn.addEventListener('click', function(e) {

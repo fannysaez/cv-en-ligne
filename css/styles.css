@@ -2936,6 +2936,88 @@ hr {
   }
 }
 
+/* Dropdown "Voir mon CV PDF" (choix entre plusieurs versions) */
+.pdf-dropdown {
+  position: relative;
+  display: inline-flex;
+}
+
+.pdf-dropdown .project-btn-pdf i.bx-chevron-down {
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.pdf-dropdown.open .project-btn-pdf i.bx-chevron-down {
+  transform: rotate(180deg);
+}
+
+.pdf-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 260px;
+  background-color: var(--card-bg);
+  border: 2px solid var(--accent-color);
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-8px);
+  transition: all 0.2s ease;
+  z-index: 20;
+}
+
+.pdf-dropdown.open .pdf-dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.pdf-dropdown-item {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-family: var(--body-font, inherit);
+  font-size: 0.9rem;
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border-radius: 0.35rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.pdf-dropdown-item:hover,
+.pdf-dropdown-item:focus-visible {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+}
+
+@media (max-width: 768px) {
+  .pdf-dropdown {
+    width: 100%;
+    max-width: 300px;
+    flex-direction: column;
+  }
+
+  .pdf-dropdown-menu {
+    width: 100%;
+    left: 0;
+    transform: translateY(-8px);
+  }
+
+  .pdf-dropdown.open .pdf-dropdown-menu {
+    transform: translateY(0);
+  }
+}
+
 /* Toast "CV en attente" */
 .cv-toast {
   position: fixed;

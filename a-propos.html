@@ -169,9 +169,24 @@
             <i class='bx bx-rocket colorIcon' style="font-size: 2rem; color: #3be2ff;"></i>
             <div class="project-buttons">
               <button id="bouton2" class="project-btn">Afficher mes projets</button>
-              <button id="openPdfViewer" class="project-btn project-btn-pdf">
-                <i class="bx bx-file-pdf"></i> Voir mon CV PDF
-              </button>
+              <div class="pdf-dropdown" id="pdfDropdown">
+                <button id="openPdfViewer" class="project-btn project-btn-pdf" aria-haspopup="true"
+                  aria-expanded="false">
+                  <i class="bx bx-file-pdf"></i> Voir mon CV PDF <i class="bx bx-chevron-down"></i>
+                </button>
+                <div class="pdf-dropdown-menu" id="pdfDropdownMenu">
+                  <button type="button" class="pdf-dropdown-item"
+                    data-pdf="./assets/docs-print/CV - SAEZ Fanny - StageCDA -  4mois en Distanciel - Clermont-Ferrand-OK Valider.pdf"
+                    data-title="Mon CV au format PDF">
+                    <i class="bx bx-file-blank"></i> CV actuel (recherche de stage)
+                  </button>
+                  <button type="button" class="pdf-dropdown-item"
+                    data-pdf="./assets/docs-print/Fanny - Ancienne version .pdf"
+                    data-title="Ancienne version de mon CV (complet)">
+                    <i class="bx bx-file-blank"></i> Ancienne version (CV complet)
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -189,13 +204,13 @@
   <div id="pdfModal" class="modal" style="display:none;">
     <div class="modal-content" style="max-width:900px; width:95%; margin:auto;">
       <span class="close-modal" id="closePdfModal" style="cursor:pointer;">&times;</span>
-      <h3><i class="bx bx-file-pdf"></i> Mon CV au format PDF</h3>
+      <h3 id="pdfModalTitle"><i class="bx bx-file-pdf"></i> Mon CV au format PDF</h3>
       <div class="pdf-viewer-container" style="margin-bottom:1rem;">
         <iframe id="pdf-viewer"
-          src="./assets/docs-print/CV - SAEZ Fanny - StageCDA -  4mois en Distanciel - Clermont-Ferrand OK.pdf" width="100%"
+          src="./assets/docs-print/CV - SAEZ Fanny - StageCDA -  4mois en Distanciel - Clermont-Ferrand-OK Valider.pdf" width="100%"
           height="600px" frameborder="0">
           <p>Votre navigateur ne supporte pas l'affichage des PDF.
-            <a href="./assets/docs-print/CV - SAEZ Fanny - StageCDA -  4mois en Distanciel - Clermont-Ferrand OK.pdf"
+            <a href="./assets/docs-print/Fanny - Ancienne version .pdf"
               target="_blank">Télécharger le PDF</a>
           </p>
         </iframe>
