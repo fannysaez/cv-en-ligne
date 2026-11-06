@@ -80,7 +80,17 @@
 .flex-colonnes .colonne h4 {
   margin-bottom: 12px;
 }
+.realisations-subtitle {
+  font-family: var(--heading-font);
+  color: var(--accent-color);
+  text-align: center;
+  font-size: 1.3rem;
+  margin: 2rem 0 1rem;
+}
 
+.realisations-subtitle:first-of-type {
+  margin-top: 0;
+}
 /* Grille de deux colonnes pour Expérience professionnelle et Réalisations */
 #experience-pro .grid,
 #realisations .grid {

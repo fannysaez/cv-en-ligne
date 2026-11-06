@@ -150,6 +150,60 @@
           </div>
         </div>
       </div>
+
+      <!-- Carte 2 : Hackathon CDA -->
+      <div class="project-card animate-fadeInUp">
+        <div class="relative">
+        <img src="./assets/a-propos/realisations/candidact-dashboard.png" alt="Hackathon Candid'Act">
+        </div>
+        <div class="container">
+          <h3>Hackathon CDA | Candid'Act</h3>
+          <p>Hackathon Simplon d'une semaine (21 → 29 octobre 2026), en équipe de 4. Conception et développement de A à Z d'une application de suivi de candidatures (stages, alternances, emplois).</p>
+          <div class="flex">
+            <span>Angular</span>
+            <span>Symfony</span>
+            <span>PHP</span>
+            <span>MariaDB</span>
+            <span>Docker</span>
+            <span>Git & GitHub</span>
+          </div>
+          <div class="buttons-container">
+            <a href="https://github.com/fannysaez/CandidAct-hackathon-frontend" class="btn" target="_blank">Frontend</a>
+            <a href="https://github.com/fannysaez/CandidAct-hackathon-backend" class="btn" target="_blank">Backend</a>
+            <a href="https://github.com/fannysaez/CandidAct-hackathon-docker" class="btn" target="_blank">Docker</a>
+          </div>
+          <!-- Accordéon détails -->
+          <div class="accordion">
+            <div class="accordion-item">
+              <button class="accordion-header" aria-expanded="false">
+                Détails des missions <span class="accordion-icon">+</span>
+              </button>
+              <div class="accordion-content">
+                <div class="flex-colonnes">
+                  <div class="colonne">
+                    <h4>Conception</h4>
+                    <ul>
+                      <li>Cahier des charges</li>
+                      <li>Conception UML & Merise</li>
+                      <li>Maquettes Figma</li>
+                    </ul>
+                  </div>
+                  <div class="colonne">
+                    <h4>Développement</h4>
+                    <ul>
+                      <li>Authentification sécurisée (JWT)</li>
+                      <li>Dashboard : liste des candidatures, recherche, statistiques, alertes</li>
+                      <li>Architecture en 3 dépôts séparés (front, back, docker), conteneurisation complète</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="date-right">Du 21 au 29 octobre 2026</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Section Projets avec meilleure séparation -->
@@ -232,14 +286,131 @@
     </div>
   </div>
 
-  <!-- Section Réalisations effectuer pour les différents projets à Simplon -->
-  <section id="realisations">
+<section id="realisations">
     <div class="container">
       <div class="main-title">
         <h2><span>Mes réalisations</span></h2>
       </div><!--  -->
 
     </div>
+    <h3 class="realisations-subtitle">Projets CDA</h3>
+    <div class="grid">
+
+      <!-- Projet Harmonia -->
+      <div class="project-card animate-fadeInUp">
+        <div class="relative">
+          <img src="https://cdn.simpleicons.org/symfony/000000" alt="Harmonia">
+        </div>
+        <div class="container">
+          <h3>Harmonia</h3>
+          <p>Application Symfony de gestion musicale (artistes, albums, playlists), avec authentification JWT, pagination, recherche Ajax et 42 tests PHPUnit.</p>
+          <div class="flex">
+            <span>Symfony</span>
+            <span>PHP</span>
+            <span>MariaDB</span>
+            <span>Docker</span>
+          </div>
+          <div class="buttons-container">
+            <a href="https://github.com/fannysaez/harmonia-docker-symfony-cda" class="btn" target="_blank">Voir le GitHub</a>
+            <button class="btn popup-trigger" data-project="Harmonia">Plus d'infos</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Harmonia -->
+      <div id="popup-Harmonia" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>Harmonia - Détails du projet</h2>
+          <div class="modal-img">
+            <img src="https://cdn.simpleicons.org/symfony/000000" alt="Harmonia">
+          </div>
+          <div class="modal-description">
+            <h3>Description</h3>
+            <p>Application Symfony de gestion musicale (artistes, albums, playlists) développée dans le cadre de la formation CDA.</p><br>
+            <h3>Technologies utilisées</h3>
+            <div class="flex">
+              <ul>
+                <li><span>Symfony 7 / PHP 8.4</span></li>
+                <li><span>MariaDB 10.6</span></li>
+                <li><span>Docker Compose</span></li>
+                <li><span>Twig</span></li>
+                <li><span>PHPUnit</span></li>
+              </ul>
+            </div><br>
+            <h3>Fonctionnalités</h3>
+            <ul>
+              <li>Authentification JWT</li>
+              <li>Pagination et recherche Ajax</li>
+              <li>Suite de 42 tests PHPUnit (82 assertions)</li>
+            </ul>
+            <a href="https://github.com/fannysaez/harmonia-docker-symfony-cda" class="btn" target="_blank">Voir sur GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projet La bonne salle au bon moment -->
+      <div class="project-card animate-fadeInUp">
+        <div class="relative">
+          <img src="https://cdn.simpleicons.org/react/61DAFB" alt="La bonne salle au bon moment">
+        </div>
+        <div class="container">
+          <h3>La bonne salle au bon moment</h3>
+          <p>Application de réservation de salles développée en équipe : React/Vite/TypeScript côté front, Express/MongoDB côté back, conteneurisée avec Docker Compose.</p>
+          <div class="flex">
+            <span>React</span>
+            <span>TypeScript</span>
+            <span>Express</span>
+            <span>MongoDB</span>
+            <span>Docker</span>
+          </div>
+          <div class="buttons-container">
+            <a href="https://github.com/fannysaez/la-bonne-salle-au-bon-moment-front-end-cda" class="btn" target="_blank">Voir le GitHub</a>
+            <button class="btn popup-trigger" data-project="LaBonneSalle">Plus d'infos</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal La bonne salle au bon moment -->
+      <div id="popup-LaBonneSalle" class="modal">
+        <div class="modal-content">
+          <span class="close-modal">&times;</span>
+          <h2>La bonne salle au bon moment - Détails du projet</h2>
+          <div class="modal-img">
+            <img src="https://cdn.simpleicons.org/react/61DAFB" alt="La bonne salle au bon moment">
+          </div>
+          <div class="modal-description">
+            <h3>Description</h3>
+            <p>Application de réservation de salles développée en équipe lors de la formation CDA.</p><br>
+            <h3>Technologies utilisées</h3>
+            <div class="flex">
+              <ul>
+                <li><span>React / Vite / TypeScript</span></li>
+                <li><span>Tailwind CSS</span></li>
+                <li><span>Express / TypeScript</span></li>
+                <li><span>MongoDB / Mongoose</span></li>
+                <li><span>Docker Compose</span></li>
+              </ul>
+            </div><br>
+            <h3>Fonctionnalités</h3>
+            <ul>
+              <li>Authentification JWT (bcrypt, cookie-parser)</li>
+              <li>Formulaires react-hook-form + validation Zod</li>
+              <li>Documentation API via Swagger (/api-docs)</li>
+              <li>Orchestration Docker Compose sur 3 dépôts</li>
+            </ul>
+            <div class="buttons-container">
+              <a href="https://github.com/fannysaez/la-bonne-salle-au-bon-moment-front-end-cda" class="btn" target="_blank">Frontend</a>
+              <a href="https://github.com/fannysaez/la-bonne-salle-au-bon-moment-backend-cda" class="btn" target="_blank">Backend</a>
+              <a href="https://github.com/fannysaez/la-bonne-salle-au-bon-moment-docker-cda" class="btn" target="_blank">Docker</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <h3 class="realisations-subtitle">Projets DWWM</h3>
     <div class="grid">
 
       <!-- Projet 1 -->
@@ -815,7 +986,6 @@
         </div>
 
   </section>
-
 
   <!-- Skills Progress Bar sur deux colonnes -->
   <section id="skills">
