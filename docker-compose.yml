@@ -1,0 +1,5 @@
+services:
+  projet_perso:
+    build: .
+    ports:
+      - "8081:80"
